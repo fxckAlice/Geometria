@@ -26,6 +26,7 @@ public class Figure {
             return leight / 2;
         }
         else{
+            System.out.println("Error. The figure doesn't have input circle.");
             return -1;
         }
     }
