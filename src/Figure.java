@@ -58,4 +58,10 @@ public class Figure {
         }
         return answer;
     }
+    public double corner(){
+        return 90;
+    }
+    public double sumOfCorners(){
+        return 360;
+    }
 }
