@@ -1,6 +1,6 @@
 public class Figure {
-    private double leight;
-    private double width;
+    protected double leight;
+    protected double width;
     public void setleight(double leight){
         this.leight = leight;
     }
@@ -70,4 +70,5 @@ public class Figure {
     public double cornerDiagonalWidth(){
         return Math.asin(leight / diagonal());
     }
+
 }
