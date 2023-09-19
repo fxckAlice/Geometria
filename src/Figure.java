@@ -13,4 +13,9 @@ public class Figure {
     public double diagonal(){
         return Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2));
     }
+    public double round(double x, int dozen){
+        double rounding = Math.pow(10, dozen);
+        int temp = (int)(x / rounding);
+        return temp * rounding;
+    }
 }

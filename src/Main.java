@@ -5,5 +5,6 @@ public class Main {
         ABCD.setWidth(3);
         ABCD.setleight(1);
         System.out.println(ABCD.diagonal());
+        System.out.println(ABCD.round(ABCD.diagonal(), -2));
     }
 }
