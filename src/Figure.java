@@ -18,4 +18,15 @@ public class Figure {
         int temp = (int)(x / rounding);
         return temp * rounding;
     }
+    public double outRadius (){
+        return diagonal()/2;
+    }
+    public double inputRadius(){
+        if(leight == width){
+            return leight / 2;
+        }
+        else{
+            return -1;
+        }
+    }
 }
