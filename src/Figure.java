@@ -7,6 +7,9 @@ public class Figure {
     public void setWidth(double width) {
         this.width = width;
     }
+    public double perimeter(){
+        return 2 * leight + 2 * width;
+    }
     public double area(){
         return leight * width;
     }
