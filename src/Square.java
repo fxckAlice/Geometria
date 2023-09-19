@@ -3,17 +3,21 @@ public class Square extends Figure{
     public void setWidth(double width) {
         System.out.println("Error.");
     }
-    public double perimeter(){
-        return 4 * leight;
+    public double perimeter() {
+        perimeter = 4 * leight;
+        return perimeter;
     }
     public double area(){
-        return Math.pow(leight,2);
+        area = Math.pow(leight,2);
+        return area;
     }
     public double diagonal(){
-        return Math.sqrt(Math.pow(leight, 2) * 2);
+        diagonal = Math.sqrt(Math.pow(leight, 2) * 2);
+        return diagonal;
     }
     public double inputRadius() {
-        return leight / 2;
+        inputRadius = leight / 2;
+        return inputRadius;
     }
     public double cornerDiagonalLeight(){
         return 45;

@@ -1,20 +1,41 @@
 public class Figure {
-    protected double leight;
-    protected double width;
-    public void setleight(double leight){
+    protected double leight, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
+    public void setLeight(double leight){
         this.leight = leight;
     }
     public void setWidth(double width) {
         this.width = width;
     }
+    public void setPerimeter(double perimeter) {
+        this.perimeter = perimeter;
+    }
+    public void setArea(double area) {
+        this.area = area;
+    }
+
+    public void setDiagonal(double diagonal) {
+        this.diagonal = diagonal;
+    }
+
+    public void setInputRadius(double inputRadius) {
+        this.inputRadius = inputRadius;
+    }
+
+    public void setOutRadius(double outRadius) {
+        this.outRadius = outRadius;
+    }
+
     public double perimeter(){
-        return 2 * leight + 2 * width;
+        perimeter = 2 * leight + 2 * width;
+        return perimeter;
     }
     public double area(){
-        return leight * width;
+        area = leight * width;
+        return area;
     }
     public double diagonal(){
-        return Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2));
+        diagonal = Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2));
+        return diagonal;
     }
     public double round(double x, int dozen){
         double rounding = Math.pow(10, dozen);
@@ -22,11 +43,13 @@ public class Figure {
         return temp * rounding;
     }
     public double outRadius (){
-        return diagonal()/2;
+        outRadius = diagonal()/2;
+        return outRadius;
     }
     public double inputRadius(){
         if(leight == width){
-            return leight / 2;
+            inputRadius = leight / 2;
+            return inputRadius;
         }
         else{
             System.out.println("Error. The figure doesn't have input circle.");
@@ -59,7 +82,8 @@ public class Figure {
         return answer;
     }
     public double corner(){
-        return 90;
+        corner = 90;
+        return corner;
     }
     public double sumOfCorners(){
         return 360;
