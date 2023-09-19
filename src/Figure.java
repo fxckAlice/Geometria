@@ -10,4 +10,7 @@ public class Figure {
     public double area(){
         return leight * width;
     }
+    public double diagonal(){
+        return Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2));
+    }
 }
