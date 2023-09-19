@@ -64,4 +64,10 @@ public class Figure {
     public double sumOfCorners(){
         return 360;
     }
+    public double cornerDiagonalLeight(){
+        return Math.acos(leight / diagonal());
+    }
+    public double cornerDiagonalWidth(){
+        return Math.asin(leight / diagonal());
+    }
 }
