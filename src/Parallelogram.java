@@ -1,6 +1,7 @@
-public class Parallelepiped extends Figure{
+public class Parallelogram extends Figure{
     protected double height;
     protected double diagonal2;
+
     public void setDiagonal2(double diagonal2){this.diagonal2 = diagonal2;}
     public void setCorner(double corner){
         if(corner <= 90){this.corner = corner;}
