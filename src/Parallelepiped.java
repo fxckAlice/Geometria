@@ -1,30 +1,29 @@
 public class Parallelepiped extends Figure{
-    double corner;
-    double height;
+    protected double height;
+    protected double diagonal2;
+    public void setDiagonal2(double diagonal2){this.diagonal2 = diagonal2;}
     public void setCorner(double corner){
         if(corner <= 90){this.corner = corner;}
         else{
             System.out.println("Corner must be less than 90 degrees");
         }
     }
-
     public void setHeight(double height) {
         this.height = height;
     }
     public double area(char parameter){
-        double answer;
         switch (parameter) {
             case ('h'):
-                answer = height * leight;
+                area = height * leight;
                 break;
             case ('c'):
-                answer = width * Math.sin(corner) * leight;
+                area = width * Math.sin(corner) * leight;
                 break;
             default:
                 System.out.println("Enter correct parameter.");
-                answer = -1;
+                area = -1;
         }
-        return answer;
+        return area;
     }
     public double diagonal(){
         System.out.println("You can use diagonal1() or diagonal2");
@@ -32,15 +31,18 @@ public class Parallelepiped extends Figure{
     }
     public double diagonal1(){
         double temp = 2 * leight * width * Math.cos(180 - corner);
-        return Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2) - temp);
+        diagonal = Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2) - temp);
+        return diagonal;
     }
     public double diagonal2(){
         double temp = 2 * leight * width * Math.cos(corner);
-        return Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2) - temp);
+        diagonal2 = Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2) - temp);
+        return diagonal2;
     }
     public double outRadius (){
         if(diagonal1() == diagonal2()){
-            return diagonal1() / 2;
+            outRadius = diagonal1() / 2;
+            return outRadius;
         }
         else{
             System.out.println("This parallelepiped doesn't have out circle");
@@ -49,7 +51,8 @@ public class Parallelepiped extends Figure{
     }
     public double inputRadius(){
         if(leight == width){
-            return area() / 2*leight;
+            inputRadius = area() / 2*leight;
+            return inputRadius;
         }
         else{
             System.out.println("Error. The figure doesn't have input circle.");
