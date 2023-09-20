@@ -39,7 +39,13 @@ public class Figure {
     }
     public double round(double x, int dozen){
         double rounding = Math.pow(10, dozen);
-        int temp = (int)(x / rounding);
+        int temp;
+        if(x % rounding >= 5 * Math.pow(10, dozen - 1)){
+             temp = (int)(x / rounding) + 1;
+        }
+        else {
+            temp = (int)(x / rounding);
+        }
         return temp * rounding;
     }
     public double outRadius (){
