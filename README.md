@@ -1,6 +1,7 @@
 # Geometria
-___
+
 "Geometria" is a program to help to calculate basic parameters in simple figures :white_check_mark:
+___
 ## Short describtion and methods:
 The main figure is **rectangle**;
 - *<leight>* - the main values that denotes the value of figure`s side;
