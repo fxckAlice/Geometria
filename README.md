@@ -16,8 +16,8 @@ The main figure is **rectangle**;
 - sumOfCorners() - calculate the sum of all corners in figure; 
 - cornerDiagonal<-Leight, -Width> - calculate the corner between the diagonal and paticular side. For example cornerDiagonalLeight() --> 30;
 - side(double value, char parameter) - calculate the <width> using <leight> and characteristic in dependance of parameter:
-- - 'a' - <value> is the area of figure;
-- - 'p' - <value> is the perimeter of figure;
-- - 'd' - <value> is the diagonal of figure;
-- - 'i' - <value> is the radius of input circle of figure;
-- - 'o' - <value> is the radius of out circle of figure;
+  - 'a' - <value> is the area of figure;
+  - 'p' - <value> is the perimeter of figure;
+  - 'd' - <value> is the diagonal of figure;
+  - 'i' - <value> is the radius of input circle of figure;
+  - 'o' - <value> is the radius of out circle of figure;
