@@ -4,7 +4,6 @@ public class Main {
         Figure ABCD = new Figure();
         ABCD.setWidth(3);
         ABCD.setLeight(1);
-        System.out.println(ABCD.diagonal());
-        System.out.println(ABCD.round(ABCD.diagonal(), -2));
+        System.out.println(ABCD.round(0.8, 0));
     }
 }
