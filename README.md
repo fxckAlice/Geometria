@@ -5,6 +5,8 @@
 ![img_2.png](img_2.png)
 ___
 ## Short describtion and methods:
+SDK: *corrnetto 11*;
+
 The main figure is **rectangle**;
 ### The head class ```Figure```:
 - ```double leight``` the main values that denotes the value of figure`s side;
@@ -24,3 +26,9 @@ The main figure is **rectangle**;
   - ```'d'``` - ```double value``` is the diagonal of figure;
   - ```'i'``` - ```double value``` is the radius of input circle of figure;
   - ```'o'``` - ```double value``` is the radius of out circle of figure;
+
+___
+
+Project participants:
+- [Alexandr Mykhailov](https://github.com/fxckAlice);
+- [Polina Kovdrush](https://github.com/pkovdrysh).

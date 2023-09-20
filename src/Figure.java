@@ -49,7 +49,7 @@ public class Figure {
         return temp * rounding;
     }
     public double outRadius (){
-        outRadius = diagonal()/2;
+        outRadius = diagonal() / 2;
         return outRadius;
     }
     public double inputRadius(){
