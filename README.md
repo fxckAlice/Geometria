@@ -1,11 +1,13 @@
 # Geometria
 
 "Geometria" is a program to help to calculate basic parameters in simple figures :white_check_mark:
+
+![img_2.png](img_2.png)
 ___
 ## Short describtion and methods:
 The main figure is **rectangle**;
 ### The head class ```Figure```:
--  ```double leight``` - the main values that denotes the value of figure`s side;
+- ```double leight``` the main values that denotes the value of figure`s side;
 - *```set[-Leight, -Width, -Perimeter, -Area, -Diagonal, -OutRadius, -InputRadius, -Corner](double value)```* - method which you should use to give values to parameters. For example ```setLeight(3);```
 - ```round(double x, int dozen)``` - method which you should use to round the number to the degree you need. For example ```round(341, 2);``` --> 300, ```round(3.3465, -2);``` --> 3.35;
 - ```area()``` - calculate the area of figure using ```double leight``` and ```double width```;
