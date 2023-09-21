@@ -31,18 +31,19 @@ public class Parallelogram extends Figure{
         return -1;
     }
     public double diagonal1(){
-        double temp = 2 * leight * width * Math.cos(180 - corner);
+        double temp = 2 * leight * width * round(Math.cos((180 - corner) / 90 * Math.PI), 10);
         diagonal = Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2) - temp);
         return diagonal;
     }
     public double diagonal2(){
-        double temp = 2 * leight * width * Math.cos(corner);
+        double temp = 2 * leight * width * round(Math.cos(corner / 90 * Math.PI), 10);
         diagonal2 = Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2) - temp);
         return diagonal2;
     }
     public double outRadius (){
         if(diagonal1() == diagonal2()){
-            outRadius = diagonal1() / 2;
+            double temp = diagonal1();
+            outRadius = temp / 2;
             return outRadius;
         }
         else{

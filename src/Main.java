@@ -1,9 +1,12 @@
 
 public class Main {
     public static void main(String[] args) {
-        Figure ABCD = new Square();
-        //ABCD.setWidth(3);
-        ABCD.setLeight(1);
-        System.out.println(ABCD.round(ABCD.diagonal(), -2));
+        Parallelogram ABCD = new Parallelogram();
+        ABCD.setWidth(3);
+        ABCD.setLeight(3);
+        ABCD.setCorner(60);
+        System.out.println(ABCD.round(ABCD.outRadius(), -2));
+        //System.out.println(Math.cos((double) (180 - 60) / 90 * Math.PI));
+        //System.out.println(Math.cos((double) 60 / 90 * Math.PI));
     }
 }
