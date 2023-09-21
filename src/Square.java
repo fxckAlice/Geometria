@@ -12,6 +12,7 @@ public class Square extends Figure{
         return area;
     }
     public double diagonal(){
+        //diagonal = leight * Math.sqrt(2);
         diagonal = Math.sqrt(Math.pow(leight, 2) * 2);
         return diagonal;
     }
