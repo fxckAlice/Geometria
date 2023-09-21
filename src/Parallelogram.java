@@ -85,4 +85,10 @@ public class Parallelogram extends Figure{
         }
         return answer;
     }
+    public double cornerDiagonalLeight(){
+        return Math.asin(height / diagonal);
+    }
+    public double cornerDiagonalWidth(){
+        return Math.asin((area / width) / diagonal());
+    }
 }
