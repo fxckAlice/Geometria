@@ -27,8 +27,14 @@ The main figure is **rectangle**;
   - ```'i'``` - ```double value``` is the radius of input circle of figure;
   - ```'o'``` - ```double value``` is the radius of out circle of figure;
 
+
+
+### The class ```Square```:
++ ``` 
+
+  
 ___
 
 Project participants:
 - [Alexandr Mykhailov](https://github.com/fxckAlice);
-- [Polina Kovdrush](https://github.com/pkovdrysh).
+- [Polina Kovdrysh](https://github.com/pkovdrysh).
