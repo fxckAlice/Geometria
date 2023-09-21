@@ -60,23 +60,23 @@ public class Parallelogram extends Figure{
             return -1;
         }
     }
-    public double side(double value, char parameter) {
+    public double side( char parameter) {
         double answer;
         switch (parameter) {
             case ('a'):
-                answer = value / height;
+                answer = area / height;
                 break;
             case ('p'):
-                answer = value / 2 - leight;
+                answer = perimeter / 2 - leight;
                 break;
             case ('d'):
-                answer = Math.sqrt(Math.pow(value, 2) - Math.pow(height, 2));
+                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(height, 2));
                 break;
             case ('i'):
-                answer = area / (2 * value);
+                answer = area / (2 * inputRadius);
                 break;
             case ('o'):
-                answer = Math.sqrt(Math.pow(value * 2, 2) - Math.pow(leight, 2));
+                answer = Math.sqrt(Math.pow(outRadius * 2, 2) - Math.pow(leight, 2));
                 break;
             default:
                 System.out.println("Enter correct parameter.");

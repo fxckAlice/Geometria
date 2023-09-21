@@ -35,5 +35,29 @@ public class rhombus extends Parallelogram{
         inputRadius = area() / 2 * leight;
         return inputRadius;
     }
-
+    public double side(char parameter) {
+        double answer;
+        switch (parameter) {
+            case ('a'):
+                answer = area / height;
+                break;
+            case ('p'):
+                answer = perimeter / 2 - leight;
+                break;
+            case ('d'):
+                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(height, 2));
+                break;
+            case ('i'):
+                answer = area / (2 * inputRadius);
+                break;
+            case ('o'):
+                answer = Math.sqrt(Math.pow(outRadius * 2, 2) / 2);
+                break;
+            default:
+                System.out.println("Enter correct parameter.");
+                answer = -1;
+                break;
+        }
+        return answer;
+    }
 }
