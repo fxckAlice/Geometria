@@ -60,4 +60,11 @@ public class rhombus extends Parallelogram{
         }
         return answer;
     }
+    public double cornerDiagonalLeight(){
+        return corner / 2;
+    }
+    public double cornerDiagonalWidth(){
+        System.out.println("Please use cornerDiagonalLeight()");
+        return -1;
+    }
 }
