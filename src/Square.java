@@ -1,4 +1,4 @@
-public class Square extends Figure{
+public class Square extends Rectangle{
     @Override
     public void setWidth(double width) {
         System.out.println("Error.");

@@ -1,4 +1,4 @@
-public class Parallelogram extends Figure{
+public class Parallelogram extends Rectangle{
     protected double height;
     protected double diagonal2;
 

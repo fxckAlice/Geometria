@@ -1,4 +1,4 @@
-public class Figure {
+public class Rectangle {
     protected double leight, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
     public void setLeight(double leight){
         this.leight = leight;
