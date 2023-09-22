@@ -1,4 +1,4 @@
-public class rhombus extends Parallelogram{
+public class Rhombus extends Parallelogram{
     @Override
     public void setWidth(double width) {
         System.out.println("Error.");
