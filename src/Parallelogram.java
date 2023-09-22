@@ -31,12 +31,12 @@ public class Parallelogram extends Figure{
         return -1;
     }
     public double diagonal1(){
-        double temp = 2 * leight * width * round(Math.cos((180 - corner) / 90 * Math.PI), 10);
+        double temp = 2 * leight * width * round(Math.cos((180 - corner) / 180 * Math.PI), -10);
         diagonal = Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2) - temp);
         return diagonal;
     }
     public double diagonal2(){
-        double temp = 2 * leight * width * round(Math.cos(corner / 90 * Math.PI), 10);
+        double temp = 2 * leight * width * round(Math.cos(corner / 180 * Math.PI), -10);
         diagonal2 = Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2) - temp);
         return diagonal2;
     }
@@ -87,9 +87,9 @@ public class Parallelogram extends Figure{
         return answer;
     }
     public double cornerDiagonalLeight(){
-        return Math.asin(height / diagonal);
+        return (Math.asin(height / diagonal) / Math.PI * 180);
     }
     public double cornerDiagonalWidth(){
-        return Math.asin((area / width) / diagonal());
+        return Math.asin((area / width) / Math.PI * 180);
     }
 }
