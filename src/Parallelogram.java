@@ -15,10 +15,10 @@ public class Parallelogram extends Rectangle{
     public double area(char parameter){
         switch (parameter) {
             case ('h'):
-                area = height * leight;
+                area = height * length;
                 break;
             case ('c'):
-                area = width * Math.sin(corner) * leight;
+                area = width * Math.sin(corner) * length;
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -31,13 +31,13 @@ public class Parallelogram extends Rectangle{
         return -1;
     }
     public double diagonal1(){
-        double temp = 2 * leight * width * round(Math.cos((180 - corner) / 180 * Math.PI), -10);
-        diagonal = Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2) - temp);
+        double temp = 2 * length * width * round(Math.cos((180 - corner) / 180 * Math.PI), -10);
+        diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal;
     }
     public double diagonal2(){
-        double temp = 2 * leight * width * round(Math.cos(corner / 180 * Math.PI), -10);
-        diagonal2 = Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2) - temp);
+        double temp = 2 * length * width * round(Math.cos(corner / 180 * Math.PI), -10);
+        diagonal2 = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal2;
     }
     public double outRadius (){
@@ -52,8 +52,8 @@ public class Parallelogram extends Rectangle{
         }
     }
     public double inputRadius(){
-        if(leight == width){
-            inputRadius = area() / 2*leight;
+        if(length == width){
+            inputRadius = area() / 2 * length;
             return inputRadius;
         }
         else{
@@ -68,7 +68,7 @@ public class Parallelogram extends Rectangle{
                 answer = area / height;
                 break;
             case ('p'):
-                answer = perimeter / 2 - leight;
+                answer = perimeter / 2 - length;
                 break;
             case ('d'):
                 answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(height, 2));
@@ -77,7 +77,7 @@ public class Parallelogram extends Rectangle{
                 answer = area / (2 * inputRadius);
                 break;
             case ('o'):
-                answer = Math.sqrt(Math.pow(outRadius * 2, 2) - Math.pow(leight, 2));
+                answer = Math.sqrt(Math.pow(outRadius * 2, 2) - Math.pow(length, 2));
                 break;
             default:
                 System.out.println("Enter correct parameter.");

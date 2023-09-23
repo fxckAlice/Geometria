@@ -1,7 +1,7 @@
 public class Rectangle {
-    protected double leight, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
+    protected double length, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
     public void setLeight(double leight){
-        this.leight = leight;
+        this.length = leight;
     }
     public void setWidth(double width) {
         this.width = width;
@@ -26,15 +26,15 @@ public class Rectangle {
     }
 
     public double perimeter(){
-        perimeter = 2 * leight + 2 * width;
+        perimeter = 2 * length + 2 * width;
         return perimeter;
     }
     public double area(){
-        area = leight * width;
+        area = length * width;
         return area;
     }
     public double diagonal(){
-        diagonal = Math.sqrt(Math.pow(leight, 2) + Math.pow(width, 2));
+        diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2));
         return diagonal;
     }
     public double round(double x, int dozen){
@@ -53,8 +53,8 @@ public class Rectangle {
         return outRadius;
     }
     public double inputRadius(){
-        if(leight == width){
-            inputRadius = leight / 2;
+        if(length == width){
+            inputRadius = length / 2;
             return inputRadius;
         }
         else{
@@ -66,13 +66,13 @@ public class Rectangle {
         double answer;
         switch (parameter){
             case ('a'):
-                answer = area / leight;
+                answer = area / length;
                 break;
             case ('p'):
-                answer = perimeter / 2 - leight;
+                answer = perimeter / 2 - length;
                 break;
             case ('d'):
-                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(leight, 2));
+                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(length, 2));
                 break;
             case ('i'):
                 answer = 2 * inputRadius;
@@ -95,10 +95,10 @@ public class Rectangle {
         return 360;
     }
     public double cornerDiagonalLeight(){
-        return Math.acos(leight / diagonal());
+        return Math.acos(length / diagonal());
     }
     public double cornerDiagonalWidth(){
-        return Math.asin(leight / diagonal());
+        return Math.asin(length / diagonal());
     }
 
 }
