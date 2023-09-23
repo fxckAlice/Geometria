@@ -1,4 +1,8 @@
-public class Rhombus extends Parallelogram{
+package Rectangle;
+
+import Rectangle.Parallelogram;
+
+public class Rhombus extends Parallelogram {
     @Override
     public void setWidth(double width) {
         System.out.println("Error.");

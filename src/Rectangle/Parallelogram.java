@@ -1,4 +1,8 @@
-public class Parallelogram extends Rectangle{
+package Rectangle;
+
+import Rectangle.Rectangle;
+
+public class Parallelogram extends Rectangle {
     protected double height;
     protected double diagonal2;
 

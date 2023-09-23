@@ -1,4 +1,6 @@
-public class IsoscelesTriangle extends EquilateralTriangle{
+package Triangle;
+
+public class IsoscelesTriangle extends EquilateralTriangle {
     protected double b, medianB, bisectorB, heightB, cornerApex, cornerSide;
     public void setMedianB(double medianB) {
         this.medianB = medianB;

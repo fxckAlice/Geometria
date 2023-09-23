@@ -1,3 +1,5 @@
+package Triangle;
+
 public class EquilateralTriangle {
     protected double a, perimeter, area, median, bisector, height, outRadius, inputRadius, semiPerimeter;
     public double round(double x, int dozen){

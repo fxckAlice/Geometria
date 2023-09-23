@@ -1,7 +1,9 @@
+package Rectangle;
+
 public class Rectangle {
     protected double length, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
-    public void setLeight(double leight){
-        this.length = leight;
+    public void setLength(double length){
+        this.length = length;
     }
     public void setWidth(double width) {
         this.width = width;

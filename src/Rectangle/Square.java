@@ -1,4 +1,6 @@
-public class Square extends Rectangle{
+package Rectangle;
+
+public class Square extends Rectangle {
     @Override
     public void setWidth(double width) {
         System.out.println("Error.");

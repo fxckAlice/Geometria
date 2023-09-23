@@ -8,7 +8,7 @@ ___
 SDK: *corrnetto 11*;
 
 The main figure is **rectangle**;
-### The head class ```Rectangle```:
+### The head class ```Rectangle.Rectangle```:
 - ```double lenght``` - the main values that denotes the value of rectangle`s side;
 - *```set[-Lenght, -Width, -Perimeter, -Area, -Diagonal, -OutRadius, -InputRadius, -Corner](double value)```* - method which you should use to give values to parameters. For example ```setLenght(3);```
 - ```round(double x, int dozen)``` - method which you should use to round the number to the degree you need. For example: ```round(341, 2);``` => *300*, ```round(3.3465, -2);``` => *3.35*;
@@ -30,8 +30,8 @@ ___
 
   
 
-### The class is ```Square```:
-*Square extends Rectangle.*
+### The class is ```Rectangle.Square```:
+*Rectangle.Square extends Rectangle.Rectangle.*
 + ```setWidth(double value)``` - method outputs Error because all sides of a square are equal(`setWidth() == setLength()`), so we use only `setLength()`.
 + ```cornerDiagonalWidth()``` - method outputs Error because 
 ```
@@ -40,8 +40,8 @@ ___
 ---
 
 
-### The class is ```Parallelogram```:
-*Parallelogram extends Rectangle.*
+### The class is ```Rectangle.Parallelogram```:
+*Rectangle.Parallelogram extends Rectangle.Rectangle.*
 + ```corner()``` - corner must be less than 90 degrees, otherwise it will not be a parallelogram.
 + ```diagonal()``` -  since a parallelogram is a derivative of a rectangle and if you enter a diagonal, it doesn't work. It means you need to use `diagonal1()` or `diagonal2()` using ```double leinght```,```double width``` and `double corner`;
 
@@ -59,8 +59,8 @@ ___
 ---
 
 
-### The class is ```Rhombus```:
-*Rhombus extends parallelogram.*
+### The class is ```Rectangle.Rhombus```:
+*Rectangle.Rhombus extends parallelogram.*
 
 
 
