@@ -1,5 +1,20 @@
 public class EquilateralTriangle {
-    protected double a, perimeter, area, median, bisector, height, outRadius, inputRadius;
+    protected double a, perimeter, area, median, bisector, height, outRadius, inputRadius, semiPerimeter;
+    public double round(double x, int dozen){
+        double rounding = Math.pow(10, dozen);
+        int temp;
+        if(x % rounding >= 5 * Math.pow(10, dozen - 1)){
+            temp = (int)(x / rounding) + 1;
+        }
+        else {
+            temp = (int)(x / rounding);
+        }
+        return temp * rounding;
+    }
+    public double semiPerimeter(){
+        semiPerimeter = perimeter / 2;
+        return semiPerimeter;
+    }
     public void setA(double a) {
         this.a = a;
     }

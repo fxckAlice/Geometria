@@ -1,15 +1,15 @@
 public class IsoscelesTriangle extends EquilateralTriangle{
-    protected double b, medianS, bisectorS, heightS, cornerApex, cornerSide;
-    public void setMedianS(double medianS) {
-        this.medianS = medianS;
+    protected double b, medianB, bisectorB, heightB, cornerApex, cornerSide;
+    public void setMedianB(double medianB) {
+        this.medianB = medianB;
     }
 
-    public void setBisectorS(double bisectorS) {
-        this.bisectorS = bisectorS;
+    public void setBisectorB(double bisectorB) {
+        this.bisectorB = bisectorB;
     }
 
-    public void setHeightS(double heightS) {
-        this.heightS = heightS;
+    public void setHeightB(double heightB) {
+        this.heightB = heightB;
     }
 
     public void setCornerApex(double cornerApex) {
@@ -27,8 +27,15 @@ public class IsoscelesTriangle extends EquilateralTriangle{
         perimeter = a * 2 + b;
         return perimeter;
     }
-    public double area(){
-        area = height() * b / 2;
+    public double area(char parameter){
+        switch (parameter){
+            case ('a'):
+                area = height * b / 2;
+                break;
+            case ('b'):
+                area = heightB * a / 2;
+                break;
+        }
         return area;
     }
     public double outRadius(){
@@ -36,7 +43,7 @@ public class IsoscelesTriangle extends EquilateralTriangle{
         return outRadius;
     }
     public double inputRadius(){
-        inputRadius = Math.sqrt(Math.pow(perimeter / 2 - a, 2) * (perimeter / 2 - b) / (perimeter / 2));
+        inputRadius = Math.sqrt(Math.pow(semiPerimeter() - a, 2) * (semiPerimeter() - b) / semiPerimeter());
         return inputRadius;
     }
     public double side(char parameter){
@@ -46,14 +53,13 @@ public class IsoscelesTriangle extends EquilateralTriangle{
                 answer = Math.sqrt(outRadius * 4 * area / (b));
                 break;
             case 'i':
-                double semiPerimeter = perimeter / 2;
-                answer = semiPerimeter - Math.sqrt(Math.pow(inputRadius, 2) * semiPerimeter / (semiPerimeter - b));
+                answer = semiPerimeter() - Math.sqrt(Math.pow(inputRadius, 2) * semiPerimeter() / (semiPerimeter() - b));
                 break;
             case 'p':
                 answer = (perimeter - b) / 2;
                 break;
             case 'a':
-                answer = Math.sqrt(Math.pow(area / b, 2) + Math.pow(b / 2, 2));
+                answer = area / heightB * 2;
                 break;
             case 'h':
                 answer = Math.sqrt(Math.pow(height, 2) + Math.pow(b / 2, 2));
@@ -71,14 +77,13 @@ public class IsoscelesTriangle extends EquilateralTriangle{
                 answer = outRadius * 4 * area / (Math.pow(a, 2));
                 break;
             case 'i':
-                double semiPerimeter = perimeter / 2;
-                answer = Math.pow(inputRadius, 2) * semiPerimeter / (semiPerimeter - b);
+                answer = Math.pow(inputRadius, 2) * semiPerimeter() / (semiPerimeter() - b);
                 break;
             case 'p':
                 answer = perimeter - 2 * a;
                 break;
             case 'a':
-                answer = area / height;
+                answer = area / height * 2;
                 break;
             case 'h':
                 answer = Math.sqrt(Math.pow(a, 2) + Math.pow(height, 2));
