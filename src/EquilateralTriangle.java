@@ -1,6 +1,5 @@
 public class EquilateralTriangle {
     protected double a, perimeter, area, median, bisector, height, outRadius, inputRadius;
-
     public void setA(double a) {
         this.a = a;
     }
