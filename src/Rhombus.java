@@ -4,16 +4,16 @@ public class Rhombus extends Parallelogram{
         System.out.println("Error.");
     }
     public double perimeter() {
-        perimeter = 4 * leight;
+        perimeter = 4 * length;
         return perimeter;
     }
     public double area(char parameter){
         switch (parameter) {
             case ('h'):
-                area = height * leight;
+                area = height * length;
                 break;
             case ('c'):
-                area = Math.sin(corner) * Math.pow(leight, 2);
+                area = Math.sin(corner) * Math.pow(length, 2);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -22,17 +22,17 @@ public class Rhombus extends Parallelogram{
         return area;
     }
     public double diagonal1(){
-        double temp = 2 * Math.pow(leight, 2) * Math.cos(180 - corner);
-        diagonal = Math.sqrt(2 * Math.pow(leight, 2) - temp);
+        double temp = 2 * Math.pow(length, 2) * Math.cos(180 - corner);
+        diagonal = Math.sqrt(2 * Math.pow(length, 2) - temp);
         return diagonal;
     }
     public double diagonal2(){
-        double temp = 2 * Math.pow(leight, 2) * Math.cos(corner);
-        diagonal2 = Math.sqrt(2 * Math.pow(leight, 2) - temp);
+        double temp = 2 * Math.pow(length, 2) * Math.cos(corner);
+        diagonal2 = Math.sqrt(2 * Math.pow(length, 2) - temp);
         return diagonal2;
     }
     public double inputRadius() {
-        inputRadius = area() / 2 * leight;
+        inputRadius = area() / 2 * length;
         return inputRadius;
     }
     public double side(char parameter) {
@@ -42,7 +42,7 @@ public class Rhombus extends Parallelogram{
                 answer = area / height;
                 break;
             case ('p'):
-                answer = perimeter / 2 - leight;
+                answer = perimeter / 2 - length;
                 break;
             case ('d'):
                 answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(height, 2));
@@ -60,7 +60,7 @@ public class Rhombus extends Parallelogram{
         }
         return answer;
     }
-    public double cornerDiagonalLeight(){
+    public double cornerDiagonalLength(){
         return corner / 2;
     }
     public double cornerDiagonalWidth(){

@@ -19,7 +19,7 @@ public class Square extends Rectangle{
         inputRadius = length / 2;
         return inputRadius;
     }
-    public double cornerDiagonalLeight(){
+    public double cornerDiagonalLength(){
         return 45;
     }
     public double cornerDiagonalWidth(){

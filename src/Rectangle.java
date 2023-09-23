@@ -94,7 +94,7 @@ public class Rectangle {
     public double sumOfCorners(){
         return 360;
     }
-    public double cornerDiagonalLeight(){
+    public double cornerDiagonalLength(){
         return Math.acos(length / diagonal());
     }
     public double cornerDiagonalWidth(){

@@ -86,7 +86,7 @@ public class Parallelogram extends Rectangle{
         }
         return answer;
     }
-    public double cornerDiagonalLeight(){
+    public double cornerDiagonalLength(){
         return (Math.asin(height / diagonal) / Math.PI * 180);
     }
     public double cornerDiagonalWidth(){
