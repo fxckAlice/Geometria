@@ -71,7 +71,7 @@ ___
   + ```'c'``` - `double value` - calculation or the area using `double length` and `double corner`;
   
   If you enter another parameter, an error will occur.-->
-  + ```cornerDiagonalWidth()``` - the method produces an Error, because all sides of a rhombus are equal and we use the `double length`, and therefore the `cornerDiagonalLength()` method;
+  + ```cornerDiagonalWidth()``` - the method produces an Error, because all sides of a rhombus are equal and we use the `double length`, and therefore the `cornerDiagonalLength()` method.
 ---
 
 
