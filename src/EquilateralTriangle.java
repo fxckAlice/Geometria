@@ -52,4 +52,29 @@ public class EquilateralTriangle {
         inputRadius = a * Math.sqrt(3) / 6;
         return inputRadius;
     }
+    public double side(char parameter){
+        double answer;
+        switch (parameter){
+            case 'o':
+                answer = outRadius * Math.sqrt(3);
+                break;
+            case 'i':
+                answer = inputRadius * Math.sqrt(3) * 2;
+                break;
+            case 'p':
+                answer = perimeter / 3;
+                break;
+            case 'a':
+                answer = Math.sqrt(area * 4 / Math.sqrt(3));
+                break;
+            case 'h':
+                answer = height * 2 / Math.sqrt(3);
+                break;
+            default:
+                System.out.println("Enter correct parameter.");
+                answer = -1;
+        }
+        return answer;
+    }
+
 }
