@@ -2,7 +2,11 @@
 
 "Geometria" is a program to help to calculate basic parameters in simple figures :ballot_box_with_check:
 
-![img_2.png](img_2.png)
+<div style="text-align:center">
+  <img src="img_2.png" alt="img_2.png">
+</div>
+<!--![img_2.png](img_2.png)-->
+
 ___
 ## Short describtion and methods:
 SDK: *corrnetto 11*;
