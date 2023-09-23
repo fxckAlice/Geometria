@@ -47,7 +47,7 @@ public class Parallelogram extends Figure{
             return outRadius;
         }
         else{
-            System.out.println("This parallelepiped doesn't have out circle");
+            System.out.println("This parallelogram doesn't have out circle");
             return  -1;
         }
     }
