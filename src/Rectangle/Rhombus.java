@@ -76,7 +76,7 @@ public class Rhombus extends Parallelogram {
     }
     @Override
     public double cornerDiagonalWidth(){
-        System.out.println("Please use cornerDiagonalLeight()");
+        System.out.println("Please use cornerDiagonalLenght()");
         return -1;
     }
 }
