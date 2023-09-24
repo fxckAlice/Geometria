@@ -13,5 +13,14 @@ public class RightTriangle extends Triangle{
     public void setCornerC(double cornerC) {
         System.out.println("90 degrees is constant.");
     }
-
+    public double area(char parameter){
+        switch (parameter){
+            case ('s'):
+                area = a * b / 2;
+                break;
+            case ('c'):
+                area = heightC * c / 2;
+        }
+        return area;
+    }
 }
