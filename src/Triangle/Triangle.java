@@ -43,6 +43,30 @@ public class Triangle extends IsoscelesTriangle {
     public void setCornerSide(double cornerSide) {
         System.out.println("Doesn't exist");
     }
+    public double medianA(){
+        medianB = 0.5 * Math.sqrt(2 * Math.pow(b, 2) + 2 * Math.pow(c, 2) - Math.pow(a, 2));
+        return medianB;
+    }
+    public double medianB(){
+        medianB = 0.5 * Math.sqrt(2 * Math.pow(a, 2) + 2 * Math.pow(c, 2) - Math.pow(b, 2));
+        return medianB;
+    }
+    public double medianC(){
+        medianB = 0.5 * Math.sqrt(2 * Math.pow(a, 2) + 2 * Math.pow(b, 2) - Math.pow(c, 2));
+        return medianB;
+    }
+    public double heightA(){
+        heightB = Math.cos(cornerB / 180 * Math.PI) * c;
+        return  heightB;
+    }
+    public double heightB(){
+        heightB = Math.cos(cornerC / 180 * Math.PI) * a;
+        return  heightB;
+    }
+    public double heightC(){
+        heightB = Math.cos(cornerA / 180 * Math.PI) * b;
+        return  heightB;
+    }
     public  double perimeter(){
         perimeter = a + b + c;
         return perimeter;
