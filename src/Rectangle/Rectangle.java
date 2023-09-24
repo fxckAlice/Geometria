@@ -42,13 +42,19 @@ public class Rectangle {
     public double round(double x, int dozen){
         double rounding = Math.pow(10, dozen);
         int temp;
-        if(x % rounding >= 5 * Math.pow(10, dozen - 1)){
-             temp = (int)(x / rounding) + 1;
+        if(dozen < -9 | dozen > 9){
+            System.out.println("Out of range");
+            return  -1;
         }
-        else {
-            temp = (int)(x / rounding);
+        else{
+            if(x % rounding >= 5 * Math.pow(10, dozen - 1)){
+                temp = (int)(x / rounding) + 1;
+            }
+            else {
+                temp = (int)(x / rounding);
+            }
+            return temp * rounding;
         }
-        return temp * rounding;
     }
     public double outRadius (){
         outRadius = diagonal() / 2;
