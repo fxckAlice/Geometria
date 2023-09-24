@@ -1,14 +1,16 @@
-import Rectangle.Parallelogram;
-import Rectangle.Rhombus;
+import Triangle.EquilateralTriangle;
+import Triangle.EquilateralTriangle;
 
 public class Main {
     public static void main(String[] args) {
-        Parallelogram ABCD = new Rhombus();
+        EquilateralTriangle ABCD = new EquilateralTriangle();
         //ABCD.setWidth(30);
-        ABCD.setLength(36);
-        ABCD.setCorner(60);
-        ABCD.setHeight(6);
-        System.out.println(ABCD.round(ABCD.inputRadius(), -2));
+        //ABCD.setLength(36);
+        //ABCD.setCorner(60);
+        ABCD.setA(20);
+        ABCD.setMedian(6);
+       // System.out.println(ABCD.round(ABCD.area(), -2));
+        System.out.println(ABCD.round(ABCD.side('h'), -2));
 
 
     }

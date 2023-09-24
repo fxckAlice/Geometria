@@ -15,7 +15,7 @@ The main figure is **rectangle**;
 ### The head class ```Rectangle```:
 - ```double lenght``` - the main values that denotes the value of rectangle`s side;
 - *```set[-Lenght, -Width, -Perimeter, -Area, -Diagonal, -OutRadius, -InputRadius, -Corner](double value)```* - method which you should use to give values to parameters. For example ```setLenght(3);```
-- ```round(double x, int dozen)``` - method which you should use to round the number to the degree you need. For example: ```round(341, 2);``` => *300*, ```round(3.3465, -2);``` => *3.35*;
+- ```round(double x, int dozen)``` - method which you should use to round the number to the degree you need. For example: ```round(341, 2);``` => *300*, ```round(3.3465, -2);``` => *3.35*. The method only works when the `int dozen` is less than -9 or greater than 9;
 - ```area()``` - calculate the area of rectangle using ```double lenght``` and ```double width```;
 - ```perimeter()``` - calculate the perimeter of rectangle using ```double lenght``` and ```double width```;
 - ```diagonal()``` - calculate the diagonal of rectangle using ```double lenght``` and ```double width```;
@@ -30,6 +30,8 @@ The main figure is **rectangle**;
   - ```'d'``` - ```double value``` is the diagonal of rectangle;
   - ```'i'``` - ```double value``` is the radius of input circle of rectangle;
   - ```'o'``` - ```double value``` is the radius of out circle of rectangle;
+
+  If you enter another parameter, an error will occur.
 ___
 
   
@@ -76,9 +78,25 @@ ___
 
 
 ### The head class is ```EquilateralTriangle```:
-+ ```round(double x, int dozen)``` - method which you should use to round the number to the degree you need. For example: ```round(341, 2);``` => *300*, ```round(3.3465, -2);``` => *3.35*;
-+ ```semiPerimeter``` - calculation of the semi-perimeter using `perimeter`;
-+ 
++ ```double a, perimeter, area, median, bisector, height, outRadius, inputRadius, semiPerimeter``` - variables that will be used in methods;
++ *```set[-A, -Perimeter, -Area, -Median, -Bisector, -Height -OutRadius, -InputRadius, -Corner](double value)```* - method which you should use to give values to parameters. For example `setA(6)`;
++ ```round(double x, int dozen)``` - method which you should use to round the number to the degree you need. For example: ```round(341, 2);``` => *300*, ```round(3.3465, -2);``` => *3.35* .The method only works when the `int dozen` is less than -9 or greater than 9;
++ ```semiPerimeter()``` - calculation of the semi-perimeter using `double perimeter`;
++ ```setMedian(), setBisector()``` - these methods are designed to derive from this class, and it can't be used in this class. you should use `setHeight()`.
++ ```perimeter()``` -  calculate the perimeter of equilateral triangle using `double a`;
++ ```area()``` -  calculate the area of equilateral triangle using ```double a```;
++ ```height()``` - calculate the height of equilateral triangle using ```double a```;
++ ```outRadius``` - calculate the radius of the circle of equilateral triangle using ```double a```;
++ ```inputRadius``` - calculate the radius of the inscribed circle of equilateral triangle using ```double a```;
++ ```side(double value, char parameter)``` - calculate the ```double a``` using characteristic in dependence of parameter:
+  + `````'a'````` - ```double value``` - using the outRadius();
+  + ```'p'``` - ```double value``` - using the inputRadius();
+  + ```'i'``` - ```double value``` - using the perimeter();
+  + ```'o'``` - ```double value``` - using the area();
+  + ```'h'``` - ```double value``` - using the height();
+
+  If you enter another parameter, an error will occur.
+
 
 
 
