@@ -2,12 +2,10 @@ package Triangle;
 
 public class Triangle extends IsoscelesTriangle {
     protected double c, medianC,heightC, bisectorC, cornerA, cornerB, cornerC;
-    @Override
     public void setMedian(double median) {
         this.median = median;
     }
 
-    @Override
     public void setBisector(double bisector) {
         this.bisector = bisector;
     }
@@ -39,46 +37,40 @@ public class Triangle extends IsoscelesTriangle {
     public void setCornerA(double cornerA) {
         this.cornerA = cornerA;
     }
-    @Override
     public void setCornerApex(double cornerApex) {
         System.out.println("Doesn't exist");
     }
-    @Override
     public void setCornerSide(double cornerSide) {
         System.out.println("Doesn't exist");
     }
     public double medianA(){
-        median = 0.5 * Math.sqrt(2 * Math.pow(b, 2) + 2 * Math.pow(c, 2) - Math.pow(a, 2));
-        return median;
+        medianB = 0.5 * Math.sqrt(2 * Math.pow(b, 2) + 2 * Math.pow(c, 2) - Math.pow(a, 2));
+        return medianB;
     }
-    @Override
     public double medianB(){
         medianB = 0.5 * Math.sqrt(2 * Math.pow(a, 2) + 2 * Math.pow(c, 2) - Math.pow(b, 2));
         return medianB;
     }
     public double medianC(){
-        medianC = 0.5 * Math.sqrt(2 * Math.pow(a, 2) + 2 * Math.pow(b, 2) - Math.pow(c, 2));
-        return medianC;
+        medianB = 0.5 * Math.sqrt(2 * Math.pow(a, 2) + 2 * Math.pow(b, 2) - Math.pow(c, 2));
+        return medianB;
     }
     public double heightA(){
-        height = Math.cos(cornerB / 180 * Math.PI) * c;
-        return  height;
+        heightB = Math.cos(cornerB / 180 * Math.PI) * c;
+        return  heightB;
     }
-    @Override
     public double heightB(){
         heightB = Math.cos(cornerC / 180 * Math.PI) * a;
         return  heightB;
     }
     public double heightC(){
-        heightC = Math.cos(cornerA / 180 * Math.PI) * b;
-        return  heightC;
+        heightB = Math.cos(cornerA / 180 * Math.PI) * b;
+        return  heightB;
     }
-    @Override
     public  double perimeter(){
         perimeter = a + b + c;
         return perimeter;
     }
-    @Override
     public double area(char parameter){
         switch (parameter){
             case ('b'):
@@ -92,17 +84,14 @@ public class Triangle extends IsoscelesTriangle {
         }
         return area;
     }
-    @Override
     public double outRadius(){
         outRadius = a * c * b / (4 * area);
         return outRadius;
     }
-    @Override
     public double inputRadius() {
         inputRadius = Math.sqrt((semiPerimeter() - a) * (semiPerimeter() - b) * (semiPerimeter() - c) / semiPerimeter());
         return inputRadius;
     }
-    @Override
     public double side(char parameter) {
         double answer;
         switch (parameter) {
@@ -130,7 +119,6 @@ public class Triangle extends IsoscelesTriangle {
         }
         return answer;
     }
-    @Override
     public double sideB(char parameter) {
         double answer;
         switch (parameter) {
