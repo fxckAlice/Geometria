@@ -25,6 +25,14 @@ public class IsoscelesTriangle extends EquilateralTriangle {
         height = Math.sqrt(Math.pow(a, 2) - Math.pow(b / 2, 2));
         return  height;
     }
+    public double medianB(){
+        medianB = 0.5 * Math.sqrt(Math.pow(a, 2) + 2 * Math.pow(b, 2));
+        return medianB;
+    }
+    public double heightB(){
+        heightB = Math.cos(cornerSide / 180 * Math.PI) * b;
+        return  heightB;
+    }
     public  double perimeter(){
         perimeter = a * 2 + b;
         return perimeter;
