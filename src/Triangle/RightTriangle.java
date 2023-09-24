@@ -23,4 +23,89 @@ public class RightTriangle extends Triangle{
         }
         return area;
     }
+    public double medianC(){
+        medianC = c / 2;
+        return medianC;
+    }
+    public double heightC(){
+        heightC = a * b / c;
+        return  heightC;
+    }
+    public double outRadius(){
+        outRadius = c / 2;
+        return outRadius;
+    }
+    public double inputRadius() {
+        inputRadius = (a + b - c) / 2;
+        return inputRadius;
+    }
+    public double side(char parameter) {
+        double answer;
+        switch (parameter) {
+            case 'o':
+                answer = Math.sqrt(Math.pow(outRadius * 2, 2) - Math.pow(b, 2));
+                break;
+            case 'i':
+                answer = inputRadius * 2 + c - b;
+                break;
+            case 'p':
+                answer = perimeter - b - c;
+                break;
+            case 'a':
+                answer = area / b * 2;
+                break;
+            case 't':
+                answer = Math.sqrt(Math.pow(c, 2) - Math.pow(b, 2));
+            default:
+                System.out.println("Enter correct parameter.");
+                answer = -1;
+        }
+        return answer;
+    }
+    public double sideB(char parameter) {
+        double answer;
+        switch (parameter) {
+            case 'o':
+                answer = Math.sqrt(Math.pow(outRadius * 2, 2) - Math.pow(a, 2));
+                break;
+            case 'i':
+                answer = inputRadius * 2 + c - a;
+                break;
+            case 'p':
+                answer = perimeter - a - c;
+                break;
+            case 'a':
+                answer = area / a * 2;
+                break;
+            case 't':
+                answer = Math.sqrt(Math.pow(c, 2) - Math.pow(a, 2));
+            default:
+                System.out.println("Enter correct parameter.");
+                answer = -1;
+        }
+        return answer;
+    }
+    public double sideC(char parameter) {
+        double answer;
+        switch (parameter) {
+            case 'o':
+                answer = outRadius * 2;
+                break;
+            case 'i':
+                answer = inputRadius * 2 - b - a;
+                break;
+            case 'p':
+                answer = perimeter - a - b;
+                break;
+            case 'm':
+                answer = medianC * 2;
+                break;
+            case 't':
+                answer = Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2));
+            default:
+                System.out.println("Enter correct parameter.");
+                answer = -1;
+        }
+        return answer;
+    }
 }
