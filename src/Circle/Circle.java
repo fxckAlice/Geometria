@@ -1,5 +1,7 @@
 package Circle;
 
+import java.util.PrimitiveIterator;
+
 public class Circle {
     protected double radius, diameter, length, area;
 
@@ -35,6 +37,16 @@ public class Circle {
         switch (parameter){
             case('d'):
                 answer = diameter / 2;
+                break;
+            case('l'):
+                answer = length / (2 * Math.PI);
+                break;
+            case('a'):
+                answer = Math.sqrt(area / Math.PI);
+                break;
+            default:
+                System.out.println("Enter correct parameter.");
+                answer = -1;
         }
         return answer;
     }
