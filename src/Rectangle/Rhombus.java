@@ -7,10 +7,12 @@ public class Rhombus extends Parallelogram {
     public void setWidth(double width) {
         System.out.println("Error.");
     }
+    @Override
     public double perimeter() {
         perimeter = 4 * length;
         return perimeter;
     }
+    @Override
     public double area(char parameter){
         switch (parameter) {
             case ('h'):
@@ -25,20 +27,24 @@ public class Rhombus extends Parallelogram {
         }
         return area;
     }
+    @Override
     public double diagonal1(){
         double temp = 2 * Math.pow(length, 2) * Math.cos(180 - corner);
         diagonal = Math.sqrt(2 * Math.pow(length, 2) - temp);
         return diagonal;
     }
+    @Override
     public double diagonal2(){
         double temp = 2 * Math.pow(length, 2) * Math.cos(corner);
         diagonal2 = Math.sqrt(2 * Math.pow(length, 2) - temp);
         return diagonal2;
     }
+    @Override
     public double inputRadius() {
         inputRadius = area() / 2 * length;
         return inputRadius;
     }
+    @Override
     public double side(char parameter) {
         double answer;
         switch (parameter) {
@@ -64,9 +70,11 @@ public class Rhombus extends Parallelogram {
         }
         return answer;
     }
+    @Override
     public double cornerDiagonalLength(){
         return corner / 2;
     }
+    @Override
     public double cornerDiagonalWidth(){
         System.out.println("Please use cornerDiagonalLeight()");
         return -1;

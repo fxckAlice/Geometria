@@ -10,9 +10,11 @@ public class RightTriangle extends Triangle{
     public void setHeightB(double heightB) {
         System.out.println("Doesn't exist.");
     }
+    @Override
     public void setCornerC(double cornerC) {
         System.out.println("90 degrees is constant.");
     }
+    @Override
     public double area(char parameter){
         switch (parameter){
             case ('s'):
@@ -23,22 +25,27 @@ public class RightTriangle extends Triangle{
         }
         return area;
     }
+    @Override
     public double medianC(){
         medianC = c / 2;
         return medianC;
     }
+    @Override
     public double heightC(){
         heightC = a * b / c;
         return  heightC;
     }
+    @Override
     public double outRadius(){
         outRadius = c / 2;
         return outRadius;
     }
+    @Override
     public double inputRadius() {
         inputRadius = (a + b - c) / 2;
         return inputRadius;
     }
+    @Override
     public double side(char parameter) {
         double answer;
         switch (parameter) {
@@ -62,6 +69,7 @@ public class RightTriangle extends Triangle{
         }
         return answer;
     }
+    @Override
     public double sideB(char parameter) {
         double answer;
         switch (parameter) {
@@ -85,6 +93,7 @@ public class RightTriangle extends Triangle{
         }
         return answer;
     }
+    @Override
     public double sideC(char parameter) {
         double answer;
         switch (parameter) {

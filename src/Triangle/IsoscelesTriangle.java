@@ -26,6 +26,7 @@ public class IsoscelesTriangle extends EquilateralTriangle {
     public void setCornerSide(double cornerSide) {
         this.cornerSide = cornerSide;
     }
+    @Override
     public double height(){
         height = Math.sqrt(Math.pow(a, 2) - Math.pow(b / 2, 2));
         return  height;
@@ -38,6 +39,7 @@ public class IsoscelesTriangle extends EquilateralTriangle {
         heightB = Math.cos(cornerSide / 180 * Math.PI) * b;
         return  heightB;
     }
+    @Override
     public  double perimeter(){
         perimeter = a * 2 + b;
         return perimeter;
@@ -53,14 +55,17 @@ public class IsoscelesTriangle extends EquilateralTriangle {
         }
         return area;
     }
+    @Override
     public double outRadius(){
         outRadius = a * a * b / (4 * area);
         return outRadius;
     }
+    @Override
     public double inputRadius(){
         inputRadius = Math.sqrt(Math.pow(semiPerimeter() - a, 2) * (semiPerimeter() - b) / semiPerimeter());
         return inputRadius;
     }
+    @Override
     public double side(char parameter){
         double answer;
         switch (parameter){
