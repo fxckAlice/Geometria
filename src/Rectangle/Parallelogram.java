@@ -30,6 +30,7 @@ public class Parallelogram extends Rectangle {
         }
         return area;
     }
+    @Override
     public double diagonal(){
         System.out.println("You can use diagonal1() or diagonal2");
         return -1;
@@ -44,6 +45,7 @@ public class Parallelogram extends Rectangle {
         diagonal2 = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal2;
     }
+    @Override
     public double outRadius (){
         if(diagonal1() == diagonal2()){
             double temp = diagonal1();
@@ -55,6 +57,7 @@ public class Parallelogram extends Rectangle {
             return  -1;
         }
     }
+    @Override
     public double inputRadius(){
         if(length == width){
             inputRadius = area() / 2 * length;
@@ -65,6 +68,7 @@ public class Parallelogram extends Rectangle {
             return -1;
         }
     }
+    @Override
     public double side( char parameter) {
         double answer;
         switch (parameter) {
@@ -90,9 +94,11 @@ public class Parallelogram extends Rectangle {
         }
         return answer;
     }
+    @Override
     public double cornerDiagonalLength(){
         return (Math.asin(height / diagonal) / Math.PI * 180);
     }
+    @Override
     public double cornerDiagonalWidth(){
         return Math.asin((area / width) / Math.PI * 180);
     }
