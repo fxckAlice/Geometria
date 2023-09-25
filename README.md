@@ -105,7 +105,7 @@ ___
 + ```heightB()``` - calculate the height of isosceles triangle using `double b`;
 + ```area(double value, char parameter)``` - calculate the area of isosceles triangle using characteristic in dependence of parameter:
   + ```'a'``` - ```double value``` - using the `height()` and `double b`;
-  + ```'b'``` - ```double value``` - using the `heightB()` and `double a`;
+  + ```'b'``` - ```double value``` - using the `heightB()` and `double a`.
 + ```sideB(double value, char parameter)``` - calculate the ```double b``` using characteristic in dependence of parameter:
   + ```'o'``` - ```double value``` - using the `outRadius()`, `area()` and `double a`;
   + ```'i'``` - ```double value``` - using the `inputRadius()`, `semiPerimeter()` and `double a`;
