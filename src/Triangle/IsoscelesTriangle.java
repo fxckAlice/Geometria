@@ -97,7 +97,7 @@ public class IsoscelesTriangle extends EquilateralTriangle {
                 answer = outRadius * 4 * area / (Math.pow(a, 2));
                 break;
             case 'i':
-                answer = Math.pow(inputRadius, 2) * semiPerimeter() / (semiPerimeter() - b);
+                answer = Math.pow(inputRadius, 2) * semiPerimeter() / Math.pow(semiPerimeter() - a, 2);
                 break;
             case 'p':
                 answer = perimeter - 2 * a;
