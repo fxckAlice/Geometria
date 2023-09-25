@@ -29,7 +29,7 @@ The main figure is **rectangle**;
   - ```'p'``` - ```double value``` is the perimeter of rectangle;
   - ```'d'``` - ```double value``` is the diagonal of rectangle;
   - ```'i'``` - ```double value``` is the radius of input circle of rectangle;
-  - ```'o'``` - ```double value``` is the radius of out circle of rectangle;
+  - ```'o'``` - ```double value``` is the radius of out circle of rectangle.
 
   If you enter another parameter, an error will occur.
 ___
@@ -93,7 +93,7 @@ ___
   + ```'p'``` - ```double value``` - using the `inputRadius()`;
   + ```'i'``` - ```double value``` - using the `perimeter()`;
   + ```'o'``` - ```double value``` - using the `area()`;
-  + ```'h'``` - ```double value``` - using the `height()`;
+  + ```'h'``` - ```double value``` - using the `height()`.
 
   If you enter another parameter, an error will occur.
 ---
