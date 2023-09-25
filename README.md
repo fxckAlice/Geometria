@@ -14,7 +14,7 @@ SDK: *corrnetto 11*;
 The main figure is **rectangle**;
 ### The head class ```Rectangle```:
 - ```double lenght``` - the main values that denotes the value of rectangle`s side;
-- *```set[-Lenght, -Width, -Perimeter, -Area, -Diagonal, -OutRadius, -InputRadius, -Corner](double value)```* - method which you should use to give values to parameters. For example ```setLenght(3);```
+- ```set[-Lenght, -Width, -Perimeter, -Area, -Diagonal, -OutRadius, -InputRadius, -Corner](double value)``` - method which you should use to give values to parameters. For example ```setLenght(3);```
 - ```round(double x, int dozen)``` - method which you should use to round the number to the degree you need. For example: ```round(341, 2);``` => *300*, ```round(3.3465, -2);``` => *3.35*. The method only works when the `int dozen` is less than -9 or greater than 9;
 - ```area()``` - calculate the area of rectangle using ```double lenght``` and ```double width```;
 - ```perimeter()``` - calculate the perimeter of rectangle using ```double lenght``` and ```double width```;
