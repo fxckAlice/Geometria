@@ -34,4 +34,30 @@ public class Square extends Rectangle {
         System.out.println("Error");
         return -1;
     }
+    @Override
+    public double side(char parameter){
+        double answer;
+        switch (parameter){
+            case ('a'):
+                answer = Math.sqrt(area);
+                break;
+            case ('p'):
+                answer = perimeter / 4;
+                break;
+            case ('d'):
+                answer = Math.sqrt(Math.pow(diagonal, 2) / 2);
+                break;
+            case ('i'):
+                answer = 2 * inputRadius;
+                break;
+            case ('o'):
+                answer = Math.sqrt(Math.pow(outRadius * 2, 2) / 2);
+                break;
+            default:
+                System.out.println("Enter correct parameter.");
+                answer = -1;
+                break;
+        }
+        return answer;
+    }
 }
