@@ -1,9 +1,20 @@
-import Rectangle.Parallelogram;
-import Rectangle.Rectangle;
-import Rectangle.Rhombus;
+import Triangle.EquilateralTriangle;
+import Triangle.EquilateralTriangle;
+import Triangle.IsoscelesTriangle;
+//import Rectangle.Rhombus;
 
 public class Main {
     public static void main(String[] args) {
-        Rectangle A = new Rectangle();
+        IsoscelesTriangle ABCD = new IsoscelesTriangle();
+        ABCD.setA(4);
+        ABCD.setB(4);
+        //ABCD.perimeter();
+        //System.out.println(ABCD.round(ABCD.height(), -2));
+        //System.out.println(ABCD.round(ABCD.heightB(), -2));
+        System.out.println(ABCD.round(ABCD.side('o'), -2));
+        System.out.println(ABCD.round(ABCD.perimeter(), -2));
+        System.out.println(ABCD.round(ABCD.semiPerimeter(), -2));
+        System.out.println(ABCD.round(ABCD.inputRadius(), -2));
+        //Rectangle A = new Rectangle();
     }
 }
