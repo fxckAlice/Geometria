@@ -114,10 +114,57 @@ ___
   + ```'h'``` - ```double value``` - using the `double a` and `height()`.
 
   If you enter another parameter, an error will occur.
+---
+### The class is `Triangle`:
+*Triangle extends IsoscelesTriangle.*
++ ```double c, double medianC, double heightC, double bisectorC, double cornerA, double cornerB, double cornerC``` - variables that will be used in methods;
++ ```setCornerSide(), setCornerApex()``` - method which doesn't exist in this class;
++ ```medianA(), medianC()``` - calculate the median of triangle using `double b`, `double c` and `double a`;
++ ```heightA()``` - calculate the height of triangle using `double c` and `double cornerB`;
++ ```heightB()``` - calculate the height of triangle using `double a` and `double cornerC`; 
++ ```heightC()``` - calculate the height of triangle using `double b` and `double cornerA`;
++ ```side(double value, char parameter)``` - calculate the ```double a``` using characteristic in dependence of parameter:
+  + ```'o'``` - ```double value``` - using the `outRadius()`, `area()`, `double b` and `double c`; 
+  + ```'i'``` - ```double value``` - using the `semiPerimeter()`, `inputRadius()`,`double b` and `double c`;
+  + ```'p'``` - ```double value``` - using the `perimeter()`, `double b` and `double c`;
+  + ```'a'``` - ```double value``` - using the `area()`, `height()`;
+  + ```'h'``` - ```double value``` - using the `height()`, `double b` and `double c`;
+  + ```'t'``` - ```double value``` - using the `cornerA()`, `double b` and `double c`.
 
+  If you enter another parameter, an error will occur.
++ ```sideC(double value, char parameter)``` - calculate the ```double c``` using characteristic in dependence of parameter:
+  + ```'o'``` - ```double value``` - using the `outRadius()`, `area()`, `double b` and `double a`;
+  + ```'i'``` - ```double value``` - using the `semiPerimeter()`, `inputRadius()`,`double b` and `double a`;
+  + ```'p'``` - ```double value``` - using the `perimeter()`, `double b` and `double a`;
+  + ```'a'``` - ```double value``` - using the `area()`, `heightC()`;
+  + ```'h'``` - ```double value``` - using the `heightC()`, `double b` and `double a`;
+  + ```'t'``` - ```double value``` - using the `cornerC()`, `double b` and `double a`.
 
+  If you enter another parameter, an error will occur.
+---
+### The class is `RightTriangle`:
+*RightTriangle extends Triangle.*
++ ```setHeight(), setHeightB()``` -  method which doesn't exist in this class;
++ ```setCornerC()``` - You should to input only 90 degrees, because it is a constant in right triangle;
++ ```area(double value, char parameter)``` - calculate the area of right triangle using characteristic in dependence of parameter:
+  + ```'s'``` - ```double value``` - using the `double a`, `double b`;
+  + ```'c'``` - ```double value``` - using the `heightC()`, `double c`.
 
+  If you enter another parameter, an error will occur.
 
+---
+### The head class is `Circle`:
++ ```double radius, double diameter, double length, double area``` - variables that will be used in methods;
++ ```set[-Radius, -Diameter, -Length, -Area](double value)``` - method which you should use to give values to parameters. For example `setDiameter(12)`;
++ ```diameter()``` - calculate the diameter of circle using `double radius`;
++ ```length()``` - calculate the length of circle using `double radius`;
++ ```area()``` - calculate the area of circle using `double radius`;
++ ```radius(double value, char parameter)``` - calculate the radius of circle using characteristic in dependence of parameter:
+  + ```'d'``` - ```double value``` - using the `double diameter`;
+  + ```'l'``` - ```double value``` - using the `double length`;
+  + ```'a'``` - ```double value``` - using the `area()`.
+
+  If you enter another parameter, an error will occur.
 ---
 Project participants:
 - [Alexandr Mykhailov](https://github.com/fxckAlice);
