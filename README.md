@@ -12,7 +12,7 @@ ___
 SDK: *corrnetto 11*;
 
 The main figure is **rectangle**;
-### The head class ```rectangle```:
+### The head class ```Rectangle```:
 - ```double lenght``` - the main values that denotes the value of rectangle`s side;
 - ```set[-Lenght, -Width, -Perimeter, -Area, -Diagonal, -OutRadius, -InputRadius, -Corner](double value)``` - method which you should use to give values to parameters. For example ```setLenght(3);```
 - ```round(double x, int dozen)``` - method which you should use to round the number to the degree you need. For example: ```round(341, 2);``` => *300*, ```round(3.3465, -2);``` => *3.35*. The method only works when the `int dozen` is less than -9 or greater than 9;
@@ -36,8 +36,8 @@ ___
 
   
 
-### The class is ```Square```:
-*Square extends rectangle*
+### The class ```Square```:
+*Square extends Rectangle*
 + ```setWidth(double value)``` - method outputs Error because all sides of a square are equal(`setWidth() == setLength()`), so we use only `setLength()`;
 + ```cornerDiagonalWidth()``` - method outputs Error because 
 ```
@@ -46,8 +46,8 @@ ___
 ---
 
 
-### The class is ```Parallelogram```:
-*Parallelogram extends rectangle*
+### The class ```Parallelogram```:
+*Parallelogram extends Rectangle*
 + ```corner()``` - corner must be less than 90 degrees, otherwise it will not be a parallelogram;
 + ```diagonal()``` -  since a parallelogram is a derivative of a rectangle and if you enter a diagonal, it doesn't work. It means you need to use `diagonal1()` or `diagonal2()` using ```double leinght```,```double width``` and `double corner`;
 
@@ -65,7 +65,7 @@ ___
 ---
 
 
-### The class is ```Rhombus```:
+### The class ```Rhombus```:
 *Rhombus extends Parallelogram.*
 + ```setWidth(double value)``` - method outputs Error because all sides of a rhombus are equal(`setWidth() == setLength()`), so we use only `setLength()`;
 <!--+ ```area()``` - the method works only by using parameters:
@@ -77,7 +77,7 @@ ___
 ---
 
 
-### The head class is ```EquilateralTriangle```:
+### The head class ```EquilateralTriangle```:
 + ```double a, double perimeter, double area, double median, double bisector, double height, double outRadius, double inputRadius``` - variables that will be used in methods;
 + ```set[-A, -Perimeter, -Area, -Median, -Bisector, -Height -OutRadius, -InputRadius, -Corner](double value)``` - method which you should use to give values to parameters. For example `setA(6)`;
 + ```round(double x, int dozen)``` - method which you should use to round the number to the degree you need. For example: ```round(341, 2);``` => *300*, ```round(3.3465, -2);``` => *3.35* .The method only works when the `int dozen` is less than -9 or greater than 9;
@@ -97,7 +97,7 @@ ___
 
   If you enter another parameter, an error will occur.
 ---
-### The class is `IsoscelesTriangle`:
+### The class `IsoscelesTriangle`:
 *IsoscelesTriangle extends EquilateralTriangle.*
 + ```double b, double medianB, double bisectorB, double heightB, double cornerApex, double ornerSid``` - variables that will be used in methods;
 + ```set[-B, -MedianB, -BisectorB, -HeightB, -CornerApex, -CornerSide](double value)``` - method which you should use to give values to parameters. For example `setMedianB(8)`;
@@ -114,10 +114,57 @@ ___
   + ```'h'``` - ```double value``` - using the `double a` and `height()`.
 
   If you enter another parameter, an error will occur.
+---
+### The class `Triangle`:
+*Triangle extends IsoscelesTriangle.*
++ ```double c, double medianC, double heightC, double bisectorC, double cornerA, double cornerB, double cornerC``` - variables that will be used in methods;
++ ```setCornerSide(), setCornerApex()``` - method which doesn't exist in this class;
++ ```medianA(), medianC()``` - calculate the median of triangle using `double b`, `double c` and `double a`;
++ ```heightA()``` - calculate the height of triangle using `double c` and `double cornerB`;
++ ```heightB()``` - calculate the height of triangle using `double a` and `double cornerC`; 
++ ```heightC()``` - calculate the height of triangle using `double b` and `double cornerA`;
++ ```side(double value, char parameter)``` - calculate the ```double a``` using characteristic in dependence of parameter:
+  + ```'o'``` - ```double value``` - using the `outRadius()`, `area()`, `double b` and `double c`; 
+  + ```'i'``` - ```double value``` - using the `semiPerimeter()`, `inputRadius()`,`double b` and `double c`;
+  + ```'p'``` - ```double value``` - using the `perimeter()`, `double b` and `double c`;
+  + ```'a'``` - ```double value``` - using the `area()`, `height()`;
+  + ```'h'``` - ```double value``` - using the `height()`, `double b` and `double c`;
+  + ```'t'``` - ```double value``` - using the `cornerA()`, `double b` and `double c`.
 
+  If you enter another parameter, an error will occur.
++ ```sideC(double value, char parameter)``` - calculate the ```double c``` using characteristic in dependence of parameter:
+  + ```'o'``` - ```double value``` - using the `outRadius()`, `area()`, `double b` and `double a`;
+  + ```'i'``` - ```double value``` - using the `semiPerimeter()`, `inputRadius()`,`double b` and `double a`;
+  + ```'p'``` - ```double value``` - using the `perimeter()`, `double b` and `double a`;
+  + ```'a'``` - ```double value``` - using the `area()`, `heightC()`;
+  + ```'h'``` - ```double value``` - using the `heightC()`, `double b` and `double a`;
+  + ```'t'``` - ```double value``` - using the `cornerC()`, `double b` and `double a`.
 
+  If you enter another parameter, an error will occur.
+---
+### The class `RightTriangle`:
+*RightTriangle extends Triangle.*
++ ```setHeight(), setHeightB()``` -  method which doesn't exist in this class;
++ ```setCornerC()``` - You should to input only 90 degrees, because it is a constant in right triangle;
++ ```area(double value, char parameter)``` - calculate the area of right triangle using characteristic in dependence of parameter:
+  + ```'s'``` - ```double value``` - using the `double a`, `double b`;
+  + ```'c'``` - ```double value``` - using the `heightC()`, `double c`.
 
+  If you enter another parameter, an error will occur.
 
+---
+### The head class `Circle`:
++ ```double radius, double diameter, double length, double area``` - variables that will be used in methods;
++ ```set[-Radius, -Diameter, -Length, -Area](double value)``` - method which you should use to give values to parameters. For example `setDiameter(12)`;
++ ```diameter()``` - calculate the diameter of circle using `double radius`;
++ ```length()``` - calculate the length of circle using `double radius`;
++ ```area()``` - calculate the area of circle using `double radius`;
++ ```radius(double value, char parameter)``` - calculate the radius of circle using characteristic in dependence of parameter:
+  + ```'d'``` - ```double value``` - using the `double diameter`;
+  + ```'l'``` - ```double value``` - using the `double length`;
+  + ```'a'``` - ```double value``` - using the `area()`.
+
+  If you enter another parameter, an error will occur.
 ---
 Project participants:
 - [Alexandr Mykhailov](https://github.com/fxckAlice);
