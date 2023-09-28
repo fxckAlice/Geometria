@@ -153,7 +153,7 @@ public class Triangle extends IsoscelesTriangle {
                 answer = outRadius * 4 * area / (b * a);
                 break;
             case 'i':
-                answer = semiPerimeter() - (Math.pow(inputRadius, 2) * semiPerimeter() / (semiPerimeter() - b) * (semiPerimeter() - a));
+                answer = semiPerimeter() - (Math.pow(inputRadius, 2) * semiPerimeter() / ((semiPerimeter() - b) * (semiPerimeter() - a)));
                 break;
             case 'p':
                 answer = perimeter - b - a;
