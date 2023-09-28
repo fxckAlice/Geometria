@@ -1,4 +1,4 @@
-package Triangle;
+package triangle;
 
 public class EquilateralTriangle {
     protected double a, perimeter, area, median, bisector, height, outRadius, inputRadius, semiPerimeter;

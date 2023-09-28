@@ -1,4 +1,4 @@
-package Circle;
+package circle;
 
 import java.util.PrimitiveIterator;
 

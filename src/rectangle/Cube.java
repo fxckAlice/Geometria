@@ -1,4 +1,4 @@
-package Rectangle;
+package rectangle;
 
 public class Cube extends Square{
     double volume, diagonalV;

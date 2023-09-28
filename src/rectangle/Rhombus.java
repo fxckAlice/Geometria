@@ -1,6 +1,4 @@
-package Rectangle;
-
-import Rectangle.Parallelogram;
+package rectangle;
 
 public class Rhombus extends Parallelogram {
     @Override

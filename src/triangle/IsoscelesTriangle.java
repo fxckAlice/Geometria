@@ -1,4 +1,4 @@
-package Triangle;
+package triangle;
 
 public class IsoscelesTriangle extends EquilateralTriangle {
     protected double b, medianB, bisectorB, heightB, cornerApex, cornerSide;

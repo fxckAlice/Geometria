@@ -1,6 +1,6 @@
-package Triangle;
+package triangle;
 
-public class RightTriangle extends Triangle{
+public class RightTriangle extends Triangle {
     @Override
     public void setHeight(double height) {
         System.out.println("Doesn't exist.");

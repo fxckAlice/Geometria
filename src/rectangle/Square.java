@@ -1,4 +1,4 @@
-package Rectangle;
+package rectangle;
 
 public class Square extends Rectangle {
     @Override
