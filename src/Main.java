@@ -1,5 +1,3 @@
-import triangle.EquilateralTriangle;
-import triangle.EquilateralTriangle;
 import triangle.IsoscelesTriangle;
 //import Rectangle.Rhombus;
 
