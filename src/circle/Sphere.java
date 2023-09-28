@@ -1,4 +1,4 @@
-package Circle;
+package circle;
 
 public class Sphere extends Circle{
     protected double volume;

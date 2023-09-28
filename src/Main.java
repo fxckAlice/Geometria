@@ -1,6 +1,4 @@
-import Triangle.EquilateralTriangle;
-import Triangle.EquilateralTriangle;
-import Triangle.IsoscelesTriangle;
+import triangle.IsoscelesTriangle;
 //import Rectangle.Rhombus;
 
 public class Main {

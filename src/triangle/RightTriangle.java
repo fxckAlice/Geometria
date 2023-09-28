@@ -1,4 +1,4 @@
-package Triangle;
+package triangle;
 
 public class RightTriangle extends Triangle{
     @Override

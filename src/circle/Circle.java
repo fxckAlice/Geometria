@@ -1,6 +1,4 @@
-package Circle;
-
-import java.util.PrimitiveIterator;
+package circle;
 
 public class Circle {
     protected double radius, diameter, length, area;

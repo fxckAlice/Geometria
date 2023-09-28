@@ -1,4 +1,4 @@
-package Rectangle;
+package rectangle;
 
 public class Rectangle {
     protected double length, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
