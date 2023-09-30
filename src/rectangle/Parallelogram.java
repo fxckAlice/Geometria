@@ -20,7 +20,7 @@ public class Parallelogram extends Rectangle {
                 area = height * length;
                 break;
             case ('c'):
-                area = width * Math.sin(corner) * length;
+                area = width * Math.sin(corner / 180 * Math.PI) * length;
                 break;
             default:
                 System.out.println("Enter correct parameter.");
