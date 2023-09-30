@@ -62,7 +62,7 @@ public class Parallelepiped extends Rectangle{
         double answer;
         switch (parameter){
             case ("a"):
-                answer = (area * 2 - length * width) / (length + width);
+                answer = (area / 2 - length * width) / (length + width);
                 break;
             case ("dL"):
                 answer = Math.sqrt(Math.pow(diagonalSideLength, 2) - Math.pow(length, 2));
@@ -87,7 +87,7 @@ public class Parallelepiped extends Rectangle{
         double answer;
         switch (parameter){
             case ("a"):
-                answer = (area * 2 - heightP * width) / (heightP + width);
+                answer = (area / 2 - heightP * width) / (heightP + width);
                 break;
             case ("dL"):
                 answer = Math.sqrt(Math.pow(diagonalSideLength, 2) - Math.pow(heightP, 2));
@@ -112,7 +112,7 @@ public class Parallelepiped extends Rectangle{
         double answer;
         switch (parameter){
             case ("a"):
-                answer = (area * 2 - heightP * length) / (length + heightP);
+                answer = (area / 2 - heightP * length) / (length + heightP);
                 break;
             case ("dW"):
                 answer = Math.sqrt(Math.pow(diagonalSideWidth, 2) - Math.pow(heightP, 2));
