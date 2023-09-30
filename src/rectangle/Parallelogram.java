@@ -1,7 +1,7 @@
 package rectangle;
 
 public class Parallelogram extends Rectangle {
-    protected double height;
+    protected double height1, height2;
     protected double diagonal2;
 
     public void setDiagonal2(double diagonal2){this.diagonal2 = diagonal2;}
@@ -11,16 +11,23 @@ public class Parallelogram extends Rectangle {
             System.out.println("Corner must be less than 90 degrees");
         }
     }
-    public void setHeight(double height) {
-        this.height = height;
+    public void setHeight1(double height1) {
+        this.height1 = height1;
     }
+
+    public void setHeight2(double height2) {
+        this.height2 = height2;
+    }
+
     public double area(char parameter){
         switch (parameter) {
-            case ('h'):
-                area = height * length;
+            case ('l'):
+                area = height1 * length;
                 break;
+            case ('w'):
+                area = height2 * width;
             case ('c'):
-                area = width * Math.sin(corner) * length;
+                area = width * Math.sin(corner / 180 * Math.PI) * length;
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -71,13 +78,13 @@ public class Parallelogram extends Rectangle {
         double answer;
         switch (parameter) {
             case ('a'):
-                answer = area / height;
+                answer = area / height1;
                 break;
             case ('p'):
                 answer = perimeter / 2 - length;
                 break;
             case ('d'):
-                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(height, 2));
+                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(height1, 2));
                 break;
             case ('i'):
                 answer = area / (2 * inputRadius);
@@ -94,7 +101,7 @@ public class Parallelogram extends Rectangle {
     }
     @Override
     public double cornerDiagonalLength(){
-        return (Math.asin(height / diagonal) / Math.PI * 180);
+        return (Math.asin(height1 / diagonal) / Math.PI * 180);
     }
     @Override
     public double cornerDiagonalWidth(){
