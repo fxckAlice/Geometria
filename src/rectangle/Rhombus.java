@@ -6,6 +6,10 @@ public class Rhombus extends Parallelogram {
         System.out.println("Error.");
     }
     @Override
+    public void setHeight2(double height2) {
+        System.out.println("Error.");
+    }
+    @Override
     public double perimeter() {
         perimeter = 4 * length;
         return perimeter;
@@ -14,7 +18,7 @@ public class Rhombus extends Parallelogram {
     public double area(char parameter){
         switch (parameter) {
             case ('h'):
-                area = height * length;
+                area = height1 * length;
                 break;
             case ('c'):
                 area = Math.sin(corner) * Math.pow(length, 2);
@@ -47,13 +51,13 @@ public class Rhombus extends Parallelogram {
         double answer;
         switch (parameter) {
             case ('a'):
-                answer = area / height;
+                answer = area / height1;
                 break;
             case ('p'):
                 answer = perimeter / 2 - length;
                 break;
             case ('d'):
-                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(height, 2));
+                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(height1, 2));
                 break;
             case ('i'):
                 answer = area / (2 * inputRadius);

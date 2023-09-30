@@ -26,8 +26,11 @@ public class StraightPrismParallelogram extends Parallelogram{
     public void setDiagonalSideWidth(double diagonalSideWidth) {
         this.diagonalSideWidth = diagonalSideWidth;
     }
-    public double volume(){
-        volume = length * height * heightP;
+    public double volume(char parameter){
+        if(parameter == 'l')volume = length * height1 * heightP;
+        else if (parameter == 'w') {
+            volume = width * height2 * heightP;
+        }
         return volume;
     }
     @Override
