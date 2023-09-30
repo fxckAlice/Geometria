@@ -11,7 +11,7 @@ ___
 ## Short describtion and methods:
 SDK: *corrnetto 11*;
 
-The main figure is **rectangle**;
+
 ### The head class ```Rectangle```:
 - ```double lenght``` - the main values that denotes the value of rectangle`s side;
 - ```set[-Lenght, -Width, -Perimeter, -Area, -Diagonal, -OutRadius, -InputRadius, -Corner](double value)``` - method which you should use to give values to parameters. For example ```setLenght(3);```
