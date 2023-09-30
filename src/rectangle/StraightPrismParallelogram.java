@@ -37,7 +37,7 @@ public class StraightPrismParallelogram extends Parallelogram{
                 area = (height1 * length) * 2 + (heightP * length) * 2 + (heightP * width) * 2;
                 break;
             case ('w'):
-                area = (height2 * width) * 2 + (heightP * length) * 2 + heightP * width) * 2;
+                area = (height2 * width) * 2 + (heightP * length) * 2 + (heightP * width) * 2;
                 break;
             case ('c'):
                 area = (width * Math.sin(corner / 180 * Math.PI) * length) * 2 + (heightP * length) * 2 + (heightP * width) * 2;
