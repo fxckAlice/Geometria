@@ -1,7 +1,7 @@
 package rectangle;
 
-public class StraightPrismParallelogram extends Parallelogram{
-    double heightP,volume, diagonalV1, diagonalV2, diagonalSideLength, diagonalSideWidth;
+public class StraightPrismRhombus extends Rhombus{
+    double heightP,volume, diagonalV1, diagonalV2, diagonalSideLength;
 
     public void setHeightP(double heightP) {
         this.heightP = heightP;
@@ -22,28 +22,22 @@ public class StraightPrismParallelogram extends Parallelogram{
     public void setDiagonalSideLength(double diagonalSideLength) {
         this.diagonalSideLength = diagonalSideLength;
     }
-
-    public void setDiagonalSideWidth(double diagonalSideWidth) {
-        this.diagonalSideWidth = diagonalSideWidth;
-    }
-    public double volume(char parameter){
-        if(parameter == 'l')volume = length * height1 * heightP;
-        else if (parameter == 'w') {
-            volume = width * height2 * heightP;
-        }
+    public double volume(){
+        volume = length * height1 * heightP;
         return volume;
+    }
+    public double diagonalSideLength(){
+        diagonalSideLength = Math.sqrt(Math.pow(length, 2) + Math.pow(heightP, 2));
+        return diagonalSideLength;
     }
     @Override
     public double area(char parameter){
         switch (parameter) {
             case ('l'):
-                area = (height1 * length) * 2 + (heightP * length) * 2 + (heightP * width) * 2;
-                break;
-            case ('w'):
-                area = (height2 * width) * 2 + (heightP * length) * 2 + (heightP * width) * 2;
+                area = 2 * ((height1 * length) + (heightP * length) * 2);
                 break;
             case ('c'):
-                area = (width * Math.sin(corner / 180 * Math.PI) * length) * 2 + (heightP * length) * 2 + (heightP * width) * 2;
+                area = 2 * ((Math.sin(corner / 180 * Math.PI) * Math.pow(length, 2)) + (heightP * length) * 2);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -59,15 +53,6 @@ public class StraightPrismParallelogram extends Parallelogram{
         diagonalV2 = Math.sqrt(Math.pow(heightP, 2) + Math.pow(diagonal2,2));
         return diagonalV2;
     }
-    public double diagonalSideLength(){
-        diagonalSideLength = Math.sqrt(Math.pow(length, 2) + Math.pow(heightP, 2));
-        return diagonalSideLength;
-    }
-    public double diagonalSideWidth(){
-        diagonalSideWidth = Math.sqrt(Math.pow(width, 2) + Math.pow(heightP, 2));
-        return diagonalSideWidth;
-    }
-
     @Override
     public double inputRadius() {
         System.out.println("Doesn`t exist");
@@ -99,13 +84,10 @@ public class StraightPrismParallelogram extends Parallelogram{
         double answer;
         switch (parameter){
             case ("a"):
-                answer = (area / 2 - length * height1) / (length + width);
+                answer = (area / 2 - length * height1) / 2 / length;
                 break;
             case ("dL"):
                 answer = Math.sqrt(Math.pow(diagonalSideLength, 2) - Math.pow(length, 2));
-                break;
-            case ("dW"):
-                answer = Math.sqrt(Math.pow(diagonalSideWidth, 2) - Math.pow(width, 2));
                 break;
             case("dV1"):
                 answer = Math.sqrt(Math.pow(diagonalV1, 2) - Math.pow(diagonal, 2));
@@ -127,7 +109,7 @@ public class StraightPrismParallelogram extends Parallelogram{
         double answer;
         switch (parameter){
             case ("a"):
-                answer = (area / 2 - height2 * width) - heightP * width / (heightP);
+                answer = area / 2 / (height1 + heightP * 2);
                 break;
             case ("dL"):
                 answer = Math.sqrt(Math.pow(diagonalSideLength, 2) - Math.pow(heightP, 2));
@@ -142,23 +124,5 @@ public class StraightPrismParallelogram extends Parallelogram{
         }
         return answer;
     }
-    public double width(String parameter){
-        double answer;
-        switch (parameter){
-            case ("a"):
-                answer = (area / 2 - height1 * length - heightP * length) / (heightP);
-                break;
-            case ("dW"):
-                answer = Math.sqrt(Math.pow(diagonalSideWidth, 2) - Math.pow(heightP, 2));
-                break;
-            case ("v"):
-                answer = volume / height2 / heightP;
-                break;
-            default:
-                System.out.println("Enter correct parameter.");
-                answer = -1;
-                break;
-        }
-        return answer;
-    }
+
 }
