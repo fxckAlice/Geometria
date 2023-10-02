@@ -33,7 +33,7 @@ public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
         return area;
     }
     @Override
-    public  double perimeter(){
+    public double perimeter(){
         System.out.println("Doesn`t exist!");
         return -1;
     }
