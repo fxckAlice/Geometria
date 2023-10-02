@@ -1,7 +1,7 @@
 package rectangle;
 
 public class Cube extends Square{
-    double volume, diagonalV;
+    protected double volume, diagonalV;
 
     public void setVolume(double volume) {
         this.volume = volume;

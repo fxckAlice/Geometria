@@ -1,7 +1,7 @@
 package rectangle;
 
 public class StraightPrismParallelogram extends Parallelogram{
-    double heightP,volume, diagonalV1, diagonalV2, diagonalSideLength, diagonalSideWidth;
+    protected double heightP,volume, diagonalV1, diagonalV2, diagonalSideLength, diagonalSideWidth;
 
     public void setHeightP(double heightP) {
         this.heightP = heightP;
