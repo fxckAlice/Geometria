@@ -40,4 +40,19 @@ public class HelpingMethods {
             return temp * rounding;
         }
     }
+    public double pythagoreanTheorem(double a, double b, char action){
+        double answer;
+        switch (action){
+            case ('+'):
+                answer = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+                break;
+            case ('-'):
+                answer = Math.sqrt(Math.pow(a, 2) - Math.pow(b, 2));
+                break;
+            default:
+                System.out.println("Enter correct parameter.");
+                answer = -1;
+        }
+        return answer;
+    }
 }
