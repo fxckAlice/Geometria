@@ -111,7 +111,7 @@ public class Triangle extends IsoscelesTriangle {
                 answer = Math.sqrt(Math.pow(b, 2) - Math.pow(height, 2)) + Math.sqrt(Math.pow(c, 2) - Math.pow(height, 2));
                 break;
             case 't':
-                double temp = 2 * b * c * round(Math.cos((180 - cornerA) / 180 * Math.PI), -10);
+                double temp = 2 * b * c * help.round(Math.cos((180 - cornerA) / 180 * Math.PI), -10);
                 answer = Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - temp);
             default:
                 System.out.println("Enter correct parameter.");
@@ -138,7 +138,7 @@ public class Triangle extends IsoscelesTriangle {
                 answer = Math.sqrt(Math.pow(a, 2) - Math.pow(heightB, 2)) + Math.sqrt(Math.pow(c, 2) - Math.pow(heightB, 2));
                 break;
             case 't':
-                double temp = 2 * a * c * round(Math.cos((180 - cornerB) / 180 * Math.PI), -10);
+                double temp = 2 * a * c * help.round(Math.cos((180 - cornerB) / 180 * Math.PI), -10);
                 answer = Math.sqrt(Math.pow(a, 2) + Math.pow(c, 2) - temp);
             default:
                 System.out.println("Enter correct parameter.");
@@ -165,7 +165,7 @@ public class Triangle extends IsoscelesTriangle {
                 answer = Math.sqrt(Math.pow(b, 2) - Math.pow(heightC, 2)) + Math.sqrt(Math.pow(a, 2) - Math.pow(heightC, 2));
                 break;
             case 't':
-                double temp = 2 * b * a * round(Math.cos((180 - cornerC) / 180 * Math.PI), -10);
+                double temp = 2 * b * a * help.round(Math.cos((180 - cornerC) / 180 * Math.PI), -10);
                 answer = Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2) - temp);
             default:
                 System.out.println("Enter correct parameter.");

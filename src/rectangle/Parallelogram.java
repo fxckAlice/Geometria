@@ -41,12 +41,12 @@ public class Parallelogram extends Rectangle {
         return -1;
     }
     public double diagonal1(){
-        double temp = 2 * length * width * round(Math.cos((180 - corner) / 180 * Math.PI), -10);
+        double temp = 2 * length * width * help.round(Math.cos((180 - corner) / 180 * Math.PI), -10);
         diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal;
     }
     public double diagonal2(){
-        double temp = 2 * length * width * round(Math.cos(corner / 180 * Math.PI), -10);
+        double temp = 2 * length * width * help.round(Math.cos(corner / 180 * Math.PI), -10);
         diagonal2 = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal2;
     }

@@ -1,18 +1,18 @@
-import triangle.IsoscelesTriangle;
+import help.HelpingMethods;
+import triangle.StraightPrismEquilateralTriangle;
+import circle.Cone;
 //import Rectangle.Rhombus;
 
 public class Main {
     public static void main(String[] args) {
-        IsoscelesTriangle ABCD = new IsoscelesTriangle();
-        ABCD.setA(4);
-        ABCD.setB(4);
-        //ABCD.perimeter();
-        //System.out.println(ABCD.round(ABCD.height(), -2));
-        //System.out.println(ABCD.round(ABCD.heightB(), -2));
-        System.out.println(ABCD.round(ABCD.side('o'), -2));
-        System.out.println(ABCD.round(ABCD.perimeter(), -2));
-        System.out.println(ABCD.round(ABCD.semiPerimeter(), -2));
-        System.out.println(ABCD.round(ABCD.inputRadius(), -2));
-        //Rectangle A = new Rectangle();
+        Cone a = new Cone();
+        HelpingMethods help = new HelpingMethods();
+        a.setRadius(5);
+        a.setHeight(5);
+        System.out.println(a.slantHeight());
+        a.areaBase();
+        a.areaSide();
+        System.out.println(a.area());
+        System.out.println(a.radius("a"));
     }
 }

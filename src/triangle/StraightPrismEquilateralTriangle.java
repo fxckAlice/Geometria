@@ -1,7 +1,11 @@
 package triangle;
 
+import help.HelpingMethods;
+import org.w3c.dom.html.HTMLLegendElement;
+
 public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
     protected double heightP, volume;
+    HelpingMethods help = new HelpingMethods();
     @Override
     public void setPerimeter(double perimeter) {
         System.out.println("Doesn`t exist!");
@@ -67,24 +71,7 @@ public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
         double answer;
         switch (parameter){
             case ('a'):
-                double D = Math.pow(3 * heightP, 2) + 4 * area * Math.sqrt(3) / 2;
-                if(D < 0){
-                    System.out.println("Discriminant less than 0");
-                    answer = -1;
-                }
-                else {
-                    double x1 = (-1 * 3 * heightP + Math.sqrt(D)) / (2 * Math.sqrt(3) / 2);
-                    double x2 = (-1 * 3 * heightP - Math.sqrt(D)) / (2 * Math.sqrt(3) / 2);
-                    if(x1 > 0){
-                        answer = x1;
-                    } else if (x2 > 0) {
-                        answer = x2;
-                    }
-                    else {
-                        System.out.println("Error!");
-                        answer = -1;
-                    }
-                }
+                answer = help.quadraticEducation(Math.sqrt(3) / 2, 3 * heightP, -area);
                 break;
             case ('v'):
                 answer = Math.sqrt(volume / heightP * 4 / Math.sqrt(3));

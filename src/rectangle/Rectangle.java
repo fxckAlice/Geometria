@@ -1,6 +1,9 @@
 package rectangle;
 
+import help.HelpingMethods;
+
 public class Rectangle {
+    HelpingMethods help = new HelpingMethods();
     protected double length, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
     public void setLength(double length){
         this.length = length;
@@ -38,23 +41,6 @@ public class Rectangle {
     public double diagonal(){
         diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2));
         return diagonal;
-    }
-    public double round(double x, int dozen){
-        double rounding = Math.pow(10, dozen);
-        int temp;
-        if(dozen < -9 | dozen > 9){
-            System.out.println("Out of range");
-            return  -1;
-        }
-        else{
-            if(x % rounding >= 5 * Math.pow(10, dozen - 1)){
-                temp = (int)(x / rounding) + 1;
-            }
-            else {
-                temp = (int)(x / rounding);
-            }
-            return temp * rounding;
-        }
     }
     public double outRadius (){
         outRadius = diagonal() / 2;

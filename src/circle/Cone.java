@@ -1,6 +1,9 @@
 package circle;
 
+import help.HelpingMethods;
+
 public class Cone extends Circle{
+    HelpingMethods help = new HelpingMethods();
     protected double volume, areaSide, areaBase, height, slantHeight;
 
     public void setVolume(double volume) {
@@ -71,24 +74,7 @@ public class Cone extends Circle{
                 answer = areaSide / Math.PI / slantHeight;
                 break;
             case("a"):
-                double D = Math.pow(slantHeight, 2) + 4 * area / Math.PI;
-                if(D < 0){
-                    System.out.println("Discriminant less than 0");
-                    answer = -1;
-                }
-                else {
-                    double x1 = (-1 * slantHeight + Math.sqrt(D)) / (2);
-                    double x2 = (-1 * slantHeight - Math.sqrt(D)) / (2);
-                    if(x1 > 0){
-                        answer = x1;
-                    } else if (x2 > 0) {
-                        answer = x2;
-                    }
-                    else {
-                        System.out.println("Error!");
-                        answer = -1;
-                    }
-                }
+                answer = help.quadraticEducation(1, slantHeight, -area / Math.PI);
                 break;
             case("aB"):
                 answer = Math.sqrt(areaBase / Math.PI);
