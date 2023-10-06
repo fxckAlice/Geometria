@@ -5,7 +5,6 @@ import org.w3c.dom.html.HTMLLegendElement;
 
 public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
     protected double heightP, volume;
-    HelpingMethods help = new HelpingMethods();
     @Override
     public void setPerimeter(double perimeter) {
         System.out.println("Doesn`t exist!");
@@ -67,6 +66,7 @@ public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
         }
         return answer;
     }
+    @Override
     public double side(char parameter){
         double answer;
         switch (parameter){

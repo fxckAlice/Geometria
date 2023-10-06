@@ -49,7 +49,7 @@ public class EquilateralTriangle {
         return area;
     }
     public double height(){
-        height = Math.sqrt(Math.pow(a, 2) - Math.pow(a / 2, 2));
+        height = help.pythagoreanTheorem(a, a / 2, '-');
         return  height;
     }
     public double outRadius(){

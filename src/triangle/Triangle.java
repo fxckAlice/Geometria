@@ -108,7 +108,7 @@ public class Triangle extends IsoscelesTriangle {
                 answer = area / height * 2;
                 break;
             case 'h':
-                answer = Math.sqrt(Math.pow(b, 2) - Math.pow(height, 2)) + Math.sqrt(Math.pow(c, 2) - Math.pow(height, 2));
+                answer = help.pythagoreanTheorem(b, height,'-') + help.pythagoreanTheorem(c, height, '-');
                 break;
             case 't':
                 double temp = 2 * b * c * help.round(Math.cos((180 - cornerA) / 180 * Math.PI), -10);
@@ -135,7 +135,7 @@ public class Triangle extends IsoscelesTriangle {
                 answer = area / heightB * 2;
                 break;
             case 'h':
-                answer = Math.sqrt(Math.pow(a, 2) - Math.pow(heightB, 2)) + Math.sqrt(Math.pow(c, 2) - Math.pow(heightB, 2));
+                answer = help.pythagoreanTheorem(a, heightB, '-') + help.pythagoreanTheorem(c, heightB, '+');
                 break;
             case 't':
                 double temp = 2 * a * c * help.round(Math.cos((180 - cornerB) / 180 * Math.PI), -10);
@@ -162,7 +162,7 @@ public class Triangle extends IsoscelesTriangle {
                 answer = area / heightC * 2;
                 break;
             case 'h':
-                answer = Math.sqrt(Math.pow(b, 2) - Math.pow(heightC, 2)) + Math.sqrt(Math.pow(a, 2) - Math.pow(heightC, 2));
+                answer = help.pythagoreanTheorem(b, heightC, '-') + help.pythagoreanTheorem(a, heightC,'-');
                 break;
             case 't':
                 double temp = 2 * b * a * help.round(Math.cos((180 - cornerC) / 180 * Math.PI), -10);

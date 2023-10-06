@@ -28,11 +28,11 @@ public class IsoscelesTriangle extends EquilateralTriangle {
     }
     @Override
     public double height(){
-        height = Math.sqrt(Math.pow(a, 2) - Math.pow(b / 2, 2));
+        height = help.pythagoreanTheorem(a, b / 2, '-');
         return  height;
     }
     public double medianB(){
-        medianB = 0.5 * Math.sqrt(Math.pow(a, 2) + 2 * Math.pow(b, 2));
+        medianB = 0.5 * help.pythagoreanTheorem(a, b * Math.sqrt(2), '+');
         return medianB;
     }
     public double heightB(){
@@ -82,7 +82,7 @@ public class IsoscelesTriangle extends EquilateralTriangle {
                 answer = area / heightB * 2;
                 break;
             case 'h':
-                answer = Math.sqrt(Math.pow(height, 2) + Math.pow(b / 2, 2));
+                answer = help.pythagoreanTheorem(height, b / 2, '+');
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -106,7 +106,7 @@ public class IsoscelesTriangle extends EquilateralTriangle {
                 answer = area / height * 2;
                 break;
             case 'h':
-                answer = Math.sqrt(Math.pow(a, 2) + Math.pow(height, 2));
+                answer = help.pythagoreanTheorem(a, height, '-');
                 break;
             default:
                 System.out.println("Enter correct parameter.");
