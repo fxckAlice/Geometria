@@ -113,6 +113,7 @@ public class Triangle extends IsoscelesTriangle {
             case 't':
                 double temp = 2 * b * c * help.round(Math.cos((180 - cornerA) / 180 * Math.PI), -10);
                 answer = Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - temp);
+                break;
             default:
                 System.out.println("Enter correct parameter.");
                 answer = -1;
