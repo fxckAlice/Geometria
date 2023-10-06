@@ -17,7 +17,7 @@ public class Square extends Rectangle {
     }
     @Override
     public double diagonal(){
-        diagonal = Math.sqrt(Math.pow(length, 2) * 2);
+        diagonal = help.pythagoreanTheorem(length,'+');
         return diagonal;
     }
     @Override
@@ -45,13 +45,13 @@ public class Square extends Rectangle {
                 answer = perimeter / 4;
                 break;
             case ('d'):
-                answer = Math.sqrt(Math.pow(diagonal, 2) / 2);
+                answer = help.pythagoreanTheorem(diagonal, '-');
                 break;
             case ('i'):
                 answer = 2 * inputRadius;
                 break;
             case ('o'):
-                answer = Math.sqrt(Math.pow(outRadius * 2, 2) / 2);
+                answer = help.pythagoreanTheorem(outRadius * 2, '-');
                 break;
             default:
                 System.out.println("Enter correct parameter.");

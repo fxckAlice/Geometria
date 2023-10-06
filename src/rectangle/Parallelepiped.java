@@ -27,7 +27,7 @@ public class Parallelepiped extends Rectangle{
         return volume;
     }
     public double diagonalV(){
-        diagonalV = Math.sqrt(Math.pow(heightP, 2) + Math.pow(diagonal,2));
+        diagonalV = help.pythagoreanTheorem(heightP, diagonal, '+');
         return diagonalV;
     }
 
@@ -65,13 +65,13 @@ public class Parallelepiped extends Rectangle{
                 answer = (area / 2 - length * width) / (length + width);
                 break;
             case ("dL"):
-                answer = Math.sqrt(Math.pow(diagonalSideLength, 2) - Math.pow(length, 2));
+                answer = help.pythagoreanTheorem(diagonalSideLength, length, '-');
                 break;
             case ("dW"):
-                answer = Math.sqrt(Math.pow(diagonalSideWidth, 2) - Math.pow(width, 2));
+                answer = help.pythagoreanTheorem(diagonalSideWidth, width, '-');
                 break;
             case("dV"):
-                answer = Math.sqrt(Math.pow(diagonalV, 2) - Math.pow(diagonal, 2));
+                answer = help.pythagoreanTheorem(diagonalV, diagonal, '-');
                 break;
             case ("v"):
                 answer = volume / length / width;
@@ -90,13 +90,13 @@ public class Parallelepiped extends Rectangle{
                 answer = (area / 2 - heightP * width) / (heightP + width);
                 break;
             case ("dL"):
-                answer = Math.sqrt(Math.pow(diagonalSideLength, 2) - Math.pow(heightP, 2));
+                answer = help.pythagoreanTheorem(diagonalSideLength, heightP, '-');
                 break;
             case ("d"):
-                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(width, 2));
+                answer = help.pythagoreanTheorem(diagonal, width, '-');
                 break;
             case("dV"):
-                answer = Math.sqrt(Math.pow(diagonalV, 2) - Math.pow(diagonalSideWidth, 2));
+                answer = help.pythagoreanTheorem(diagonalV, diagonalSideWidth, '-');
                 break;
             case ("v"):
                 answer = volume / heightP / width;
@@ -115,13 +115,13 @@ public class Parallelepiped extends Rectangle{
                 answer = (area / 2 - heightP * length) / (length + heightP);
                 break;
             case ("dW"):
-                answer = Math.sqrt(Math.pow(diagonalSideWidth, 2) - Math.pow(heightP, 2));
+                answer = help.pythagoreanTheorem(diagonalSideWidth, heightP, '-');
                 break;
             case ("d"):
-                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(length, 2));
+                answer = help.pythagoreanTheorem(diagonal, length, '-');
                 break;
             case("dV"):
-                answer = Math.sqrt(Math.pow(diagonalV, 2) - Math.pow(diagonalSideLength, 2));
+                answer = help.pythagoreanTheorem(diagonalV, diagonalSideLength, '-');
                 break;
             case ("v"):
                 answer = volume / length / heightP;

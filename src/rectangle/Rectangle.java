@@ -39,7 +39,7 @@ public class Rectangle {
         return area;
     }
     public double diagonal(){
-        diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2));
+        diagonal = help.pythagoreanTheorem(length, width, '+');
         return diagonal;
     }
     public double outRadius (){
@@ -66,13 +66,13 @@ public class Rectangle {
                 answer = perimeter / 2 - length;
                 break;
             case ('d'):
-                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(length, 2));
+                answer = help.pythagoreanTheorem(diagonal, length, '-');
                 break;
             case ('i'):
                 answer = 2 * inputRadius;
                 break;
             case ('o'):
-                answer = Math.sqrt(Math.pow(outRadius * 2, 2) / 2);
+                answer = help.pythagoreanTheorem(outRadius * 2, '-');
                 break;
             default:
                 System.out.println("Enter correct parameter.");

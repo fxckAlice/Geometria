@@ -55,4 +55,19 @@ public class HelpingMethods {
         }
         return answer;
     }
-}
+    public double pythagoreanTheorem(double a, char action){
+        double answer;
+        switch (action){
+            case ('+'):
+                answer = Math.sqrt(Math.pow(a, 2) * 2);
+                break;
+            case ('-'):
+                answer = Math.sqrt(Math.pow(a, 2) / 2);
+                break;
+            default:
+                System.out.println("Enter correct parameter.");
+                answer = -1;
+        }
+        return answer;
+    }
+    }

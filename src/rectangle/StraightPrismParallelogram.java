@@ -52,19 +52,19 @@ public class StraightPrismParallelogram extends Parallelogram{
         return area;
     }
     public double diagonalV1(){
-        diagonalV1 = Math.sqrt(Math.pow(heightP, 2) + Math.pow(diagonal,2));
+        diagonalV1 = help.pythagoreanTheorem(heightP, diagonal, '+');
         return diagonalV1;
     }
     public double diagonalV2(){
-        diagonalV2 = Math.sqrt(Math.pow(heightP, 2) + Math.pow(diagonal2,2));
+        diagonalV2 = help.pythagoreanTheorem(heightP, diagonal2, '+');
         return diagonalV2;
     }
     public double diagonalSideLength(){
-        diagonalSideLength = Math.sqrt(Math.pow(length, 2) + Math.pow(heightP, 2));
+        diagonalSideLength = help.pythagoreanTheorem(length, heightP, '+');
         return diagonalSideLength;
     }
     public double diagonalSideWidth(){
-        diagonalSideWidth = Math.sqrt(Math.pow(width, 2) + Math.pow(heightP, 2));
+        diagonalSideWidth = help.pythagoreanTheorem(width, heightP, '+');
         return diagonalSideWidth;
     }
 
@@ -102,16 +102,16 @@ public class StraightPrismParallelogram extends Parallelogram{
                 answer = (area / 2 - length * height1) / (length + width);
                 break;
             case ("dL"):
-                answer = Math.sqrt(Math.pow(diagonalSideLength, 2) - Math.pow(length, 2));
+                answer = help.pythagoreanTheorem(diagonalSideLength, length, '-');
                 break;
             case ("dW"):
-                answer = Math.sqrt(Math.pow(diagonalSideWidth, 2) - Math.pow(width, 2));
+                answer = help.pythagoreanTheorem(diagonalSideWidth, width,'-');
                 break;
             case("dV1"):
-                answer = Math.sqrt(Math.pow(diagonalV1, 2) - Math.pow(diagonal, 2));
+                answer = help.pythagoreanTheorem(diagonalV1, diagonal, '-');
                 break;
             case("dV2"):
-                answer = Math.sqrt(Math.pow(diagonalV2, 2) - Math.pow(diagonal2, 2));
+                answer = help.pythagoreanTheorem(diagonalV2, diagonal2, '-');
                 break;
             case ("v"):
                 answer = volume / (length * height1);
@@ -130,7 +130,7 @@ public class StraightPrismParallelogram extends Parallelogram{
                 answer = (area / 2 - height2 * width) - heightP * width / (heightP);
                 break;
             case ("dL"):
-                answer = Math.sqrt(Math.pow(diagonalSideLength, 2) - Math.pow(heightP, 2));
+                answer = help.pythagoreanTheorem(diagonalSideLength, heightP, '-');
                 break;
             case ("v"):
                 answer = volume / heightP / height1;
@@ -149,7 +149,7 @@ public class StraightPrismParallelogram extends Parallelogram{
                 answer = (area / 2 - height1 * length - heightP * length) / (heightP);
                 break;
             case ("dW"):
-                answer = Math.sqrt(Math.pow(diagonalSideWidth, 2) - Math.pow(heightP, 2));
+                answer = help.pythagoreanTheorem(diagonalSideWidth, heightP, '-');
                 break;
             case ("v"):
                 answer = volume / height2 / heightP;

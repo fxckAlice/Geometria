@@ -21,7 +21,7 @@ public class Rhombus extends Parallelogram {
                 area = height1 * length;
                 break;
             case ('c'):
-                area = Math.sin(corner) * Math.pow(length, 2);
+                area = Math.sin(corner / 180 * Math.PI) * Math.pow(length, 2);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -31,13 +31,13 @@ public class Rhombus extends Parallelogram {
     }
     @Override
     public double diagonal1(){
-        double temp = 2 * Math.pow(length, 2) * Math.cos(180 - corner);
+        double temp = 2 * Math.pow(length, 2) * Math.cos((180 - corner) / 180 * Math.PI);
         diagonal = Math.sqrt(2 * Math.pow(length, 2) - temp);
         return diagonal;
     }
     @Override
     public double diagonal2(){
-        double temp = 2 * Math.pow(length, 2) * Math.cos(corner);
+        double temp = 2 * Math.pow(length, 2) * Math.cos(corner / 180 * Math.PI);
         diagonal2 = Math.sqrt(2 * Math.pow(length, 2) - temp);
         return diagonal2;
     }
@@ -57,7 +57,7 @@ public class Rhombus extends Parallelogram {
                 answer = perimeter / 2 - length;
                 break;
             case ('d'):
-                answer = Math.sqrt(Math.pow(diagonal, 2) - Math.pow(height1, 2));
+                answer = help.pythagoreanTheorem(diagonal, height1, '-');
                 break;
             case ('i'):
                 answer = area / (2 * inputRadius);

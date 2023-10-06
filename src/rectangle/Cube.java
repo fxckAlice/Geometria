@@ -63,7 +63,7 @@ public class Cube extends Square{
                 answer = Math.sqrt(area / 6);
                 break;
             case ('d'):
-                answer = Math.sqrt(Math.pow(diagonal, 2) / 2);
+                answer = help.pythagoreanTheorem(diagonal, '-');
                 break;
             case ('v'):
                 answer = Math.cbrt(volume);
