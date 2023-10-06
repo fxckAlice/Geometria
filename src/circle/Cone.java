@@ -4,14 +4,14 @@ import help.HelpingMethods;
 
 public class Cone extends Circle{
     HelpingMethods help = new HelpingMethods();
-    protected double volume, areaSide, areaBase, height, slantHeight;
+    protected double volume, areaSide, areaBase, heightP, slantHeight;
 
     public void setVolume(double volume) {
         this.volume = volume;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public void setHeightP(double heightP) {
+        this.heightP = heightP;
     }
 
     public void setAreaSide(double areaSide) {
@@ -39,24 +39,24 @@ public class Cone extends Circle{
         return area;
     }
     public double volume(){
-        volume = areaBase * height / 3;
+        volume = areaBase * heightP / 3;
         return volume;
     }
     public double slantHeight(){
-        slantHeight = Math.sqrt(Math.pow(height, 2) + Math.pow(radius, 2));
+        slantHeight = help.pythagoreanTheorem(heightP, radius, '+');
         return slantHeight;
     }
     public double height(String parameter){
         double answer;
         switch (parameter){
             case("s"):
-                answer = Math.sqrt(Math.pow(slantHeight, 2) - Math.pow(radius, 2));
+                answer = help.pythagoreanTheorem(slantHeight, radius,'-');
                 break;
             case("aS"):
-                answer = Math.sqrt(Math.pow(areaSide / Math.PI / radius, 2) - Math.pow(radius, 2));
+                answer = help.pythagoreanTheorem(areaSide / Math.PI / radius, radius, '-');
                 break;
             case("a"):
-                answer = Math.sqrt(Math.pow((area - Math.pow(radius, 2) * Math.PI) / Math.PI / radius, 2) - Math.pow(radius, 2));
+                answer = help.pythagoreanTheorem((area - Math.pow(radius, 2) * Math.PI) / Math.PI / radius, radius, '-');
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -68,7 +68,7 @@ public class Cone extends Circle{
         double answer;
         switch (parameter){
             case("s"):
-                answer = Math.sqrt(Math.pow(slantHeight, 2) - Math.pow(height, 2));
+                answer = help.pythagoreanTheorem(slantHeight, heightP,'-');
                 break;
             case("aS"):
                 answer = areaSide / Math.PI / slantHeight;
