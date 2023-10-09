@@ -103,6 +103,11 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
         System.out.println("Use String parameter!");
         return -1;
     }
+    @Override
+    public double sideB(char parameter){
+        System.out.println("Use String parameter!");
+        return -1;
+    }
     public double side(String parameter){
         double answer;
         switch (parameter){
@@ -113,9 +118,9 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
                 answer = help.pythagoreanTheorem(2 * areaBase / b, b / 2, '+');
                 break;
             case ("aS"):
-                answer = (areaSide / heightP - b) / 2;
+                answer = areaSide / heightP - a * 2;
                 break;
-            case ("dSA"):
+            case ("dSB"):
                 answer = help.pythagoreanTheorem(diagonalSideA, heightP, '-');
                 break;
             default:
@@ -125,4 +130,27 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
         }
         return answer;
     }
+    public double sideB(String parameter){
+        double answer;
+        switch (parameter){
+            case ("v"):
+                answer = help.pythagoreanTheorem(2 * volume / heightP / b, b / 2, '+');
+                break;
+            case ("aB"):
+                answer = areaBase / heightP * 2;
+                break;
+            case ("aS"):
+                answer = (areaSide / heightP - b) / 2;
+                break;
+            case ("dSB"):
+                answer = help.pythagoreanTheorem(diagonalSideB, heightP, '-');
+                break;
+            default:
+                System.out.println("Enter correct parameter.");
+                answer = -1;
+                break;
+        }
+        return answer;
+    }
+
 }
