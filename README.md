@@ -47,7 +47,7 @@ SDK: *corrnetto 11*;
 ### The package `rectangle`:
 #### The 2D figures:
 #### The head class ```Rectangle```:
-![rectangle](rectangle.jpg)
+![rectangle](src/photos/rectangle.jpg)
 <span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
 <div style="text-align:center;">
   <span style="color: none;">double</span>
