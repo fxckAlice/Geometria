@@ -47,48 +47,49 @@ public class RightTriangle extends Triangle{
         return inputRadius;
     }
     @Override
-    public double side(char parameter) {
-        double answer;
-        switch (parameter) {
-            case 'o':
-                answer = help.pythagoreanTheorem(outRadius * 2, b, '-');
-                break;
-            case 'm':
-                answer = help.pythagoreanTheorem(medianC * 2, b, '-');
-                break;
-            case 'p':
-                answer = perimeter - b - c;
-                break;
-            case 'a':
-                answer = area / b;
-                break;
-            case 't':
-                answer = help.pythagoreanTheorem(c, b, '-');
-                break;
-            default:
-                System.out.println("Enter correct parameter.");
-                answer = -1;
-        }
-        return answer;
+    public double side(char parameter){
+        System.out.println("Use String parameter!");
+        return -1;
     }
     @Override
     public double sideB(char parameter) {
+        System.out.println("Use String parameter!");
+        return -1;
+    }
+    @Override
+    public double sideC(char parameter) {
+        System.out.println("Use String parameter!");
+        return -1;
+    }
+    public double side(String parameter) {
         double answer;
         switch (parameter) {
-            case 'o':
-                answer = help.pythagoreanTheorem(outRadius * 2, a, '-');
+            case "o":
+                answer = help.pythagoreanTheorem(outRadius * 2, b, '-');
                 break;
-            case 'm':
-                answer = help.pythagoreanTheorem(medianC * 2, a, '-');
+            case "m":
+                answer = help.pythagoreanTheorem(medianC * 2, b, '-');
                 break;
-            case 'p':
-                answer = perimeter - a - c;
+            case "p":
+                answer = perimeter - b - c;
                 break;
-            case 'a':
-                answer = area / a;
+            case "a":
+                answer = area / b;
                 break;
-            case 't':
-                answer = help.pythagoreanTheorem(c, a, '-');
+            case "t":
+                answer = help.pythagoreanTheorem(c, b, '-');
+                break;
+            case ("sin"):
+                answer = c * Math.sin(cornerA / 180 * Math.PI);
+                break;
+            case ("cos"):
+                answer = c * Math.cos(cornerB / 180 * Math.PI);
+                break;
+            case ("tan"):
+                answer = b * Math.tan(cornerA / 180 * Math.PI);
+                break;
+            case ("ctan"):
+                answer = b / Math.tan(cornerB / 180 * Math.PI);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -96,21 +97,69 @@ public class RightTriangle extends Triangle{
         }
         return answer;
     }
-    @Override
-    public double sideC(char parameter) {
+    public double sideB(String parameter) {
         double answer;
         switch (parameter) {
-            case 'o':
+            case "o":
+                answer = help.pythagoreanTheorem(outRadius * 2, a, '-');
+                break;
+            case "m":
+                answer = help.pythagoreanTheorem(medianC * 2, a, '-');
+                break;
+            case "p":
+                answer = perimeter - a - c;
+                break;
+            case "a":
+                answer = area / a;
+                break;
+            case "t":
+                answer = help.pythagoreanTheorem(c, a, '-');
+                break;
+            case ("sin"):
+                answer = c * Math.sin(cornerB / 180 * Math.PI);
+                break;
+            case ("cos"):
+                answer = c * Math.cos(cornerA / 180 * Math.PI);
+                break;
+            case ("tan"):
+                answer = a * Math.tan(cornerB / 180 * Math.PI);
+                break;
+            case ("ctan"):
+                answer = a / Math.tan(cornerA / 180 * Math.PI);
+                break;
+            default:
+                System.out.println("Enter correct parameter.");
+                answer = -1;
+        }
+        return answer;
+    }
+
+    public double sideC(String parameter) {
+        double answer;
+        switch (parameter) {
+            case "o":
                 answer = outRadius * 2;
                 break;
-            case 'm':
+            case "m":
                 answer = medianC * 2;
                 break;
-            case 'p':
+            case "p":
                 answer = perimeter - a - b;
                 break;
-            case 't':
+            case "t":
                 answer = help.pythagoreanTheorem(b, a, '+');
+                break;
+            case ("sinA"):
+                answer = a / Math.sin(cornerA / 180 * Math.PI);
+                break;
+            case ("cosA"):
+                answer = b / Math.cos(cornerA / 180 * Math.PI);
+                break;
+            case ("sinB"):
+                answer = b / Math.sin(cornerB / 180 * Math.PI);
+                break;
+            case ("cosB"):
+                answer = a / Math.cos(cornerB / 180 * Math.PI);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
