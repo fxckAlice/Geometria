@@ -3,6 +3,7 @@ package rectangle;
 public class Parallelepiped extends Rectangle{
     double heightP, volume, diagonalV, diagonalSideLength, diagonalSideWidth;
 
+
     public void setHeightP(double heightP) {
         this.heightP = heightP;
     }
