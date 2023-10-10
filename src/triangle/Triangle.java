@@ -81,6 +81,9 @@ public class Triangle extends IsoscelesTriangle {
                 break;
             case ('c'):
                 area = heightC * c / 2;
+            default:
+                System.out.println("Enter correct parameter.");
+                area = -1;
         }
         return area;
     }
@@ -114,6 +117,9 @@ public class Triangle extends IsoscelesTriangle {
                 double temp = 2 * b * c * help.round(Math.cos((180 - cornerA) / 180 * Math.PI), -10);
                 answer = Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - temp);
                 break;
+            case 'm':
+                answer = Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(c, 2)) - Math.pow(median / 2, 2));
+                break;
             default:
                 System.out.println("Enter correct parameter.");
                 answer = -1;
@@ -141,6 +147,10 @@ public class Triangle extends IsoscelesTriangle {
             case 't':
                 double temp = 2 * a * c * help.round(Math.cos((180 - cornerB) / 180 * Math.PI), -10);
                 answer = Math.sqrt(Math.pow(a, 2) + Math.pow(c, 2) - temp);
+                break;
+            case 'm':
+                answer = Math.sqrt(2 * (Math.pow(a, 2) + Math.pow(c, 2)) - Math.pow(medianB / 2, 2));
+                break;
             default:
                 System.out.println("Enter correct parameter.");
                 answer = -1;
@@ -168,6 +178,10 @@ public class Triangle extends IsoscelesTriangle {
             case 't':
                 double temp = 2 * b * a * help.round(Math.cos((180 - cornerC) / 180 * Math.PI), -10);
                 answer = Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2) - temp);
+                break;
+            case 'm':
+                answer = Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(a, 2)) - Math.pow(medianC / 2, 2));
+                break;
             default:
                 System.out.println("Enter correct parameter.");
                 answer = -1;
