@@ -78,12 +78,12 @@ SDK: *corrnetto 11*;
 - ```corner()``` - method which calculates the corner of rectangle;
 - ```sumOfCorners()``` - method which calculates the sum of all corners in rectangle; 
 - ```cornerDiagonal[-Length, -Width]``` - method which calculates the corner between the diagonal and particular side. For example ```cornerDiagonalLength()``` => *30*;
-- ```side(double value, char parameter)``` - method which calculates the ```double width``` using ```double length``` and characteristic in dependence of parameter:
-  - `````'a'````` - ```double value``` is the area of rectangle;
-  - ```'p'``` - ```double value``` is the perimeter of rectangle;
-  - ```'d'``` - ```double value``` is the diagonal of rectangle;
-  - ```'i'``` - ```double value``` is the radius of input circle of rectangle;
-  - ```'o'``` - ```double value``` is the radius of out circle of rectangle.
+- ```double side(String parameter)``` - method which calculates the ```double width``` using ```double length``` and characteristic in dependence of parameter:
+  - ```"a"``` - is the area of rectangle;
+  - ```"p"``` - is the perimeter of rectangle;
+  - ```"d"``` - is the diagonal of rectangle;
+  - ```"i"``` - is the radius of input circle of rectangle;
+  - ```"o"``` - is the radius of out circle of rectangle.
 
   If you enter another parameter, an error will occur.
 ___
@@ -104,9 +104,9 @@ ___
 
 + ```outRadius()``` - a circle can be described around a square and a rectangle, that is, when equality `diagonal1() == diagonal2()` is fulfilled.The method using method `diagonal1()`;
 + ```inputRadius()``` - method, which using `double length`, `double width` and `area()`, works only when `double length == double width` otherwise, it is not possible to inscribe a circle in a parallelogram and find the radius;
-+ ```area()``` - method which calculates the area of parallelogram using characteristic in dependence of parameter:
-  + ```'h'``` - `double value` - using `double height` and `double length`;
-  + ```'c'``` - `double value` - using `double width`, `double corner` and `double length`. 
++ ```double area(String parameter)``` - method which calculates the area of parallelogram using characteristic in dependence of parameter:
+  + ```"h"``` - using `double height` and `double length`;
+  + ```"c"``` - using `double width`, `double corner` and `double length`. 
   
   If you enter another parameter, an error will occur.  
 ---
@@ -139,28 +139,28 @@ ___
 + ```diagonalV()``` - method which calculates the diagonal of parallelepiped using `double diagonal` and `double heightP`;
 + ```inputRadius(), setPerimeter(), setInputRadius(), setOutRadius(), outRadius()``` - methods which doesn't exist in this class;
 + ```sumOfCorners()``` - method which doesn't use in this class, because it is impossible to find the sum of corners in parallelepiped;
-+ ```heightP(double value, char parameter)``` - method which calculates the volume height of parallelepiped in different ways using characteristic in dependence of parameter:
-  + ```'a'``` - ```double value``` - using `double area`, `double length` and `double width`;
-  + ```'dL``` - ```double value``` - using `double diagonalSideLength` and `double length`;
-  + ```'dW'``` - ```double value``` - using `double diagonalSideWidth` and `double width`;
-  + ```dV``` - ```double value``` - using `double diagonal` and `double diagonalV`;
-  + ```'v'``` - ```double value``` - using `double volume`, `double length` and `double width`.
++ ```double heightP(String parameter)``` - method which calculates the volume height of parallelepiped in different ways using characteristic in dependence of parameter:
+  + ```"a"``` - using `double area`, `double length` and `double width`;
+  + ```"d"``` - using `double diagonalSideLength` and `double length`;
+  + ```"dW"``` - using `double diagonalSideWidth` and `double width`;
+  + ```"dV"``` - using `double diagonal` and `double diagonalV`;
+  + ```"v"``` - using `double volume`, `double length` and `double width`.
 
   If you enter another parameter, an error will occur.
-+ ```length(double value, char parameter)``` - method which calculates the length of parallelepiped in different ways using characteristic in dependence of parameter: 
-  + ```'a'``` - ```double value``` - using `double area`, `double heightP` and `double width`; 
-  + ```'dL``` - ```double value``` - using `double diagonalSideLength` and `double heightP`;
-  + ```'d'``` - ```double value``` - using `double diagonal` and `double width`;
-  + ```dV``` - ```double value``` - using `double diagonalV` and `double diagonalSideWidth`;
-  + ```'v'``` - ```double value``` - using `double volume`, `double heightP` and `double width`.
++ ```double length(String parameter)``` - method which calculates the length of parallelepiped in different ways using characteristic in dependence of parameter: 
+  + ```"a"``` - using `double area`, `double heightP` and `double width`; 
+  + ```"dL"``` - using `double diagonalSideLength` and `double heightP`;
+  + ```"d"``` - using `double diagonal` and `double width`;
+  + ```"dV"``` - using `double diagonalV` and `double diagonalSideWidth`;
+  + ```"v"``` - using `double volume`, `double heightP` and `double width`.
 
   If you enter another parameter, an error will occur.
-+ ```width(double value, char parameter)``` - method which calculates the length of parallelepiped in different ways using characteristic in dependence of parameter:
-  + ```'a'``` - ```double value``` - using `double area`, `double heightP` and `double length`;
-  + ```'dW``` - ```double value``` - using `double diagonalSideWidth` and `double heightP`;
-  + ```'d'``` - ```double value``` - using `double diagonal` and `double length`;
-  + ```dV``` - ```double value``` - using `double diagonalV` and `double diagonalSideLength`;
-  + ```'v'``` - ```double value``` - using `double volume`, `double heightP` and `double length`.
++ ```double width(String parameter)``` - method which calculates the length of parallelepiped in different ways using characteristic in dependence of parameter:
+  + ```"a"``` - using `double area`, `double heightP` and `double length`;
+  + ```"dW"``` - using `double diagonalSideWidth` and `double heightP`;
+  + ```"d"``` - using `double diagonal` and `double length`;
+  + ```"dV"``` - using `double diagonalV` and `double diagonalSideLength`;
+  + ```"v"``` -  using `double volume`, `double heightP` and `double length`.
 
   If you enter another parameter, an error will occur.
 
@@ -170,28 +170,28 @@ ___
 + ```double heightP, double volume, double diagonalV1, double diagonalV2, double diagonalSideLength``` - variables that will be used in methods;
 + ```volume()``` - method which calculates the volume of prism using `double length`, `double height1` and `double heightP`;
 + ```diagonalSideLength()    - method which calculates diagonal of edge of the prism (length * height) using `double length` and `double heightP`;
-+ ```area(double value, char parameter)``` - method which calculates the area of prism in different ways using characteristic in dependence of parameter:
-  + ```'l'``` -  ```double value``` - using `double height1`, `double heightP` and `double length`;
-  + ```'c'``` -  ```double value``` - using `double corner`, `double length` and `double heightP`.
++ ```double area(String parameter)``` - method which calculates the area of prism in different ways using characteristic in dependence of parameter:
+  + ```"l"``` - using `double height1`, `double heightP` and `double length`;
+  + ```"c"``` - using `double corner`, `double length` and `double heightP`.
 
   If you enter another parameter, an error will occur.
 
 + ```diagonalV1(), diagonalV2()``` - methods which calculate diagonals in prism using `double heightP`, `double diagonal` and `double diagonal2`;
 + ```inputRadius(), setPerimeter(), setInputRadius(), setOutRadius(), outRadius()``` - methods which doesn't exist in this class;
 + ```sumOfCorners()``` - method which doesn't use in this class, because it is impossible to find the sum of corners in prism;
-+ ```heightP(double value, char parameter)``` - method which calculates the volume height of prism in different ways using characteristic in dependence of parameter:
-  + ```'a'``` - ```double value``` - using `double area`, `double length` and `double height1`;
-  + ```'dL``` - ```double value``` - using `double diagonalSideLength` and `double length`;
-  + ```'dV1'``` - ```double value``` - using `double diagonalV1` and `double diagonal`;
-  + ```dV2``` - ```double value``` - using `double diagonalV2` and `double diagonal2`;
-  + ```'v'``` - ```double value``` - using `double volume`, `double height1` and `double length`.
++ ```double heightP(String parameter)``` - method which calculates the volume height of prism in different ways using characteristic in dependence of parameter:
+  + ```"a"``` - using `double area`, `double length` and `double height1`;
+  + ```"dL"``` - using `double diagonalSideLength` and `double length`;
+  + ```"dV1"``` - using `double diagonalV1` and `double diagonal`;
+  + ```"dV2"``` - using `double diagonalV2` and `double diagonal2`;
+  + ```"v"``` - using `double volume`, `double height1` and `double length`.
 
   If you enter another parameter, an error will occur.
 
-+ ```length(double value, char parameter)``` - method which calculates the length of prism in different ways using characteristic in dependence of parameter:
-  + ```'a'``` - ```double value``` - using `double area`, `double heightP` and `double height1`;
-  + ```'dL``` - ```double value``` - using `double diagonalSideLength` and `double heightP`;
-  + ```'v'``` - ```double value``` - using `double volume`, `double height1` and `double heightP`.
++ ```double length(String parameter)``` - method which calculates the length of prism in different ways using characteristic in dependence of parameter:
+  + ```"a"``` - using `double area`, `double heightP` and `double height1`;
+  + ```"dL"``` - using `double diagonalSideLength` and `double heightP`;
+  + ```"v"``` - using `double volume`, `double height1` and `double heightP`.
 
   If you enter another parameter, an error will occur.
 ---
@@ -199,38 +199,38 @@ ___
 #### The class `StraightPrismParallelogram`:
 *StraightPrismParallelogram extends Parallelogram.*
 + ```double heightP, double volume, double diagonalV1, double diagonalV2, double diagonalSideLength, double diagonalSideWidth``` - methods which doesn't exist in this class;
-+ ```volume(double value, char parameter)``` - method which calculates the volume of prism in different ways using characteristic in dependence of parameter:
-  + ```'l'``` - ```double value``` - using  `double length`, `double height1` and `heightP`;
-  + ```'w'``` - ```double value``` - using `double width`, `double height2`, and `double heightP`. 
-+ ```area(double value, char parameter)``` - method which calculates the area of prism in different ways using characteristic in dependence of parameter:
-  + ```'l'``` - ```double value``` - using `double length`, `double heightP`, `double width` and `double height1`; 
-  + ```'w'``` - ```double value``` - using `double length`, `double heightP`, `double width` and `double height2`;
-  + ```'c'``` - ```double value``` - using `double width`, `double length`, `double heightP` and `double corner`.
++ ```double volume(String parameter)``` - method which calculates the volume of prism in different ways using characteristic in dependence of parameter:
+  + ```"l"``` - using  `double length`, `double height1` and `heightP`;
+  + ```"w"``` - using `double width`, `double height2`, and `double heightP`. 
++ ```double area(String parameter)``` - method which calculates the area of prism in different ways using characteristic in dependence of parameter:
+  + ```"l"``` - using `double length`, `double heightP`, `double width` and `double height1`; 
+  + ```"w"``` - using `double length`, `double heightP`, `double width` and `double height2`;
+  + ```"c"``` - using `double width`, `double length`, `double heightP` and `double corner`.
 
   If you enter another parameter, an error will occur.
 + ```diagonalV1(), diagonalV2()``` - methods which calculate diagonals of prism using `double heightP`, `double diagonal` and `double diagonal2`;
 + ```diagonalSideLength(), diagonalSideWidth() ``` - methods which calculate diagonals of edge of the prism (length/width * height) using `double heightP` and `double length`/`double width`;
 + ```inputRadius(), setPerimeter(), setInputRadius(), setOutRadius(), outRadius()``` - methods which doesn't exist in this class;
 + ```sumOfCorners()``` - method which doesn't use in this class, because it is impossible to find the sum of corners in prism;
-+ ```heightP(double value, char parameter)``` - method which calculates the volume height of prism in different ways using characteristic in dependence of parameter:
-  + ```'a'``` - ```double value``` - using `double area`, `double length`, `double width` and `height1`;
-  + ```'dL'``` - ```double value``` - using `double diagonalSideLength` and `double length`;
-  + ```'dW'``` - ```double value``` - using `double diagonalSideWidth` and `double width`;
-  + ```'dV1'``` - ```double value``` - using `double diagonalV1` and `double diagonal`;
-  + ```'dV2'``` - ```double value``` - using `double diagonalV2` and `double diagonal2`;
-  + ```'v'``` - ```double value``` - using `double volume`, `double length` and `double height1`.
++ ```double heightP(String parameter)``` - method which calculates the volume height of prism in different ways using characteristic in dependence of parameter:
+  + ```"a"``` - using `double area`, `double length`, `double width` and `height1`;
+  + ```"dL"``` - using `double diagonalSideLength` and `double length`;
+  + ```"dW"``` - using `double diagonalSideWidth` and `double width`;
+  + ```"dV1"``` - using `double diagonalV1` and `double diagonal`;
+  + ```"dV2"``` - using `double diagonalV2` and `double diagonal2`;
+  + ```"v"``` - using `double volume`, `double length` and `double height1`.
 
   If you enter another parameter, an error will occur.
-+ ```length(double value, char parameter)``` - method which calculates the length of prism in different ways using characteristic in dependence of parameter:
-  + ```'a'``` - ```double value``` - using `double area`, `double width`, `double height1` and `double heightP`;
-  + ```'dL'``` - ```double value``` - using `double diagonalSideLength` and `double heightP`;
-  + ```'v'```- ```double value``` - using `double volume`, `double heightP` and `double height1`.
++ ```double length(String parameter)``` - method which calculates the length of prism in different ways using characteristic in dependence of parameter:
+  + ```"a"``` - using `double area`, `double width`, `double height1` and `double heightP`;
+  + ```"dL"``` - using `double diagonalSideLength` and `double heightP`;
+  + ```"v"```- using `double volume`, `double heightP` and `double height1`.
 
 If you enter another parameter, an error will occur.
-+ ```width(double value, char parameter)``` - method which calculates the width of prism in different ways using characteristic in dependence of parameter:
-  + ```'a'``` - ```double value``` - using `double area`, `double length`, `double heightP` and `double height1`;
-  + ```'dW'``` - ```double value``` - using `double diagonalSideWidth` and `double heightP`;
-  + ```'v'``` - ```double value``` - using `double volume`, `double heightP` and `double height2`.
++ ```double width(String parameter)``` - method which calculates the width of prism in different ways using characteristic in dependence of parameter:
+  + ```"a"``` - using `double area`, `double length`, `double heightP` and `double height1`;
+  + ```"dW"``` - using `double diagonalSideWidth` and `double heightP`;
+  + ```"v"``` - using `double volume`, `double heightP` and `double height2`.
 
 If you enter another parameter, an error will occur.
 
@@ -238,7 +238,7 @@ If you enter another parameter, an error will occur.
 ---
 
 ### The package `triangle`:
-### The 2D figures:
+#### The 2D figures:
 #### The head class ```EquilateralTriangle```:
 + ```double a, double perimeter, double area, double median, double bisector, double height, double outRadius, double inputRadius``` - variables that will be used in methods;
 + ```set[-A, -Perimeter, -Area, -Median, -Bisector, -Height -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example `setA(6)`;
@@ -249,12 +249,12 @@ If you enter another parameter, an error will occur.
 + ```height()``` - method which calculates the height of equilateral triangle using ```double a```;
 + ```outRadius()``` - method which calculates the radius of the circle of equilateral triangle using ```double a```;
 + ```inputRadius()``` - method which calculates the radius of the inscribed circle of equilateral triangle using ```double a```;
-+ ```side(double value, char parameter)``` - method which calculates the ```double a``` using characteristic in dependence of parameter:
-  + `````'a'````` - ```double value``` - using the `outRadius()`;
-  + ```'p'``` - ```double value``` - using the `inputRadius()`;
-  + ```'i'``` - ```double value``` - using the `perimeter()`;
-  + ```'o'``` - ```double value``` - using the `area()`;
-  + ```'h'``` - ```double value``` - using the `height()`.
++ ```double side(String parameter)``` - method which calculates the ```double a``` using characteristic in dependence of parameter:
+  + ```"a"``` - ```double value``` - using the `double outRadius`;
+  + ```"p"``` - ```double value``` - using the `double inputRadius`;
+  + ```"i"``` - ```double value``` - using the `double perimeter`;
+  + ```"o"``` - ```double value``` - using the `double area`;
+  + ```"h"``` - ```double value``` - using the `double height`.
 
   If you enter another parameter, an error will occur.
 
@@ -265,15 +265,15 @@ If you enter another parameter, an error will occur.
 + ```set[-B, -MedianB, -BisectorB, -HeightB, -CornerApex, -CornerSide](double value)``` - methods which you should use to give values to parameters. For example `setMedianB(8)`;
 + ```medianB()``` - method which calculates the median of isosceles triangle using `double b` and `double a`;
 + ```heightB()``` - method which calculates the height of isosceles triangle using `double b`;
-+ ```area(double value, char parameter)``` - method which calculates the area of isosceles triangle using characteristic in dependence of parameter:
-  + ```'a'``` - ```double value``` - using the `height()` and `double b`;
-  + ```'b'``` - ```double value``` - using the `heightB()` and `double a`.
-+ ```sideB(double value, char parameter)``` - method which calculates the ```double b``` using characteristic in dependence of parameter:
-  + ```'o'``` - ```double value``` - using the `outRadius()`, `area()` and `double a`;
-  + ```'i'``` - ```double value``` - using the `inputRadius()`, `semiPerimeter()` and `double a`;
-  + ```'p'``` - ```double value``` - using the `perimeter()` and `double a`;
-  + ```'a'``` - ```double value``` - using the `area()` and `height()`;
-  + ```'h'``` - ```double value``` - using the `double a` and `height()`.
++ ```double area(String parameter)``` - method which calculates the area of isosceles triangle using characteristic in dependence of parameter:
+  + ```"a"``` - using the `double height` and `double b`;
+  + ```"b"``` - using the `double heightB` and `double a`.
++ ```double sideB(String parameter)``` - method which calculates the ```double b``` using characteristic in dependence of parameter:
+  + ```"o"``` - using the `double outRadius`, `double area` and `double a`;
+  + ```"i"``` - using the `double inputRadius`, `double semiPerimeter` and `double a`;
+  + ```"p"``` - using the `double perimeter` and `double a`;
+  + ```"a"``` - using the `double area` and `double height`;
+  + ```"h"``` - using the `double a` and `double height`.
 
   If you enter another parameter, an error will occur.
 ---
@@ -285,23 +285,23 @@ If you enter another parameter, an error will occur.
 + ```heightA()``` - method which calculates the height of triangle using `double c` and `double cornerB`;
 + ```heightB()``` - method which calculates the height of triangle using `double a` and `double cornerC`; 
 + ```heightC()``` - method which calculates the height of triangle using `double b` and `double cornerA`;
-+ ```side(double value, char parameter)``` - method which calculate sthe ```double a``` using characteristic in dependence of parameter:
-  + ```'o'``` - ```double value``` - using the `outRadius()`, `area()`, `double b` and `double c`; 
-  + ```'i'``` - ```double value``` - using the `semiPerimeter()`, `inputRadius()`,`double b` and `double c`;
-  + ```'p'``` - ```double value``` - using the `perimeter()`, `double b` and `double c`;
-  + ```'a'``` - ```double value``` - using the `area()`, `height()`;
-  + ```'h'``` - ```double value``` - using the `height()`, `double b` and `double c`;
-  + ```'t'``` - ```double value``` - using the `cornerA()`, `double b` and `double c`.
++ ```double side(String parameter)``` - method which calculate the ```double a``` using characteristic in dependence of parameter:
+  + ```"o"``` - using the `double outRadius`, `double area`, `double b` and `double c`; 
+  + ```"i"``` - using the `double semiPerimeter`, `double inputRadius`,`double b` and `double c`;
+  + ```"p"``` - using the `double perimeter`, `double b` and `double c`;
+  + ```"a"``` - using the `double area`, `double height`;
+  + ```"h"``` - using the `double height`, `double b` and `double c`;
+  + ```"t"``` - using the `double cornerA`, `double b` and `double c`.
 
   If you enter another parameter, an error will occur.
  
-+ ```sideC(double value, char parameter)``` - method which calculates the ```double c``` using characteristic in dependence of parameter:
-  + ```'o'``` - ```double value``` - using the `outRadius()`, `area()`, `double b` and `double a`;
-  + ```'i'``` - ```double value``` - using the `semiPerimeter()`, `inputRadius()`,`double b` and `double a`;
-  + ```'p'``` - ```double value``` - using the `perimeter()`, `double b` and `double a`;
-  + ```'a'``` - ```double value``` - using the `area()`, `heightC()`;
-  + ```'h'``` - ```double value``` - using the `heightC()`, `double b` and `double a`;
-  + ```'t'``` - ```double value``` - using the `cornerC()`, `double b` and `double a`.
++ ```double sideC(String parameter)``` - method which calculates the ```double c``` using characteristic in dependence of parameter:
+  + ```"o"``` - using the `double outRadius`, `double area`, `double b` and `double a`;
+  + ```"i"``` - using the `double semiPerimeter`, `double inputRadius`,`double b` and `double a`;
+  + ```"p"``` - using the `double perimeter`, `double b` and `double a`;
+  + ```"a"```  - using the `double area`, `double heightC`;
+  + ```"h"``` - using the `double heightC`, `double b` and `double a`;
+  + ```"t"``` - using the `double cornerC`, `double b` and `double a`.
 
   If you enter another parameter, an error will occur.
 
@@ -310,12 +310,49 @@ If you enter another parameter, an error will occur.
 *RightTriangle extends Triangle.*
 + ```setHeight(), setHeightB()``` -  methods which doesn't exist in this class;
 + ```setCornerC()``` - You should to input only 90 degrees, because it is a constant in right triangle;
-+ ```area(double value, char parameter)``` - method which calculates the area of right triangle using characteristic in dependence of parameter:
-  + ```'s'``` - ```double value``` - using the `double a`, `double b`;
-  + ```'c'``` - ```double value``` - using the `heightC()`, `double c`.
++ ```double area(String parameter)``` - method which calculates the area of right triangle using characteristic in dependence of parameter:
+  + ```"s"``` - using the `double a`, `double b`;
+  + ```"c"``` - using the `double heightC`, `double c`. 
 
   If you enter another parameter, an error will occur.
-### The 3D figures:
++ ```double side(String parameter)``` - method which calculates the `double a` of right triangle using characteristic in dependence of parameter:
+  + ```"o"``` - using `HelpingMethods`, `double outRadius` and `double b`;
+  + ```"m"``` - using `HelpingMthods`, `double medianC` and `double b`;
+  + ```"p"``` - using `double perimeter`, `double b` and `double c`;
+  + ```"a"``` - using `double area` and `double b`;
+  + ```"t"``` - using `HelpingMethods`, `double c` and `double b`;
+  + ```"sin"``` - using `double c` and `double cornerA`
+  + ```"cos"``` - using `double c` and `double cornerB`;
+  + ```"tan"``` - using `double b` and `double cornerA`;
+  + ```"ctan"``` - using `double b` and `double cornerA`.
+
+  If you enter another parameter, an error will occur.
++ ```double sideB(String parameter)``` - method which calculates the `double a` of right triangle using characteristic in dependence of parameter:
+  + ```"o"``` - using `HelpingMethods`, `double outRadius` and `double a`;
+  + ```"m"``` - using `HelpingMthods`, `double medianC` and `double a`;
+  + ```"p"``` - using `double perimeter`, `double a` and `double c`;
+  + ```"a"``` - using `double area` and `double a`;
+  + ```"t"``` - using `HelpingMethods`, `double c` and `double a`;
+  + ```"sin"``` - using `double c` and `double cornerB`
+  + ```"cos"``` - using `double c` and `double cornerA`;
+  + ```"tan"``` - using `double a` and `double cornerB`;
+  + ```"ctan"``` - using `double a` and `double cornerA`.
+
+  If you enter another parameter, an error will occur.
++ ```double sideC(String parameter)``` - method which calculates the `double a` of right triangle using characteristic in dependence of parameter:
+  + ```"o"``` - using `double outRadius`;
+  + ```"m"``` - using `double medianC`;
+  + ```"p"``` - using `double perimeter`, `double b` and `double a`;
+  + ```"t"``` - using `HelpingMethods`, `double a` and `double b`;
+  + ```"sinA"``` - using `double a` and `double cornerA`
+  + ```"cosA"``` - using `double b` and `double cornerA`;
+  + ```"sinB"``` - using `double b` and `double cornerB`;
+  + ```"cosB"``` - using `double a` and `double cornerB`.
+
+  If you enter another parameter, an error will occur.
+
+  
+#### The 3D figures:
 #### The class `StraightPrismEquilateralTriangle`:
 *StraightPrismEquilateralTriangle extends EquilateralTriangle.*
 + ```double heightP, double volume``` - variables that will be used in methods;
@@ -323,14 +360,14 @@ If you enter another parameter, an error will occur.
 + ```double perimeter, double outRadius, double inputRadius``` - variables which doesn't exist in this class;
 + ```volume()``` - method which calculates the volume of prism using `double a` and `double heightP`;
 + ```area()``` - method which calculates the area of prism using `double a` and `double heightP`;
-+ ```heightP(double value, char parameter)``` - method which calculates the volume height of prism using characteristic in dependence of parameter:
-  + ```'a'``` - ```double value``` - using `double area` and `double a`;
-  + ```'v'``` - ```double value``` - using `doube volume` and `double a`.
++ ```double heightP(String parameter)``` - method which calculates the volume height of prism using characteristic in dependence of parameter:
+  + ```"a"``` - using `double area` and `double a`;
+  + ```"v"``` - using `doube volume` and `double a`.
 
 If you enter another parameter, an error will occur.
-+ ```side(double value, char parameter)``` - method which calculates the side of prism using characteristic in dependence of parameter:
-  + ```'a'``` - ```double value``` - using `double area`, `double heightP` and `HelpingMethods`;
-  + ```'v'``` - ```double value``` - using `double volume` and `double heightP`.
++ ```double side(String parameter)``` - method which calculates the side of prism using characteristic in dependence of parameter:
+  + ```"a"``` - using `double area`, `double heightP` and `HelpingMethods`;
+  + ```"v"``` - using `double volume` and `double heightP`.
 
   If you enter another parameter, an error will occur.
 ---
@@ -345,13 +382,13 @@ If you enter another parameter, an error will occur.
 + ```volume()``` - method which calculates the volume of pyramid using `double areaBase` and `double heightP`;
 + ```area()``` - method which calculates the volume of pyramid using `double areaSide` and `double areaBase`;
 + ```heightP()``` - method which calculates the volume height  of pyramid using `double a` and `HelpingMethods`;
-+ ```side(double value, char parameter)``` - method which calculates the sides using characteristic in dependence of parameter:
-  + ```'a'``` - using the `double area`;
-  + ```'aS'``` - using the `double areaSide`;
-  + ```'aB'``` - using the `double areaSide`;
-  + ```'h'``` - using the `double height`;
-  + ```'hP'``` - using the `double height`;
-  + ```'v'``` - using the `double volume`.
++ ```double side(String parameter)``` - method which calculates the side using characteristic in dependence of parameter:
+  + ```"a"``` - using the `double area`;
+  + ```"aS"``` - using the `double areaSide`;
+  + ```"aB"``` - using the `double areaSide`;
+  + ```"h"``` - using the `double height`;
+  + ```"hP"``` - using the `double height`;
+  + ```"v"``` - using the `double volume`.
 
   If you enter another parameter, an error will occur.
 
@@ -362,22 +399,22 @@ If you enter another parameter, an error will occur.
 + ```setPerimeter(), setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
 + ```set[-Volume, -HeightP, -DiagonalSideA, -DiagonalSideB](double value)``` - methods which you should use to give values to parameters. For example `setDiagonalSideB(16)`;
 + ```volume()``` - method which calculates the volume of prism using `double areaBase` and `double heightP`;
-+ ```areaBase()``` - method which calculates the base area of prism using characteristic in dependence of parameter:
-  + ```'a'```- ```double value``` - using `double height` and `double b`;
-  + ```'b'``` - ```double value``` - using `double heightB` and `double a`.
++ ```double areaBase(String parameter)``` - method which calculates the base area of prism using characteristic in dependence of parameter:
+  + ```"a"``` - using `double height` and `double b`;
+  + ```"b"``` - using `double heightB` and `double a`.
 + ```areaSide()``` - method which calculates the area of the sides of prism using `double a`, `double heightP` and `double b`;
 + ```area()``` - method which calculates the area of prism using `double areaBase` and `double areaSide`;
 + ```double inputRadius, double outRadius, double perimeter``` - variables which doesn't exist in this class;
 + ```diagonalSideA()``` - method which calculates the diagonal of side A using `HelpingMethods`, `double a` and `double heightP`;
 + ```diagonalSideB()``` - method which calculates the diagonal of side B using `HelpingMethods`, `double b` and `double heightP`;
-+ ```heightP(double value, char parameter)``` - method which calculates the volume height of prism using characteristic in dependence of parameter:
-  + ```'v'``` - ```double value``` - using `double volume` and `double areaBase`;
-  + ```'aS'``` - ```double value``` - using `double areaSide` and `double a`.
++ ```double heightP(String parameter)``` - method which calculates the volume height of prism using characteristic in dependence of parameter:
+  + ```"v"``` - using `double volume` and `double areaBase`;
+  + ```"aS"``` - using `double areaSide` and `double a`.
 
   If you enter another parameter, an error will occur.
-+ ```side(double value, char parameter)``` - method which calculates the side of prism using characteristic in dependence of parameter:
-  + ```'a'``` - ```double value``` - using `HelpingMethods`, `double heightP` and `double area`;
-  + ```'v'``` - ```double value``` - using `double volume` and `double heightP`.
++ ```double side(String parameter)``` - method which calculates the side of prism using characteristic in dependence of parameter:
+  + ```"a"``` - using `HelpingMethods`, `double heightP` and `double area`;
+  + ```"v"``` - using `double volume` and `double heightP`.
 
   If you enter another parameter, an error will occur.
 
@@ -388,11 +425,11 @@ If you enter another parameter, an error will occur.
 + ```set[-Volume, -AreaSide, -AreaBase, -HeightP, -DiagonalSideA, -DiagonalSideB, -DiagonalSideC](double value)``` - methods which you should use to give values to parameters. For example `setAreaBase(36)`;
 + ```setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
 + ```double outRadius, double inputRadius, double side, double sideB, double sideC``` - variables which doesn't exist in this class;
-+ ```String areaBase(char parameter)``` - method which calculates the base area of prism using characteristic in dependence of parameter:
-  + ```"b"``` - ```double value``` - using `double heightB` and `double b`;
-  + ```"a"``` - ```double value``` - using `double height` and `double a`;
-  + ```"c"``` - ```double value``` - using `double heightC` and `double c`;
-  + ```"p"``` - ```double value``` - using `double semiPerimeter`, `double a`, `double b` and `double c`.
++ ```double areaBase(String parameter)``` - method which calculates the base area of prism using characteristic in dependence of parameter:
+  + ```"b"``` - using `double heightB` and `double b`;
+  + ```"a"``` - using `double height` and `double a`;
+  + ```"c"``` - using `double heightC` and `double c`;
+  + ```"p"``` - using `double semiPerimeter`, `double a`, `double b` and `double c`.
 
   If you enter another parameter, an error will occur.
   + ```areaSide()``` - method which calculates the area of the sides of prism using `double heightP`, `double a`, `double b` and `double c`;
@@ -401,16 +438,16 @@ If you enter another parameter, an error will occur.
   + ```diagonalSideA()``` - method which calculates the diagonal near side `double a` using `HelpingMethods`, `double heightP` and `double a`;
   + ```diagonalSideB()``` - method which calculates the diagonal near side `double b` using `HelpingMethods`, `double heightP` and `double b`;
   + ```diagonalSideC()``` - method which calculates the diagonal near side `double c` using `HelpingMethods`, `double heightP` and `double c`;
-  + ```String heightP(String parameter)``` - method which calculates the volume height of prism using characteristic in dependence of parameter:
-    + ```"aS"``` - ```double value``` - using `double areaSide`, `double a`, `double b` and `double c`;
-    + ```"a"``` - ```double value``` - using `double area`,`double areaBase`, `double a`, `double b` and `double c`;
-    + ```"v"``` - ```double value``` - using `double volume` and `double areaBase`;
-    + ```"dSA"``` - ```double value``` - using `HeilpingMethods`, `double diagonalSideA` and `double a`;
-    + ```"dSB"``` - ```double value``` - using `HeilpingMethods`, `double diagonalSideB` and `double b`;
-    + ```"dSC"``` - ```double value``` - using `HeilpingMethods`, `double diagonalSideC` and `double c`.
+  + ```double heightP(String parameter)``` - method which calculates the volume height of prism using characteristic in dependence of parameter:
+    + ```"aS"``` - using `double areaSide`, `double a`, `double b` and `double c`;
+    + ```"a"``` - using `double area`,`double areaBase`, `double a`, `double b` and `double c`;
+    + ```"v"``` - using `double volume` and `double areaBase`;
+    + ```"dSA"``` - using `HeilpingMethods`, `double diagonalSideA` and `double a`;
+    + ```"dSB"``` - using `HeilpingMethods`, `double diagonalSideB` and `double b`;
+    + ```"dSC"``` - using `HeilpingMethods`, `double diagonalSideC` and `double c`.
 
   If you enter another parameter, an error will occur.
-+ ```String side(String parameter)``` - method which calculates the side(`double a`)of prism using characteristic in dependence of parameter:
++ ```double side(String parameter)``` - method which calculates the `double a` of prism using characteristic in dependence of parameter:
   + ```"aBH"``` - ```double value``` - using `double areaBase` and `double height`;
   + ```"p"``` - ```double value``` - using `double perimeter`, `double b` and `double c`;
   + ```"v"``` - ```double value``` - using `double volume`, `double heightP` and `double height`;
@@ -420,7 +457,7 @@ If you enter another parameter, an error will occur.
   + ```"m"``` - ```double value``` - using `double b`, `double c` and `double median`.
 
   If you enter another parameter, an error will occur.
-+ ```String sideB(String parameter)``` - method which calculates the side(`double b`) of prism using characteristic in dependence of parameter:
++ ```double sideB(String parameter)``` - method which calculates the `double b` of prism using characteristic in dependence of parameter:
   + ```"aBH"``` - ```double value``` - using `double areaBase` and `double heightB`;
   + ```"p"``` - ```double value``` - using `double perimeter`, `double a` and `double c`;
   + ```"v"``` - ```double value``` - using `double volume`, `double heightP` and `double heightB`;
@@ -430,7 +467,7 @@ If you enter another parameter, an error will occur.
   + ```"m"``` - ```double value``` - using `double a`, `double c` and `double medianB`.
 
   If you enter another parameter, an error will occur.
-+ ```String sideC(String parameter)``` - method which calculates the side(`double c`) of prism using characteristic in dependence of parameter:
++ ```double sideC(String parameter)``` - method which calculates the `double c` of prism using characteristic in dependence of parameter:
   + ```"aBH"``` - ```double value``` - using `double areaBase` and `double heightC`;
   + ```"p"``` - ```double value``` - using `double perimeter`, `double b` and `double a`;
   + ```"v"``` - ```double value``` - using `double volume`, `double heightP` and `double heightC`;
@@ -442,22 +479,85 @@ If you enter another parameter, an error will occur.
   If you enter another parameter, an error will occur.
 
 ---
+
+#### The class `StraightPrismRightTriangle`:
++ ```double volume, double areaSide, double areaBase, double heightP, double diagonalSideA, double diagonalSideB,double diagonalSideC``` - variables that will be used in methods;
++ ```set[-Volume, -AreaSide, -AreaBase, -HeightP, -DiagonalSideA, -DiagonalSideB, -DiagonalSideC]``` - methods which you should use to give values to parameters. For example `setDiagonalSideA(16)`;
++ ```setInputRadius(), setOutRadius()``` - methods which doesn't exist in this class;
++ ```double outRadius, double inputRadius, double side, double sideB, double sideC``` - variables which doesn't exist in this class;
++ ```double areaBase(String parameter)``` - method which calculates the base area of prism using characteristic in dependence of parameter:
+  + ```"c"``` - using `double a` and `double b`;
+  + ```"h"``` - using `double heightC` and `double c`.
+
+  If you enter another parameter, an error will occur.
++ ```areaSide()``` - method which calculates the area of the sides of prism using `double heightP`, `double b`, `double c` and `double a`;
++ ```area()``` - method which calculates the area of prism using `double areaBase` and `double areaSide`;
++ ```volume()``` - method which calculates the volume of prism using `double areaBase` and `double heightP`;
++ ```diagonalSideA()``` - method which calculates the diagonal near side `double a` using `HelpingMethods`, `double heightP` and `double a`;
++ ```diagonalSideB()``` - method which calculates the diagonal near side `double b` using `HelpingMethods`, `double heightP` and `double b`;
++ ```diagonalSideC()``` - method which calculates the diagonal near side `double c` using `HelpingMethods`, `double heightP` and `double c`;
++ ```double heightP(String parameter)``` - method which calculates the volume height of prism using characteristic in dependence of parameter:
+  + ```"aS"``` - using `double areaSide`, `double a`, `double b` and `double c`; 
+  + ```"a"``` - using `double area`, `double areaBase`, `double a`, `double b` and `double c`;
+  + ```"v"``` - using `double volume` and `double areaBase`;
+  + ```"dSA"``` - using `HelpingMethods`, `double diagonalSideA` and `double a`;
+  + ```"dSB"``` - using `HelpingMethods`, `double diagonalSideB` and `double b`;
+  + ```"dSC"``` - using `HelpingMethods`, `double diagonalSideC` and `double c`.
+
+  If you enter another parameter, an error will occur.
++ ```double side(String parameter)``` - method which calculates the `double a` using characteristic in dependence of parameter:
+  + ```"aBH"``` - using `double areaBase` and `double b`;
+  + ```"v"``` - using `double volume`,`double heightP` and `double b`;
+  + ```"dSA"``` - using `HelpingMethods`, `double diagonalSideA` and `double heightP`;
+  + ```"t"``` - using `HeplingMethods`, `double c` and `double b`;
+  + ```"sin"``` - using `double c` and `double cornerA`;
+  + ```"cos"``` - using `double c` and `double cornerB`;
+  + ```"tan"``` - using `double b` and `double cornerA`;
+  + ```"ctan"``` - using `double b` and `double cornerB`.
+
+  If you enter another parameter, an error will occur.
++ ```double sideB(String parameter)``` - method which calculates the `double a` using characteristic in dependence of parameter:
+  + ```"aBH"``` - using `double areaBase` and `double a`;
+  + ```"v"``` - using `double volume`,`double heightP` and `double a`;
+  + ```"dSB"``` - using `HelpingMethods`, `double diagonalSideB` and `double heightP`;
+  + ```"t"``` - using `HeplingMethods`, `double c` and `double a`;
+  + ```"sin"``` - using `double c` and `double cornerB`;
+  + ```"cos"``` - using `double c` and `double cornerA`;
+  + ```"tan"``` - using `double a` and `double cornerB`;
+  + ```"ctan"``` - using `double a` and `double cornerA`.
+
+  If you enter another parameter, an error will occur.
++ ```double sideC(String parameter)``` - method which calculates the `double a` using characteristic in dependence of parameter:
+  + ```"aBH"``` - using `double areaBase` and `double heightC`;
+  + ```"v"``` - using `double volume`,`double heightP` and `double heightC`;
+  + ```"dSC"``` - using `HelpingMethods`, `double diagonalSideC` and `double heightP`;
+  + ```"t"``` - using `HeplingMethods`, `double a` and `double b`;
+  + ```"m"``` - using `double medianC`;
+  + ```"sinA"``` - using `double a` and `double cornerA`;
+  + ```"cosA"``` - using `double b` and `double cornerA`;
+  + ```"sinnB"``` - using `double b` and `double cornerB`;
+  + ```"cosB"``` - using `double a` and `double cornerB`.
+
+  If you enter another parameter, an error will occur.
+
+
+---
 ### The package `circle`:
-### The 2D figures:
+#### The 2D figures:
 #### The head class `Circle`:
 + ```double radius, double diameter, double length, double area``` - variables that will be used in methods;
 + ```set[-Radius, -Diameter, -Length, -Area](double value)``` - methods which you should use to give values to parameters. For example `setDiameter(12)`;
 + ```diameter()``` - method which calculates the diameter of circle using `double radius`;
 + ```length()``` - method which calculates the length of circle using `double radius`;
 + ```area()``` - method which calculates the area of circle using `double radius`;
-+ ```radius(double value, char parameter)``` - method which calculates the radius of circle using characteristic in dependence of parameter:
-  + ```'d'``` - ```double value``` - using the `double diameter`;.
-  + ```'l'``` - ```double value``` - using the `double length`;
-  + ```'a'``` - ```double value``` - using the `area()`.
++ ```double radius(String parameter)``` - method which calculates the radius of circle using characteristic in dependence of parameter:
+  + ```"d"``` - using the `double diameter`;.
+  + ```"l"``` - using the `double length`;
+  + ```"a"``` - using the `double area`.
 
   If you enter another parameter, an error will occur.
 ---
-### The 3D figures:
+#### The 3D figures:
 #### The class `Cone`:
 + ```double volume, double areaSide, double areaBase, double hightP, double slantHeight``` - variables that will be used in methods;
 + ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlanHeight](double value)``` - methods which you should use to give values to parameters. For example `setVolume(36`
@@ -466,17 +566,17 @@ If you enter another parameter, an error will occur.
 + ```area()``` - method which calculates the area of cone using `double areaSide` and `double areaBase`;
 + ```volume()``` - method which calculates the volume of cone using `double areaBase` and `heightP`;
 + ```slanHeight()``` - method which calculates the slan height of cone using `HelpingMethods`, `double heightP` and `double radius`;
-+ ```height(double value, char parameter)``` - method which calculates the height of cone using characteristic in dependence of parameter:
-  + ```'s'``` - ```double value``` - using the `HelpingMethods`, `double slanHeight` and `double radius`;
-  + ```'aS'``` - ```double value``` - using the `HelpingMethods`, `double areaSide` and `double radius`;
-  + ```'a'``` - ```double value``` - using the `HelpingMethods`, `double area` and `double radius`.
++ ```double height(String parameter)``` - method which calculates the height of cone using characteristic in dependence of parameter:
+  + ```"s"``` - using the `HelpingMethods`, `double slanHeight` and `double radius`;
+  + ```"aS"``` - using the `HelpingMethods`, `double areaSide` and `double radius`;
+  + ```"a"``` - using the `HelpingMethods`, `double area` and `double radius`.
 
   If you enter another parameter, an error will occur.
-+ ```radius(double value, char parameter)``` - method which calculates the radius of cone using characteristic in dependence of parameter:
-  + ```'s'``` - ```double value``` - using the `HelpingMethods`, `double slanHeight` and `double heightP`;
-  + ```'aS'``` - ```double value``` - using the `double areaSide` and `double slanHeight`;
-  + ```'a'``` - ```double value``` - using the `HelpingMethods`, `double slanHeight` and `double area`;
-  + ```'aB'``` - ```double value``` - using the `double areaBase`.
++ ```double radius(String parameter)``` - method which calculates the radius of cone using characteristic in dependence of parameter:
+  + ```"s"``` - using the `HelpingMethods`, `double slanHeight` and `double heightP`;
+  + ```"aS"``` - using the `double areaSide` and `double slanHeight`;
+  + ```"a"``` - using the `HelpingMethods`, `double slanHeight` and `double area`;
+  + ```"aB"``` - using the `double areaBase`.
 
   If you enter another parameter, an error will occur.
 
