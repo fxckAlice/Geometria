@@ -43,17 +43,17 @@ public class Triangle extends IsoscelesTriangle {
     public void setCornerSide(double cornerSide) {
         System.out.println("Doesn't exist");
     }
-    public double medianA(){
-        medianB = 0.5 * Math.sqrt(2 * Math.pow(b, 2) + 2 * Math.pow(c, 2) - Math.pow(a, 2));
-        return medianB;
+    public double median(){
+        median = 0.5 * Math.sqrt(2 * Math.pow(b, 2) + 2 * Math.pow(c, 2) - Math.pow(a, 2));
+        return median;
     }
     public double medianB(){
         medianB = 0.5 * Math.sqrt(2 * Math.pow(a, 2) + 2 * Math.pow(c, 2) - Math.pow(b, 2));
         return medianB;
     }
     public double medianC(){
-        medianB = 0.5 * Math.sqrt(2 * Math.pow(a, 2) + 2 * Math.pow(b, 2) - Math.pow(c, 2));
-        return medianB;
+        medianC = 0.5 * Math.sqrt(2 * Math.pow(a, 2) + 2 * Math.pow(b, 2) - Math.pow(c, 2));
+        return medianC;
     }
     public double heightA(){
         heightB = Math.cos(cornerB / 180 * Math.PI) * c;
@@ -114,11 +114,11 @@ public class Triangle extends IsoscelesTriangle {
                 answer = help.pythagoreanTheorem(b, height,"-") + help.pythagoreanTheorem(c, height, "-");
                 break;
             case "t":
-                double temp = 2 * b * c * help.round(Math.cos((180 - cornerA) / 180 * Math.PI), -10);
-                answer = Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - temp);
+                double temp = 2 * b * c * Math.cos(cornerA / 180 * Math.PI);
+                answer = help.round(Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - temp), -8);
                 break;
             case "m":
-                answer = Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(c, 2)) - Math.pow(median / 2, 2));
+                answer = help.round(Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(c, 2)) - Math.pow(median * 2, 2)), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -145,11 +145,11 @@ public class Triangle extends IsoscelesTriangle {
                 answer = help.pythagoreanTheorem(a, heightB, "-") + help.pythagoreanTheorem(c, heightB, "+");
                 break;
             case "t":
-                double temp = 2 * a * c * help.round(Math.cos((180 - cornerB) / 180 * Math.PI), -10);
-                answer = Math.sqrt(Math.pow(a, 2) + Math.pow(c, 2) - temp);
+                double temp = 2 * a * c * Math.cos(cornerB / 180 * Math.PI);
+                answer = help.round(Math.sqrt(Math.pow(a, 2) + Math.pow(c, 2) - temp), -8);
                 break;
             case "m":
-                answer = Math.sqrt(2 * (Math.pow(a, 2) + Math.pow(c, 2)) - Math.pow(medianB / 2, 2));
+                answer = help.round(Math.sqrt(2 * (Math.pow(a, 2) + Math.pow(c, 2)) - Math.pow(medianB * 2, 2)), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -176,11 +176,11 @@ public class Triangle extends IsoscelesTriangle {
                 answer = help.pythagoreanTheorem(b, heightC, "-") + help.pythagoreanTheorem(a, heightC,"-");
                 break;
             case "t":
-                double temp = 2 * b * a * help.round(Math.cos((180 - cornerC) / 180 * Math.PI), -10);
-                answer = Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2) - temp);
+                double temp = 2 * b * a * Math.cos(cornerC / 180 * Math.PI);
+                answer = help.round(Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2) - temp), -8);
                 break;
             case "m":
-                answer = Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(a, 2)) - Math.pow(medianC / 2, 2));
+                answer = help.round(Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(a, 2)) - Math.pow(medianC * 2, 2)), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
