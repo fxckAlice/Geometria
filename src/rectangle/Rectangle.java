@@ -43,7 +43,7 @@ public class Rectangle {
         return diagonal;
     }
     public double outRadius (){
-        outRadius = diagonal() / 2;
+        outRadius = diagonal / 2;
         return outRadius;
     }
     public double inputRadius(){
@@ -72,7 +72,7 @@ public class Rectangle {
                 answer = 2 * inputRadius;
                 break;
             case ("o"):
-                answer = help.pythagoreanTheorem(outRadius * 2, "-");
+                answer = help.round(help.pythagoreanTheorem(outRadius * 2, "-"), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -89,10 +89,10 @@ public class Rectangle {
         return 360;
     }
     public double cornerDiagonalLength(){
-        return Math.acos(length / diagonal());
+        return help.round(Math.acos(length / diagonal) / Math.PI * 180, -7);
     }
     public double cornerDiagonalWidth(){
-        return Math.asin(length / diagonal());
+        return help.round(Math.asin(length / diagonal) / Math.PI * 180, -7);
     }
 
 }
