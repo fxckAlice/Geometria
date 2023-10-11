@@ -7,10 +7,16 @@ import triangle.StraightPrismIsoscelesTriangle;
 
 public class Main {
     public static void main(String[] args) {
-        Circle a = new Circle();
+        Cone a = new Cone();
 
         a.setRadius(5);
-        System.out.println(a.area());
-        System.out.println(a.length());
+        a.setHeightP(12);
+        a.diameter();
+        a.slantHeight();
+        a.areaSide();
+        a.areaBase();
+        a.area();
+        //System.out.println(a.heightP("a"));
+        System.out.println(a.radius("aB"));
     }
 }

@@ -22,7 +22,7 @@ public class Circle {
         this.area = area;
     }
     public double diameter(){
-        diameter = radius / 2;
+        diameter = radius * 2;
         return diameter;
     }
     public double length(){
