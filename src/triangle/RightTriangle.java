@@ -65,16 +65,16 @@ public class RightTriangle extends Triangle {
                 answer = help.pythagoreanTheorem(c, b, "-");
                 break;
             case ("sin"):
-                answer = c * Math.sin(cornerA / 180 * Math.PI);
+                answer = help.round(c * Math.sin(cornerA / 180 * Math.PI), -8);
                 break;
             case ("cos"):
-                answer = c * Math.cos(cornerB / 180 * Math.PI);
+                answer = help.round(c * Math.cos(cornerB / 180 * Math.PI), -8);
                 break;
             case ("tan"):
-                answer = b * Math.tan(cornerA / 180 * Math.PI);
+                answer = help.round(b * Math.tan(cornerA / 180 * Math.PI), -8);
                 break;
             case ("ctan"):
-                answer = b / Math.tan(cornerB / 180 * Math.PI);
+                answer = help.round(b / Math.tan(cornerB / 180 * Math.PI), -8);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -101,16 +101,16 @@ public class RightTriangle extends Triangle {
                 answer = help.pythagoreanTheorem(c, a, "-");
                 break;
             case ("sin"):
-                answer = c * Math.sin(cornerB / 180 * Math.PI);
+                answer = help.round(c * Math.sin(cornerB / 180 * Math.PI), -8);
                 break;
             case ("cos"):
-                answer = c * Math.cos(cornerA / 180 * Math.PI);
+                answer = help.round(c * Math.cos(cornerA / 180 * Math.PI), -8);
                 break;
             case ("tan"):
-                answer = a * Math.tan(cornerB / 180 * Math.PI);
+                answer = help.round(a * Math.tan(cornerB / 180 * Math.PI), -8);
                 break;
             case ("ctan"):
-                answer = a / Math.tan(cornerA / 180 * Math.PI);
+                answer = help.round(a / Math.tan(cornerA / 180 * Math.PI), -8);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -135,16 +135,16 @@ public class RightTriangle extends Triangle {
                 answer = help.pythagoreanTheorem(b, a, "+");
                 break;
             case ("sinA"):
-                answer = a / Math.sin(cornerA / 180 * Math.PI);
+                answer = help.round(a / Math.sin(cornerA / 180 * Math.PI), -8);
                 break;
             case ("cosA"):
-                answer = b / Math.cos(cornerA / 180 * Math.PI);
+                answer = help.round(b / Math.cos(cornerA / 180 * Math.PI), -8);
                 break;
             case ("sinB"):
-                answer = b / Math.sin(cornerB / 180 * Math.PI);
+                answer = help.round(b / Math.sin(cornerB / 180 * Math.PI), -8);
                 break;
             case ("cosB"):
-                answer = a / Math.cos(cornerB / 180 * Math.PI);
+                answer = help.round(a / Math.cos(cornerB / 180 * Math.PI), -8);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
