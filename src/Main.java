@@ -1,3 +1,4 @@
+import circle.Circle;
 import help.HelpingMethods;
 import triangle.StraightPrismEquilateralTriangle;
 import circle.Cone;
@@ -6,18 +7,10 @@ import triangle.StraightPrismIsoscelesTriangle;
 
 public class Main {
     public static void main(String[] args) {
-        StraightPrismIsoscelesTriangle a = new StraightPrismIsoscelesTriangle();
-        HelpingMethods help = new HelpingMethods();
+        Circle a = new Circle();
 
-        a.setA(13);
-        a.setB(10);
-        a.setHeightP(10);
-        System.out.println(a.height());
-        System.out.println(a.areaBase("a"));
-        System.out.println(a.areaSide());
-        System.out.println(a.volume());
-        System.out.println(a.side("v"));
-        System.out.println(a.side("aS"));
-        System.out.println(a.sideB("aB"));
+        a.setRadius(5);
+        System.out.println(a.area());
+        System.out.println(a.length());
     }
 }
