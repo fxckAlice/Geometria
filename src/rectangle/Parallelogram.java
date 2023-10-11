@@ -84,13 +84,13 @@ public class Parallelogram extends Rectangle {
                 answer = perimeter / 2 - length;
                 break;
             case ("d"):
-                answer = help.pythagoreanTheorem(diagonal, height1, '-');
+                answer = help.pythagoreanTheorem(diagonal, height1, "-");
                 break;
             case ("i"):
                 answer = area / (2 * inputRadius);
                 break;
             case ("o"):
-                answer = help.pythagoreanTheorem(outRadius * 2, length, '-');
+                answer = help.pythagoreanTheorem(outRadius * 2, length, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
