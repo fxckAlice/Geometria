@@ -19,14 +19,14 @@ public class Parallelogram extends Rectangle {
         this.height2 = height2;
     }
 
-    public double area(char parameter){
+    public double area(String parameter){
         switch (parameter) {
-            case ('l'):
+            case ("l"):
                 area = height1 * length;
                 break;
-            case ('w'):
+            case ("w"):
                 area = height2 * width;
-            case ('c'):
+            case ("c"):
                 area = width * Math.sin(corner / 180 * Math.PI) * length;
                 break;
             default:
@@ -74,22 +74,22 @@ public class Parallelogram extends Rectangle {
         }
     }
     @Override
-    public double side( char parameter) {
+    public double side(String parameter) {
         double answer;
         switch (parameter) {
-            case ('a'):
+            case ("a"):
                 answer = area / height1;
                 break;
-            case ('p'):
+            case ("p"):
                 answer = perimeter / 2 - length;
                 break;
-            case ('d'):
+            case ("d"):
                 answer = help.pythagoreanTheorem(diagonal, height1, '-');
                 break;
-            case ('i'):
+            case ("i"):
                 answer = area / (2 * inputRadius);
                 break;
-            case ('o'):
+            case ("o"):
                 answer = help.pythagoreanTheorem(outRadius * 2, length, '-');
                 break;
             default:

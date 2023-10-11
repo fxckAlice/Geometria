@@ -70,7 +70,7 @@ public class RightPyramidEquilateralTriangle extends EquilateralTriangle{
         return -1;
     }
     public double heightP(){
-        heightP = help.pythagoreanTheorem(a, help.pythagoreanTheorem(a, a / 2, '-') * 2 / 3, '-');
+        heightP = help.pythagoreanTheorem(a, help.pythagoreanTheorem(a, a / 2, "-") * 2 / 3, "-");
         return heightP;
     }  //heightP = a / 2; xD
     public double side(String parameter){

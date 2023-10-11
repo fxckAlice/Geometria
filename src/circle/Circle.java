@@ -33,16 +33,16 @@ public class Circle {
         area = Math.pow(radius, 2) * Math.PI;
         return area;
     }
-    public double radius(char parameter){
+    public double radius(String parameter){
         double answer;
         switch (parameter){
-            case('d'):
+            case("d"):
                 answer = diameter / 2;
                 break;
-            case('l'):
+            case("l"):
                 answer = length / (2 * Math.PI);
                 break;
-            case('a'):
+            case("a"):
                 answer = Math.sqrt(area / Math.PI);
                 break;
             default:

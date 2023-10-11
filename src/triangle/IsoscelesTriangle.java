@@ -28,11 +28,11 @@ public class IsoscelesTriangle extends EquilateralTriangle {
     }
     @Override
     public double height(){
-        height = help.pythagoreanTheorem(a, b / 2, '-');
+        height = help.pythagoreanTheorem(a, b / 2, "-");
         return  height;
     }
     public double medianB(){
-        medianB = 0.5 * help.pythagoreanTheorem(a, b * Math.sqrt(2), '+');
+        medianB = 0.5 * help.pythagoreanTheorem(a, b * Math.sqrt(2), "+");
         return medianB;
     }
     public double heightB(){
@@ -44,12 +44,12 @@ public class IsoscelesTriangle extends EquilateralTriangle {
         perimeter = a * 2 + b;
         return perimeter;
     }
-    public double area(char parameter){
+    public double area(String parameter){
         switch (parameter){
-            case ('a'):
+            case ("a"):
                 area = height * b / 2;
                 break;
-            case ('b'):
+            case ("b"):
                 area = heightB * a / 2;
                 break;
         }
@@ -66,23 +66,23 @@ public class IsoscelesTriangle extends EquilateralTriangle {
         return inputRadius;
     }
     @Override
-    public double side(char parameter){
+    public double side(String parameter){
         double answer;
         switch (parameter){
-            case 'o':
+            case "o":
                 answer = Math.sqrt(outRadius * 4 * area / (b));
                 break;
-            case 'i':
+            case "i":
                 answer = semiPerimeter() - Math.sqrt(Math.pow(inputRadius, 2) * semiPerimeter() / (semiPerimeter() - b));
                 break;
-            case 'p':
+            case "p":
                 answer = (perimeter - b) / 2;
                 break;
-            case 'a':
+            case "a":
                 answer = area / heightB * 2;
                 break;
-            case 'h':
-                answer = help.pythagoreanTheorem(height, b / 2, '+');
+            case "h":
+                answer = help.pythagoreanTheorem(height, b / 2, "+");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -90,23 +90,23 @@ public class IsoscelesTriangle extends EquilateralTriangle {
         }
         return answer;
     }
-    public double sideB(char parameter){
+    public double sideB(String parameter){
         double answer;
         switch (parameter){
-            case 'o':
+            case "o":
                 answer = outRadius * 4 * area / (Math.pow(a, 2));
                 break;
-            case 'i':
+            case "i":
                 answer = Math.pow(inputRadius, 2) * semiPerimeter() / Math.pow(semiPerimeter() - a, 2);
                 break;
-            case 'p':
+            case "p":
                 answer = perimeter - 2 * a;
                 break;
-            case 'a':
+            case "a":
                 answer = area / height * 2;
                 break;
-            case 'h':
-                answer = help.pythagoreanTheorem(a, height, '-');
+            case "h":
+                answer = help.pythagoreanTheorem(a, height, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");

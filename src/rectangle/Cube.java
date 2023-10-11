@@ -56,19 +56,19 @@ public class Cube extends Square{
         return -1;
     }
     @Override
-    public double side(char parameter){
+    public double side(String parameter){
         double answer;
         switch (parameter){
-            case ('a'):
+            case ("a"):
                 answer = Math.sqrt(area / 6);
                 break;
-            case ('d'):
-                answer = help.pythagoreanTheorem(diagonal, '-');
+            case ("d"):
+                answer = help.pythagoreanTheorem(diagonal, "-");
                 break;
-            case ('v'):
+            case ("v"):
                 answer = Math.cbrt(volume);
                 break;
-            case('s'):
+            case("s"):
                 answer = diagonalV / Math.sqrt(3);
                 break;
             default:

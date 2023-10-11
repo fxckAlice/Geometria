@@ -34,12 +34,12 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
         return volume;
     }
 
-    public double areaBase(char parameter){
+    public double areaBase(String parameter){
         switch (parameter){
-            case ('a'):
+            case ("a"):
                 areaBase = height * b / 2;
                 break;
-            case ('b'):
+            case ("b"):
                 areaBase = heightB * a / 2;
                 break;
         }
@@ -50,7 +50,7 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
         return areaSide;
     }
     @Override
-    public double area(char parameter){
+    public double area(String parameter){
         area = areaBase * 2 + areaSide;
         return area;
     }
@@ -70,11 +70,11 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
         return -1;
     }
     public double diagonalSideA(){
-        diagonalSideA = help.pythagoreanTheorem(a, heightP, '+');
+        diagonalSideA = help.pythagoreanTheorem(a, heightP, "+");
         return diagonalSideA;
     }
     public double diagonalSideB(){
-        diagonalSideB = help.pythagoreanTheorem(b, heightP, '+');
+        diagonalSideB = help.pythagoreanTheorem(b, heightP, "+");
         return diagonalSideB;
     }
     public double heightP(String parameter){
@@ -87,10 +87,10 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
                 answer = areaSide / (a * 2 + b);
                 break;
             case ("dSA"):
-                answer = help.pythagoreanTheorem(diagonalSideA, a, '-');
+                answer = help.pythagoreanTheorem(diagonalSideA, a, "-");
                 break;
             case ("dSB"):
-                answer = help.pythagoreanTheorem(diagonalSideB, b, '-');
+                answer = help.pythagoreanTheorem(diagonalSideB, b, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -99,29 +99,20 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
         }
         return answer;
     }
-    public double side(char parameter){
-        System.out.println("Use String parameter!");
-        return -1;
-    }
-    @Override
-    public double sideB(char parameter){
-        System.out.println("Use String parameter!");
-        return -1;
-    }
     public double side(String parameter){
         double answer;
         switch (parameter){
             case ("v"):
-                answer = help.pythagoreanTheorem(2 * volume / heightP / b, b / 2, '+');
+                answer = help.pythagoreanTheorem(2 * volume / heightP / b, b / 2, "+");
                 break;
             case ("aB"):
-                answer = help.pythagoreanTheorem(2 * areaBase / b, b / 2, '+');
+                answer = help.pythagoreanTheorem(2 * areaBase / b, b / 2, "+");
                 break;
             case ("aS"):
                 answer = areaSide / heightP - a * 2;
                 break;
             case ("dSB"):
-                answer = help.pythagoreanTheorem(diagonalSideA, heightP, '-');
+                answer = help.pythagoreanTheorem(diagonalSideA, heightP, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -134,7 +125,7 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
         double answer;
         switch (parameter){
             case ("v"):
-                answer = help.pythagoreanTheorem(2 * volume / heightP / b, b / 2, '+');
+                answer = help.pythagoreanTheorem(2 * volume / heightP / b, b / 2, "+");
                 break;
             case ("aB"):
                 answer = areaBase / heightP * 2;
@@ -143,7 +134,7 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
                 answer = (areaSide / heightP - b) / 2;
                 break;
             case ("dSB"):
-                answer = help.pythagoreanTheorem(diagonalSideB, heightP, '-');
+                answer = help.pythagoreanTheorem(diagonalSideB, heightP, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");

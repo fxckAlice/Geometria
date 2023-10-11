@@ -34,7 +34,7 @@ public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
         return volume;
     }
     public double diagonalSide(){
-        diagonalSide = help.pythagoreanTheorem(a, heightP, '+');
+        diagonalSide = help.pythagoreanTheorem(a, heightP, "+");
         return diagonalSide;
     }
 
@@ -58,13 +58,13 @@ public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
         System.out.println("Doesn`t exist!");
         return -1;
     }
-    public double heightP(char parameter){
+    public double heightP(String parameter){
         double answer;
         switch (parameter){
-            case ('a'):
+            case ("a"):
                 answer = (area / a - Math.sqrt(3) / 2) / 3;
                 break;
-            case ('v'):
+            case ("v"):
                 answer = volume / (Math.pow(a, 2) * Math.sqrt(3) / 4);
                 break;
             default:
@@ -75,13 +75,13 @@ public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
         return answer;
     }
     @Override
-    public double side(char parameter){
+    public double side(String parameter){
         double answer;
         switch (parameter){
-            case ('a'):
+            case ("a"):
                 answer = help.quadraticEducation(Math.sqrt(3) / 2, 3 * heightP, -area);
                 break;
-            case ('v'):
+            case ("v"):
                 answer = Math.sqrt(volume / heightP * 4 / Math.sqrt(3));
                 break;
             default:

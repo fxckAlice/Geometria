@@ -13,7 +13,7 @@ public class Main {
         a.setB(10);
         a.setHeightP(10);
         System.out.println(a.height());
-        System.out.println(a.areaBase('a'));
+        System.out.println(a.areaBase("a"));
         System.out.println(a.areaSide());
         System.out.println(a.volume());
         System.out.println(a.side("v"));

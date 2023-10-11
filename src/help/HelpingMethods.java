@@ -40,13 +40,13 @@ public class HelpingMethods {
             return temp * rounding;
         }
     }
-    public double pythagoreanTheorem(double a, double b, char action){
+    public double pythagoreanTheorem(double a, double b, String action){
         double answer;
         switch (action){
-            case ('+'):
+            case ("+"):
                 answer = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
                 break;
-            case ('-'):
+            case ("-"):
                 answer = Math.sqrt(Math.pow(a, 2) - Math.pow(b, 2));
                 break;
             default:
@@ -55,13 +55,13 @@ public class HelpingMethods {
         }
         return answer;
     }
-    public double pythagoreanTheorem(double a, char action){
+    public double pythagoreanTheorem(double a, String action){
         double answer;
         switch (action){
-            case ('+'):
+            case ("+"):
                 answer = Math.sqrt(Math.pow(a, 2) * 2);
                 break;
-            case ('-'):
+            case ("-"):
                 answer = Math.sqrt(Math.pow(a, 2) / 2);
                 break;
             default:

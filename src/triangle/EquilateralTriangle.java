@@ -49,7 +49,7 @@ public class EquilateralTriangle {
         return area;
     }
     public double height(){
-        height = help.pythagoreanTheorem(a, a / 2, '-');
+        height = help.pythagoreanTheorem(a, a / 2, "-");
         return  height;
     }
     public double outRadius(){
@@ -60,22 +60,22 @@ public class EquilateralTriangle {
         inputRadius = a * Math.sqrt(3) / 6;
         return inputRadius;
     }
-    public double side(char parameter){
+    public double side(String parameter){
         double answer;
         switch (parameter){
-            case 'o':
+            case "o":
                 answer = outRadius * Math.sqrt(3);
                 break;
-            case 'i':
+            case "i":
                 answer = inputRadius * Math.sqrt(3) * 2;
                 break;
-            case 'p':
+            case "p":
                 answer = perimeter / 3;
                 break;
-            case 'a':
+            case "a":
                 answer = Math.sqrt(area * 4 / Math.sqrt(3));
                 break;
-            case 'h':
+            case "h":
                 answer = height * 2 / Math.sqrt(3);
                 break;
             default:
