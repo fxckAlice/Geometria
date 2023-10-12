@@ -1,22 +1,20 @@
 import circle.Circle;
 import help.HelpingMethods;
-import triangle.StraightPrismEquilateralTriangle;
+import rectangle.Rectangle;
+import triangle.*;
 import circle.Cone;
-import triangle.StraightPrismIsoscelesTriangle;
 //import Rectangle.Rhombus;
 
 public class Main {
     public static void main(String[] args) {
-        Cone a = new Cone();
-
-        a.setRadius(5);
-        a.setHeightP(12);
-        a.diameter();
-        a.slantHeight();
-        a.areaSide();
-        a.areaBase();
-        a.area();
-        //System.out.println(a.heightP("a"));
-        System.out.println(a.radius("aB"));
+        IsoscelesTriangle a = new IsoscelesTriangle();
+        a.setA(12);
+        a.setB(12);
+        a.setCornerSide(60);
+        System.out.println(a.height());
+        EquilateralTriangle b = new EquilateralTriangle();
+        b.setA(12);
+        b.height();
+        System.out.println(a.height() == b.height());
     }
 }
