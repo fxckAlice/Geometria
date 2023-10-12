@@ -381,7 +381,9 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `RightPyramidEquilateralTriangle`:
 *RightPyramidEquilateralTriangle extends EquilateralTriangle.*
-![Right pyramid equilateral triangle](src/photos/Regular triangular pyramid.jpg)
+
+![Right pyram id equilateral triangle](src/photos/Regular triangular pyramid.jpg)
+
 + ```double volume, double areaSide, double areaBase, double heightP, double slantHeight``` - variables that will be used in methods;
 + ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlantHeight](double value)``` - methods which you should use to give values to parameters. For example: `setAreaSide(24)`;
 + ```setPerimeter(), setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
