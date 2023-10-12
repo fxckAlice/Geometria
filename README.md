@@ -246,7 +246,7 @@ If you enter another parameter, an error will occur.
 ### The package `triangle`:
 #### The 2D figures:
 #### The head class ```EquilateralTriangle```:
-![Equilateral triangle](src/photos/Equilateraltriangle.jpg)
+![Equilateraltriangle](src/photos/Equilateraltriangle.jpg)
 + ```double a, double perimeter, double area, double median, double bisector, double height, double outRadius, double inputRadius``` - variables that will be used in methods;
 + ```set[-A, -Perimeter, -Area, -Median, -Bisector, -Height -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example `setA(6)`;
 + ```semiPerimeter()``` - calculation of the semi-perimeter using `double perimeter`;
@@ -268,7 +268,7 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `IsoscelesTriangle`:
 *IsoscelesTriangle extends EquilateralTriangle.*
-![Isosceles triangle](src/photos/Isoscelestriangle.jpg)
+![Isoscelestriangle](src/photos/Isoscelestriangle.jpg)
 + ```double b, double medianB, double bisectorB, double heightB, double cornerApex, double ornerSid``` - variables that will be used in methods;
 + ```set[-B, -MedianB, -BisectorB, -HeightB, -CornerApex, -CornerSide](double value)``` - methods which you should use to give values to parameters. For example `setMedianB(8)`;
 + ```medianB()``` - method which calculates the median of isosceles triangle using `double b` and `double a`;
@@ -384,7 +384,7 @@ If you enter another parameter, an error will occur.
 #### The class `RightPyramidEquilateralTriangle`:
 *RightPyramidEquilateralTriangle extends EquilateralTriangle.*
 
-![Right pyramid equilateral triangle](src/photos/Regulartriangularpyramid.jpg)
+![Rightpyramidequilateraltriangle](src/photos/Regulartriangularpyramid.jpg)
 
 + ```double volume, double areaSide, double areaBase, double heightP, double slantHeight``` - variables that will be used in methods;
 + ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlantHeight](double value)``` - methods which you should use to give values to parameters. For example: `setAreaSide(24)`;
