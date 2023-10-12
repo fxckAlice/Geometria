@@ -47,23 +47,24 @@ SDK: *corrnetto 11*;
 ### The package `rectangle`:
 #### The 2D figures:
 #### The head class ```Rectangle```:
-![rectangle](src/photos/rectangle.jpg)
+![Rectangle](src/photos/rectangle.jpg)
 <span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
 <div style="text-align:center;">
-  <span style="color: none;">double</span>
+  <span>double</span>
   <span style="color: blue;">width;</span>
 </div>
 <div style="text-align:center;">
-  <span style="color: none;">double</span>
+  <span>double</span>
   <span style="color: green;">length;</span>
 </div>
 <div style="text-align:center;">
-  <span style="color: none;">double</span>
+  <span>double</span>
   <span style="color: purple;">diagonal;</span>
 </div>
 <div style="text-align:center;">
-  <span style="color: none;">double</span>
+  <span>double</span>
   <span style="color: red;">corner;</span>
+  <div><span style="color: red;">corner!!!!!!;</span></div>
 </div>
 <span style="color: orange;"><div style="text-align:center;">cornerDiagonalWidth();</div></span>
 <span style="color: yellow;"><div style="text-align:center;">cornerDiagonalLength().</div></span>
@@ -92,6 +93,7 @@ ___
 
 #### The class ```Square```:
 *Square extends Rectangle.*
+![Square](src/photos/square.jpg)
 + ```setWidth(double value)``` - method outputs Error because all sides of a square are equal(`setWidth() == setLength()`), so we use only `setLength()`;
 + ```cornerDiagonalWidth()``` - method outputs Error because `cornerDiagonalWidth() == cornerDiagonalLength()`.
 ---
@@ -99,6 +101,7 @@ ___
 
 #### The class ```Parallelogram```:
 *Parallelogram extends Rectangle.*
+![Parallelogram](src/photos/parallelogram.jpg)
 + ```corner()``` - corner must be less than 90 degrees, otherwise it will not be a parallelogram;
 + ```diagonal()``` -  since a parallelogram is a derivative of a rectangle and if you enter a diagonal, it doesn't work. It means you need to use `diagonal1()` or `diagonal2()` using ```double leinght```,```double width``` and `double corner`;
 
@@ -134,6 +137,7 @@ ___
 ---
 #### The class `Parallelepiped`:
 *Parallelepiped extends Rectangle.*
+![Parallelepiped](src/photos/parallelepiped.jpg)
 + ```double heightP, double volume, double diagonalV, double diagonalSideLength, double diagonalSideWidth```- variables that will be used in methods;
 + ```volume()``` - method which calculates the volume of parallelepiped using `double length`, `double width`, `double heightP`;
 + ```diagonalV()``` - method which calculates the diagonal of parallelepiped using `double diagonal` and `double heightP`;
@@ -240,6 +244,7 @@ If you enter another parameter, an error will occur.
 ### The package `triangle`:
 #### The 2D figures:
 #### The head class ```EquilateralTriangle```:
+![Equilateral triangle](src/photos/Equilateral triangle.jpg)
 + ```double a, double perimeter, double area, double median, double bisector, double height, double outRadius, double inputRadius``` - variables that will be used in methods;
 + ```set[-A, -Perimeter, -Area, -Median, -Bisector, -Height -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example `setA(6)`;
 + ```semiPerimeter()``` - calculation of the semi-perimeter using `double perimeter`;
@@ -261,6 +266,7 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `IsoscelesTriangle`:
 *IsoscelesTriangle extends EquilateralTriangle.*
+![Isosceles triangle](src/photos/Isosceles triangle.jpg)
 + ```double b, double medianB, double bisectorB, double heightB, double cornerApex, double ornerSid``` - variables that will be used in methods;
 + ```set[-B, -MedianB, -BisectorB, -HeightB, -CornerApex, -CornerSide](double value)``` - methods which you should use to give values to parameters. For example `setMedianB(8)`;
 + ```medianB()``` - method which calculates the median of isosceles triangle using `double b` and `double a`;
@@ -279,6 +285,7 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `Triangle`:
 *Triangle extends IsoscelesTriangle.*
+![Triangle](src/photos/triangle.jpg)
 + ```double c, double medianC, double heightC, double bisectorC, double cornerA, double cornerB, double cornerC``` - variables that will be used in methods;
 + ```setCornerSide(), setCornerApex()``` - methods which doesn't exist in this class;
 + ```medianA(), medianC()``` - method which calculates the median of triangle using `double b`, `double c` and `double a`;
@@ -351,7 +358,8 @@ If you enter another parameter, an error will occur.
 
   If you enter another parameter, an error will occur.
 
-  
+---
+
 #### The 3D figures:
 #### The class `StraightPrismEquilateralTriangle`:
 *StraightPrismEquilateralTriangle extends EquilateralTriangle.*
@@ -373,6 +381,7 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `RightPyramidEquilateralTriangle`:
 *RightPyramidEquilateralTriangle extends EquilateralTriangle.*
+![Right pyramid equilateral triangle](src/photos/Regular triangular pyramid.jpg)
 + ```double volume, double areaSide, double areaBase, double heightP, double slantHeight``` - variables that will be used in methods;
 + ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlantHeight](double value)``` - methods which you should use to give values to parameters. For example: `setAreaSide(24)`;
 + ```setPerimeter(), setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
@@ -545,6 +554,7 @@ If you enter another parameter, an error will occur.
 ### The package `circle`:
 #### The 2D figures:
 #### The head class `Circle`:
+![Circle](src/photos/circle.jpg)
 + ```double radius, double diameter, double length, double area``` - variables that will be used in methods;
 + ```set[-Radius, -Diameter, -Length, -Area](double value)``` - methods which you should use to give values to parameters. For example `setDiameter(12)`;
 + ```diameter()``` - method which calculates the diameter of circle using `double radius`;
@@ -566,7 +576,7 @@ If you enter another parameter, an error will occur.
 + ```area()``` - method which calculates the area of cone using `double areaSide` and `double areaBase`;
 + ```volume()``` - method which calculates the volume of cone using `double areaBase` and `heightP`;
 + ```slanHeight()``` - method which calculates the slan height of cone using `HelpingMethods`, `double heightP` and `double radius`;
-+ ```double height(String parameter)``` - method which calculates the height of cone using characteristic in dependence of parameter:
++ ```double heightP(String parameter)``` - method which calculates the volume height of cone using characteristic in dependence of parameter:
   + ```"s"``` - using the `HelpingMethods`, `double slanHeight` and `double radius`;
   + ```"aS"``` - using the `HelpingMethods`, `double areaSide` and `double radius`;
   + ```"a"``` - using the `HelpingMethods`, `double area` and `double radius`.
