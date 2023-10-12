@@ -47,7 +47,10 @@ SDK: *corrnetto 11*;
 ### The package `rectangle`:
 #### The 2D figures:
 #### The head class ```Rectangle```:
-![Rectangle](src/photos/rectangle.jpg)
+<!--![Rectangle](src/photos/rectangle.jpg)-->
+<div style="text-align:center;">
+<img src="src/photos/rectangle.jpg" width="300" height="200">
+</div>
 <span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
 <div style="text-align:center;">
   <span>double</span>
@@ -64,7 +67,6 @@ SDK: *corrnetto 11*;
 <div style="text-align:center;">
   <span>double</span>
   <span style="color: red;">corner;</span>
-  <div><span style="color: red;">corner!!!!!!;</span></div>
 </div>
 <span style="color: orange;"><div style="text-align:center;">cornerDiagonalWidth();</div></span>
 <span style="color: yellow;"><div style="text-align:center;">cornerDiagonalLength().</div></span>
@@ -244,7 +246,7 @@ If you enter another parameter, an error will occur.
 ### The package `triangle`:
 #### The 2D figures:
 #### The head class ```EquilateralTriangle```:
-![Equilateral triangle](src/photos/Equilateral triangle.jpg)
+![Equilateral triangle](src/photos/Equilateraltriangle.jpg)
 + ```double a, double perimeter, double area, double median, double bisector, double height, double outRadius, double inputRadius``` - variables that will be used in methods;
 + ```set[-A, -Perimeter, -Area, -Median, -Bisector, -Height -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example `setA(6)`;
 + ```semiPerimeter()``` - calculation of the semi-perimeter using `double perimeter`;
@@ -266,7 +268,7 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `IsoscelesTriangle`:
 *IsoscelesTriangle extends EquilateralTriangle.*
-![Isosceles triangle](src/photos/Isosceles triangle.jpg)
+![Isosceles triangle](src/photos/Isoscelestriangle.jpg)
 + ```double b, double medianB, double bisectorB, double heightB, double cornerApex, double ornerSid``` - variables that will be used in methods;
 + ```set[-B, -MedianB, -BisectorB, -HeightB, -CornerApex, -CornerSide](double value)``` - methods which you should use to give values to parameters. For example `setMedianB(8)`;
 + ```medianB()``` - method which calculates the median of isosceles triangle using `double b` and `double a`;
@@ -381,7 +383,9 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `RightPyramidEquilateralTriangle`:
 *RightPyramidEquilateralTriangle extends EquilateralTriangle.*
-![Right pyramid equilateral triangle](src/photos/Regular triangular pyramid.jpg)
+
+![Right pyramid equilateral triangle](src/photos/Regulartriangularpyramid.jpg)
+
 + ```double volume, double areaSide, double areaBase, double heightP, double slantHeight``` - variables that will be used in methods;
 + ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlantHeight](double value)``` - methods which you should use to give values to parameters. For example: `setAreaSide(24)`;
 + ```setPerimeter(), setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
