@@ -47,29 +47,12 @@ SDK: *corrnetto 11*;
 ### The package `rectangle`:
 #### The 2D figures:
 #### The head class ```Rectangle```:
-<!--![Rectangle](src/photos/rectangle.jpg)-->
+
 <div style="text-align:center;">
-<img src="src/photos/rectangle.jpg" width="300" height="200">
-</div>
-<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
-<div style="text-align:center;">
-  <span>double</span>
-  <span style="color: blue;">width;</span>
-</div>
-<div style="text-align:center;">
-  <span>double</span>
-  <span style="color: green;">length;</span>
-</div>
-<div style="text-align:center;">
-  <span>double</span>
-  <span style="color: purple;">diagonal;</span>
-</div>
-<div style="text-align:center;">
-  <span>double</span>
-  <span style="color: red;">corner;</span>
-</div>
-<span style="color: orange;"><div style="text-align:center;">cornerDiagonalWidth();</div></span>
-<span style="color: yellow;"><div style="text-align:center;">cornerDiagonalLength().</div></span>
+<img src="src/photos/rectangle.jpg" width="400" height="300"><img src="src/photos/rectangle2.jpg" width="300" height="250">
+
+</div>  
+
 
 - ```double length``` - the main values that denotes the value of rectangle`s side;
 - ```set[-Length, -Width, -Perimeter, -Area, -Diagonal, -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example ```setLength(3)```;
@@ -95,7 +78,12 @@ ___
 
 #### The class ```Square```:
 *Square extends Rectangle.*
-![Square](src/photos/square.jpg)
+
+<div style="text-align:center;">
+<img src="src/photos/square.jpg" width="400" height="400"> <img src="src/photos/square2.jpg" >
+
+</div>  
+
 + ```setWidth(double value)``` - method outputs Error because all sides of a square are equal(`setWidth() == setLength()`), so we use only `setLength()`;
 + ```cornerDiagonalWidth()``` - method outputs Error because `cornerDiagonalWidth() == cornerDiagonalLength()`.
 ---
@@ -103,7 +91,19 @@ ___
 
 #### The class ```Parallelogram```:
 *Parallelogram extends Rectangle.*
-![Parallelogram](src/photos/parallelogram.jpg)
+
+<div style="text-align:center;">
+<img src="src/photos/parallelogram.jpg" width="400" height="300"><img src="src/photos/parallelogram.2.jpg" width="300" height="250">
+
+</div>
+
+
+
+
+
+
+
+
 + ```corner()``` - corner must be less than 90 degrees, otherwise it will not be a parallelogram;
 + ```diagonal()``` -  since a parallelogram is a derivative of a rectangle and if you enter a diagonal, it doesn't work. It means you need to use `diagonal1()` or `diagonal2()` using ```double leinght```,```double width``` and `double corner`;
 
@@ -139,7 +139,11 @@ ___
 ---
 #### The class `Parallelepiped`:
 *Parallelepiped extends Rectangle.*
-![Parallelepiped](src/photos/parallelepiped.jpg)
+
+<div style="text-align:center;">
+<img src="src/photos/parallelepiped.jpg" width="400" height="300">
+</div>  
+
 + ```double heightP, double volume, double diagonalV, double diagonalSideLength, double diagonalSideWidth```- variables that will be used in methods;
 + ```volume()``` - method which calculates the volume of parallelepiped using `double length`, `double width`, `double heightP`;
 + ```diagonalV()``` - method which calculates the diagonal of parallelepiped using `double diagonal` and `double heightP`;
@@ -246,7 +250,11 @@ If you enter another parameter, an error will occur.
 ### The package `triangle`:
 #### The 2D figures:
 #### The head class ```EquilateralTriangle```:
-![Equilateraltriangle](src/photos/Equilateraltriangle.jpg)
+
+<div style="text-align:center;">
+<img src="src/photos/Equilateraltriangle.jpg" width="400" height="300">
+</div>  
+
 + ```double a, double perimeter, double area, double median, double bisector, double height, double outRadius, double inputRadius``` - variables that will be used in methods;
 + ```set[-A, -Perimeter, -Area, -Median, -Bisector, -Height -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example `setA(6)`;
 + ```semiPerimeter()``` - calculation of the semi-perimeter using `double perimeter`;
@@ -268,7 +276,11 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `IsoscelesTriangle`:
 *IsoscelesTriangle extends EquilateralTriangle.*
-![Isoscelestriangle](src/photos/Isoscelestriangle.jpg)
+
+<div style="text-align:center;">
+<img src="src/photos/Isoscelestriangle.jpg" width="400" height="300">
+</div>  
+
 + ```double b, double medianB, double bisectorB, double heightB, double cornerApex, double ornerSid``` - variables that will be used in methods;
 + ```set[-B, -MedianB, -BisectorB, -HeightB, -CornerApex, -CornerSide](double value)``` - methods which you should use to give values to parameters. For example `setMedianB(8)`;
 + ```medianB()``` - method which calculates the median of isosceles triangle using `double b` and `double a`;
@@ -287,7 +299,11 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `Triangle`:
 *Triangle extends IsoscelesTriangle.*
-![Triangle](src/photos/triangle.jpg)
+
+<div style="text-align:center;">
+<img src="src/photos/triangle.jpg" width="400" height="300">
+</div>  
+
 + ```double c, double medianC, double heightC, double bisectorC, double cornerA, double cornerB, double cornerC``` - variables that will be used in methods;
 + ```setCornerSide(), setCornerApex()``` - methods which doesn't exist in this class;
 + ```medianA(), medianC()``` - method which calculates the median of triangle using `double b`, `double c` and `double a`;
@@ -384,7 +400,9 @@ If you enter another parameter, an error will occur.
 #### The class `RightPyramidEquilateralTriangle`:
 *RightPyramidEquilateralTriangle extends EquilateralTriangle.*
 
-![Rightpyramidequilateraltriangle](src/photos/Regulartriangularpyramid.jpg)
+<div style="text-align:center;">
+<img src="src/photos/Regulartriangularpyramid.jpg" width="400" height="300">
+</div>  
 
 + ```double volume, double areaSide, double areaBase, double heightP, double slantHeight``` - variables that will be used in methods;
 + ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlantHeight](double value)``` - methods which you should use to give values to parameters. For example: `setAreaSide(24)`;
@@ -558,7 +576,11 @@ If you enter another parameter, an error will occur.
 ### The package `circle`:
 #### The 2D figures:
 #### The head class `Circle`:
-![Circle](src/photos/circle.jpg)
+
+<div style="text-align:center;">
+<img src="src/photos/circle.jpg" width="400" height="400">
+</div>  
+
 + ```double radius, double diameter, double length, double area``` - variables that will be used in methods;
 + ```set[-Radius, -Diameter, -Length, -Area](double value)``` - methods which you should use to give values to parameters. For example `setDiameter(12)`;
 + ```diameter()``` - method which calculates the diameter of circle using `double radius`;
