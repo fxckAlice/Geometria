@@ -7,7 +7,7 @@ import circle.Cone;
 
 public class Main {
     public static void main(String[] args) {
-        Rectangle a = new Rectangle(4, 3);
+        Rectangle a = new Rectangle();
         System.out.println(a.perimeter() + " " + a.diagonal());
     }
 }
