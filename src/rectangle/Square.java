@@ -1,6 +1,10 @@
 package rectangle;
 
 public class Square extends Rectangle {
+    Square(double length){
+        this.length = length;
+    }
+    Square(){}
     @Override
     public void setWidth(double width) {
         System.out.println("Error.");

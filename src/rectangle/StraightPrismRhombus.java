@@ -1,6 +1,22 @@
 package rectangle;
 
 public class StraightPrismRhombus extends Rhombus{
+    StraightPrismRhombus(double length,double heightP, double corner){
+        this.length = length;
+        this.heightP = heightP;
+        corner:{
+            if (corner >= 180) {
+                System.out.println("Error!");
+                break corner;
+            }
+            if (corner <= 90) {
+                this.corner = corner;
+            } else {
+                this.corner = 180 - corner;
+            }
+        }
+    }
+    StraightPrismRhombus(){}
     protected double heightP, volume, diagonalV1, diagonalV2, diagonalSideLength;
 
     public void setHeightP(double heightP) {

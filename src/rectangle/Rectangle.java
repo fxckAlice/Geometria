@@ -5,6 +5,11 @@ import help.HelpingMethods;
 public class Rectangle {
     HelpingMethods help = new HelpingMethods();
     protected double length, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
+    Rectangle(double length, double width){
+        this.length = length;
+        this.width = width;
+    }
+    Rectangle(){}
     public void setLength(double length){
         this.length = length;
     }
