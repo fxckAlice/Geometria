@@ -46,7 +46,7 @@ public class Cone extends Circle{
         slantHeight = help.pythagoreanTheorem(heightP, radius, "+");
         return slantHeight;
     }
-    public double height(String parameter){
+    public double heightP(String parameter){
         double answer;
         switch (parameter){
             case("s"):
@@ -78,6 +78,7 @@ public class Cone extends Circle{
                 break;
             case("aB"):
                 answer = Math.sqrt(areaBase / Math.PI);
+                break;
             default:
                 System.out.println("Enter correct parameter.");
                 answer = -1;
