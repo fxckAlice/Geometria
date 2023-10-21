@@ -1,7 +1,7 @@
 package rectangle;
 
 public class Rhombus extends Parallelogram {
-    Rhombus(double length, double corner){
+    public Rhombus(double length, double corner){
         this.length = length;
         corner:{
             if (corner >= 180) {
@@ -15,7 +15,7 @@ public class Rhombus extends Parallelogram {
             }
         }
     }
-    Rhombus(){}
+    public Rhombus(){}
     @Override
     public void setWidth(double width) {
         System.out.println("Error.");

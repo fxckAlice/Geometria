@@ -2,10 +2,10 @@ package rectangle;
 
 public class Cube extends Square{
     protected double volume, diagonalV;
-    Cube(double length){
+    public Cube(double length){
         this.length = length;
     }
-    Cube(){}
+    public Cube(){}
     public void setVolume(double volume) {
         this.volume = volume;
     }

@@ -1,7 +1,7 @@
 package rectangle;
 
 public class StraightPrismRhombus extends Rhombus{
-    StraightPrismRhombus(double length,double heightP, double corner){
+    public StraightPrismRhombus(double length,double heightP, double corner){
         this.length = length;
         this.heightP = heightP;
         corner:{
@@ -16,7 +16,7 @@ public class StraightPrismRhombus extends Rhombus{
             }
         }
     }
-    StraightPrismRhombus(){}
+    public StraightPrismRhombus(){}
     protected double heightP, volume, diagonalV1, diagonalV2, diagonalSideLength;
 
     public void setHeightP(double heightP) {

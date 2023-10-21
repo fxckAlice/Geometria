@@ -3,7 +3,7 @@ package rectangle;
 public class Parallelogram extends Rectangle {
     protected double height1, height2;
     protected double diagonal2;
-    Parallelogram(double length, double width, double corner){
+    public Parallelogram(double length, double width, double corner){
         this.length = length;
         this.width = width;
         corner:{
@@ -18,7 +18,7 @@ public class Parallelogram extends Rectangle {
             }
         }
     }
-    Parallelogram(){}
+    public Parallelogram(){}
     public void setDiagonal2(double diagonal2){this.diagonal2 = diagonal2;}
     public void setCorner(double corner){
         if(corner >= 180){
