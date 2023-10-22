@@ -5,6 +5,11 @@ import help.HelpingMethods;
 public class Rectangle {
     HelpingMethods help = new HelpingMethods();
     protected double length, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
+    public Rectangle(double length, double width){
+        this.length = length;
+        this.width = width;
+    }
+    public Rectangle(){}
     public void setLength(double length){
         this.length = length;
     }
@@ -39,11 +44,11 @@ public class Rectangle {
         return area;
     }
     public double diagonal(){
-        diagonal = help.pythagoreanTheorem(length, width, '+');
+        diagonal = help.pythagoreanTheorem(length, width, "+");
         return diagonal;
     }
     public double outRadius (){
-        outRadius = diagonal() / 2;
+        outRadius = diagonal / 2;
         return outRadius;
     }
     public double inputRadius(){
@@ -56,23 +61,23 @@ public class Rectangle {
             return -1;
         }
     }
-    public double side(char parameter){
+    public double side(String parameter){
         double answer;
         switch (parameter){
-            case ('a'):
+            case ("a"):
                 answer = area / length;
                 break;
-            case ('p'):
+            case ("p"):
                 answer = perimeter / 2 - length;
                 break;
-            case ('d'):
-                answer = help.pythagoreanTheorem(diagonal, length, '-');
+            case ("d"):
+                answer = help.pythagoreanTheorem(diagonal, length, "-");
                 break;
-            case ('i'):
+            case ("i"):
                 answer = 2 * inputRadius;
                 break;
-            case ('o'):
-                answer = help.pythagoreanTheorem(outRadius * 2, '-');
+            case ("o"):
+                answer = help.round(help.pythagoreanTheorem(outRadius * 2, "-"), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -89,10 +94,10 @@ public class Rectangle {
         return 360;
     }
     public double cornerDiagonalLength(){
-        return Math.acos(length / diagonal());
+        return help.round(Math.acos(length / diagonal) / Math.PI * 180, -7);
     }
     public double cornerDiagonalWidth(){
-        return Math.asin(length / diagonal());
+        return help.round(Math.asin(length / diagonal) / Math.PI * 180, -7);
     }
 
 }

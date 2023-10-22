@@ -1,6 +1,10 @@
 package rectangle;
 
 public class Square extends Rectangle {
+    public Square(double length){
+        this.length = length;
+    }
+    public Square(){}
     @Override
     public void setWidth(double width) {
         System.out.println("Error.");
@@ -17,7 +21,7 @@ public class Square extends Rectangle {
     }
     @Override
     public double diagonal(){
-        diagonal = help.pythagoreanTheorem(length,'+');
+        diagonal = help.pythagoreanTheorem(length,"+");
         return diagonal;
     }
     @Override
@@ -35,23 +39,23 @@ public class Square extends Rectangle {
         return -1;
     }
     @Override
-    public double side(char parameter){
+    public double side(String parameter){
         double answer;
         switch (parameter){
-            case ('a'):
+            case ("a"):
                 answer = Math.sqrt(area);
                 break;
-            case ('p'):
+            case ("p"):
                 answer = perimeter / 4;
                 break;
-            case ('d'):
-                answer = help.pythagoreanTheorem(diagonal, '-');
+            case ("d"):
+                answer = help.pythagoreanTheorem(diagonal, "-");
                 break;
-            case ('i'):
+            case ("i"):
                 answer = 2 * inputRadius;
                 break;
-            case ('o'):
-                answer = help.pythagoreanTheorem(outRadius * 2, '-');
+            case ("o"):
+                answer = help.pythagoreanTheorem(outRadius * 2, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");

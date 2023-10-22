@@ -32,12 +32,12 @@ public class StraightPrismRightTriangle extends RightTriangle{
     public void setInputRadius(double inputRadius) {
         System.out.println("Doesn`t exist!");
     }
-    public double areaBase(char parameter) {
+    public double areaBase(String parameter) {
         switch (parameter){
-            case ('с'):
+            case ("с"):
                 area = a * b / 2;
                 break;
-            case ('h'):
+            case ("h"):
                 area = heightC * c / 2;
                 break;
             default:
@@ -60,15 +60,15 @@ public class StraightPrismRightTriangle extends RightTriangle{
         return volume;
     }
     public double diagonalSideA(){
-        diagonalSideA = help.pythagoreanTheorem(heightP, a, '+');
+        diagonalSideA = help.pythagoreanTheorem(heightP, a, "+");
         return diagonalSideA;
     }
     public double diagonalSideB(){
-        diagonalSideB = help.pythagoreanTheorem(heightP, b, '+');
+        diagonalSideB = help.pythagoreanTheorem(heightP, b, "+");
         return diagonalSideB;
     }
     public double diagonalSideC(){
-        diagonalSideC = help.pythagoreanTheorem(heightP, c, '+');
+        diagonalSideC = help.pythagoreanTheorem(heightP, c, "+");
         return diagonalSideC;
     }
     @Override
@@ -79,21 +79,6 @@ public class StraightPrismRightTriangle extends RightTriangle{
     @Override
     public double inputRadius() {
         System.out.println("Doesn`t exist!");
-        return -1;
-    }
-    @Override
-    public double side(char parameter){
-        System.out.println("Use String parameter!");
-        return -1;
-    }
-    @Override
-    public double sideB(char parameter) {
-        System.out.println("Use String parameter!");
-        return -1;
-    }
-    @Override
-    public double sideC(char parameter) {
-        System.out.println("Use String parameter!");
         return -1;
     }
 
@@ -109,13 +94,13 @@ public class StraightPrismRightTriangle extends RightTriangle{
                 heightP = volume / areaBase;
                 break;
             case ("dSA"):
-                heightP = help.pythagoreanTheorem(diagonalSideA, a, '-');
+                heightP = help.pythagoreanTheorem(diagonalSideA, a, "-");
                 break;
             case ("dSB"):
-                heightP = help.pythagoreanTheorem(diagonalSideB, b, '-');
+                heightP = help.pythagoreanTheorem(diagonalSideB, b, "-");
                 break;
             case ("dSC"):
-                heightP = help.pythagoreanTheorem(diagonalSideC, c, '-');
+                heightP = help.pythagoreanTheorem(diagonalSideC, c, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -133,22 +118,22 @@ public class StraightPrismRightTriangle extends RightTriangle{
                 answer = volume / heightP / b / 4;
                 break;
             case ("dSA"):
-                answer = help.pythagoreanTheorem(diagonalSideA, heightP, '-');
+                answer = help.pythagoreanTheorem(diagonalSideA, heightP, "-");
                 break;
             case ("t"):
-                answer = help.pythagoreanTheorem(c, b,'-');
+                answer = help.pythagoreanTheorem(c, b,"-");
                 break;
             case ("sin"):
-                answer = c * Math.sin(cornerA / 180 * Math.PI);
+                answer = help.round(c * Math.sin(cornerA / 180 * Math.PI), -8);
                 break;
             case ("cos"):
-                answer = c * Math.cos(cornerB / 180 * Math.PI);
+                answer = help.round(c * Math.cos(cornerB / 180 * Math.PI), -8);
                 break;
             case ("tan"):
-                answer = b * Math.tan(cornerA / 180 * Math.PI);
+                answer = help.round(b * Math.tan(cornerA / 180 * Math.PI), -8);
                 break;
             case ("ctan"):
-                answer = b / Math.tan(cornerB / 180 * Math.PI);
+                answer = help.round(b / Math.tan(cornerB / 180 * Math.PI), -8);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -166,22 +151,22 @@ public class StraightPrismRightTriangle extends RightTriangle{
                 answer = volume / heightP / a / 4;
                 break;
             case ("dSB"):
-                answer = help.pythagoreanTheorem(diagonalSideB, heightP, '-');
+                answer = help.pythagoreanTheorem(diagonalSideB, heightP, "-");
                 break;
             case ("t"):
-                answer = help.pythagoreanTheorem(c, a,'-');
+                answer = help.pythagoreanTheorem(c, a,"-");
                 break;
-            case ("sin"):
-                answer = c * Math.sin(cornerB / 180 * Math.PI);
+            case ("sinA"):
+                answer = help.round(a / Math.sin(cornerA / 180 * Math.PI), -8);
                 break;
-            case ("cos"):
-                answer = c * Math.cos(cornerA / 180 * Math.PI);
+            case ("cosA"):
+                answer = help.round(b / Math.cos(cornerA / 180 * Math.PI), -8);
                 break;
-            case ("tan"):
-                answer = a * Math.tan(cornerB / 180 * Math.PI);
+            case ("sinB"):
+                answer = help.round(b / Math.sin(cornerB / 180 * Math.PI), -8);
                 break;
-            case ("ctan"):
-                answer = a / Math.tan(cornerA / 180 * Math.PI);
+            case ("cosB"):
+                answer = help.round(a / Math.cos(cornerB / 180 * Math.PI), -8);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -199,10 +184,10 @@ public class StraightPrismRightTriangle extends RightTriangle{
                 answer = volume / heightP / heightC / 4;
                 break;
             case ("dSC"):
-                answer = help.pythagoreanTheorem(diagonalSideC, heightP, '-');
+                answer = help.pythagoreanTheorem(diagonalSideC, heightP, "-");
                 break;
             case ("t"):
-                answer = help.pythagoreanTheorem(b, a,'+');
+                answer = help.pythagoreanTheorem(b, a,"+");
                 break;
             case ("m"):
                 answer = 2 * medianC;

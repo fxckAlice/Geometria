@@ -5,7 +5,10 @@ import help.HelpingMethods;
 public class Circle {
     HelpingMethods help = new HelpingMethods();
     protected double radius, diameter, length, area;
-
+    public Circle(double radius){
+        this.radius = radius;
+    }
+    public Circle(){}
     public void setRadius(double radius) {
         this.radius = radius;
     }
@@ -22,7 +25,7 @@ public class Circle {
         this.area = area;
     }
     public double diameter(){
-        diameter = radius / 2;
+        diameter = radius * 2;
         return diameter;
     }
     public double length(){
@@ -33,16 +36,16 @@ public class Circle {
         area = Math.pow(radius, 2) * Math.PI;
         return area;
     }
-    public double radius(char parameter){
+    public double radius(String parameter){
         double answer;
         switch (parameter){
-            case('d'):
+            case("d"):
                 answer = diameter / 2;
                 break;
-            case('l'):
+            case("l"):
                 answer = length / (2 * Math.PI);
                 break;
-            case('a'):
+            case("a"):
                 answer = Math.sqrt(area / Math.PI);
                 break;
             default:

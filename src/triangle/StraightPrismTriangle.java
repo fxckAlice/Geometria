@@ -32,18 +32,18 @@ public class StraightPrismTriangle extends Triangle{
     public void setInputRadius(double inputRadius) {
         System.out.println("Doesn`t exist!");
     }
-    public double areaBase(char parameter) {
+    public double areaBase(String parameter) {
         switch (parameter){
-            case ('b'):
+            case ("b"):
                 areaBase = heightB * b / 2;
                 break;
-            case ('a'):
+            case ("a"):
                 areaBase = height * a / 2;
                 break;
-            case ('c'):
+            case ("c"):
                 areaBase = heightC * c / 2;
                 break;
-            case ('p'):
+            case ("p"):
                 semiPerimeter();
                 areaBase = Math.sqrt(semiPerimeter * (semiPerimeter - a) * (semiPerimeter - b) * (semiPerimeter - c));
             default:
@@ -66,15 +66,15 @@ public class StraightPrismTriangle extends Triangle{
         return volume;
     }
     public double diagonalSideA(){
-        diagonalSideA = help.pythagoreanTheorem(heightP, a, '+');
+        diagonalSideA = help.pythagoreanTheorem(heightP, a, "+");
         return diagonalSideA;
     }
     public double diagonalSideB(){
-        diagonalSideB = help.pythagoreanTheorem(heightP, b, '+');
+        diagonalSideB = help.pythagoreanTheorem(heightP, b, "+");
         return diagonalSideB;
     }
     public double diagonalSideC(){
-        diagonalSideC = help.pythagoreanTheorem(heightP, c, '+');
+        diagonalSideC = help.pythagoreanTheorem(heightP, c, "+");
         return diagonalSideC;
     }
     @Override
@@ -85,20 +85,6 @@ public class StraightPrismTriangle extends Triangle{
     @Override
     public double inputRadius() {
         System.out.println("Doesn`t exist!");
-        return -1;
-    }
-    public double side(char parameter){
-        System.out.println("Use String parameter!");
-        return -1;
-    }
-    @Override
-    public double sideB(char parameter) {
-        System.out.println("Use String parameter!");
-        return -1;
-    }
-    @Override
-    public double sideC(char parameter) {
-        System.out.println("Use String parameter!");
         return -1;
     }
 
@@ -114,13 +100,13 @@ public class StraightPrismTriangle extends Triangle{
                 heightP = volume / areaBase;
                 break;
             case ("dSA"):
-                heightP = help.pythagoreanTheorem(diagonalSideA, a, '-');
+                heightP = help.pythagoreanTheorem(diagonalSideA, a, "-");
                 break;
             case ("dSB"):
-                heightP = help.pythagoreanTheorem(diagonalSideB, b, '-');
+                heightP = help.pythagoreanTheorem(diagonalSideB, b, "-");
                 break;
             case ("dSC"):
-                heightP = help.pythagoreanTheorem(diagonalSideC, c, '-');
+                heightP = help.pythagoreanTheorem(diagonalSideC, c, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -141,17 +127,17 @@ public class StraightPrismTriangle extends Triangle{
                 answer = volume / heightP / height / 4;
                 break;
             case ("dSA"):
-                answer = help.pythagoreanTheorem(diagonalSideA, heightP, '-');
+                answer = help.pythagoreanTheorem(diagonalSideA, heightP, "-");
                 break;
-            case ("t"):
-                double temp = 2 * b * c * help.round(Math.cos((180 - cornerA) / 180 * Math.PI), -10);
-                answer = Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - temp);
+            case "t":
+                double temp = 2 * b * c * Math.cos(cornerA / 180 * Math.PI);
+                answer = help.round(Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - temp), -8);
+                break;
+            case "m":
+                answer = help.round(Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(c, 2)) - Math.pow(median * 2, 2)), -7);
                 break;
             case ("h"):
-                answer = help.pythagoreanTheorem(b, height,'-') + help.pythagoreanTheorem(c, height, '-');
-                break;
-            case ("m"):
-                answer = Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(c, 2)) - Math.pow(median / 2, 2));
+                answer = help.pythagoreanTheorem(b, height,"-") + help.pythagoreanTheorem(c, height, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -172,17 +158,17 @@ public class StraightPrismTriangle extends Triangle{
                 answer = volume / heightP / heightB / 4;
                 break;
             case ("dSA"):
-                answer = help.pythagoreanTheorem(diagonalSideB, heightP, '-');
+                answer = help.pythagoreanTheorem(diagonalSideB, heightP, "-");
                 break;
-            case ("t"):
-                double temp = 2 * a * c * help.round(Math.cos((180 - cornerB) / 180 * Math.PI), -10);
-                answer = Math.sqrt(Math.pow(a, 2) + Math.pow(c, 2) - temp);
+            case "t":
+                double temp = 2 * a * c * Math.cos(cornerB / 180 * Math.PI);
+                answer = help.round(Math.sqrt(Math.pow(a, 2) + Math.pow(c, 2) - temp), -8);
+                break;
+            case "m":
+                answer = help.round(Math.sqrt(2 * (Math.pow(a, 2) + Math.pow(c, 2)) - Math.pow(medianB * 2, 2)), -7);
                 break;
             case ("h"):
-                answer = help.pythagoreanTheorem(a, heightB,'-') + help.pythagoreanTheorem(c, heightB, '-');
-                break;
-            case ("m"):
-                answer = Math.sqrt(2 * (Math.pow(a, 2) + Math.pow(c, 2)) - Math.pow(medianB / 2, 2));
+                answer = help.pythagoreanTheorem(a, heightB,"-") + help.pythagoreanTheorem(c, heightB, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -203,17 +189,17 @@ public class StraightPrismTriangle extends Triangle{
                 answer = volume / heightP / heightC / 4;
                 break;
             case ("dSA"):
-                answer = help.pythagoreanTheorem(diagonalSideC, heightP, '-');
+                answer = help.pythagoreanTheorem(diagonalSideC, heightP, "-");
                 break;
-            case ("t"):
-                double temp = 2 * b * a * help.round(Math.cos((180 - cornerC) / 180 * Math.PI), -10);
-                answer = Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2) - temp);
+            case "t":
+                double temp = 2 * b * a * Math.cos(cornerC / 180 * Math.PI);
+                answer = help.round(Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2) - temp), -8);
+                break;
+            case "m":
+                answer = help.round(Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(a, 2)) - Math.pow(medianC * 2, 2)), -7);
                 break;
             case ("h"):
-                answer = help.pythagoreanTheorem(b, heightC,'-') + help.pythagoreanTheorem(a, heightC, '-');
-                break;
-            case ("m"):
-                answer = Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(a, 2)) - Math.pow(medianC / 2, 2));
+                answer = help.pythagoreanTheorem(b, heightC,"-") + help.pythagoreanTheorem(a, heightC, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");

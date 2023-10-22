@@ -1,6 +1,21 @@
 package rectangle;
 
 public class Rhombus extends Parallelogram {
+    public Rhombus(double length, double corner){
+        this.length = length;
+        corner:{
+            if (corner >= 180) {
+                System.out.println("Error!");
+                break corner;
+            }
+            if (corner <= 90) {
+                this.corner = corner;
+            } else {
+                this.corner = 180 - corner;
+            }
+        }
+    }
+    public Rhombus(){}
     @Override
     public void setWidth(double width) {
         System.out.println("Error.");
@@ -15,12 +30,12 @@ public class Rhombus extends Parallelogram {
         return perimeter;
     }
     @Override
-    public double area(char parameter){
+    public double area(String parameter){
         switch (parameter) {
-            case ('h'):
+            case ("h"):
                 area = height1 * length;
                 break;
-            case ('c'):
+            case ("c"):
                 area = Math.sin(corner / 180 * Math.PI) * Math.pow(length, 2);
                 break;
             default:
@@ -47,22 +62,22 @@ public class Rhombus extends Parallelogram {
         return inputRadius;
     }
     @Override
-    public double side(char parameter) {
+    public double side(String parameter) {
         double answer;
         switch (parameter) {
-            case ('a'):
+            case ("a"):
                 answer = area / height1;
                 break;
-            case ('p'):
+            case ("p"):
                 answer = perimeter / 2 - length;
                 break;
-            case ('d'):
-                answer = help.pythagoreanTheorem(diagonal, height1, '-');
+            case ("d"):
+                answer = help.pythagoreanTheorem(diagonal, height1, "-");
                 break;
-            case ('i'):
+            case ("i"):
                 answer = area / (2 * inputRadius);
                 break;
-            case ('o'):
+            case ("o"):
                 answer = Math.sqrt(Math.pow(outRadius * 2, 2) / 2);
                 break;
             default:

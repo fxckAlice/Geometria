@@ -3,12 +3,31 @@ package rectangle;
 public class Parallelogram extends Rectangle {
     protected double height1, height2;
     protected double diagonal2;
-
+    public Parallelogram(double length, double width, double corner){
+        this.length = length;
+        this.width = width;
+        corner:{
+            if (corner >= 180) {
+                System.out.println("Error!");
+                break corner;
+            }
+            if (corner <= 90) {
+                this.corner = corner;
+            } else {
+                this.corner = 180 - corner;
+            }
+        }
+    }
+    public Parallelogram(){}
     public void setDiagonal2(double diagonal2){this.diagonal2 = diagonal2;}
     public void setCorner(double corner){
+        if(corner >= 180){
+            System.out.println("Error!");
+            return;
+        }
         if(corner <= 90){this.corner = corner;}
         else{
-            System.out.println("Corner must be less than 90 degrees");
+            this.corner = 180 - corner;
         }
     }
     public void setHeight1(double height1) {
@@ -19,14 +38,14 @@ public class Parallelogram extends Rectangle {
         this.height2 = height2;
     }
 
-    public double area(char parameter){
+    public double area(String parameter){
         switch (parameter) {
-            case ('l'):
+            case ("l"):
                 area = height1 * length;
                 break;
-            case ('w'):
+            case ("w"):
                 area = height2 * width;
-            case ('c'):
+            case ("c"):
                 area = width * Math.sin(corner / 180 * Math.PI) * length;
                 break;
             default:
@@ -74,23 +93,23 @@ public class Parallelogram extends Rectangle {
         }
     }
     @Override
-    public double side( char parameter) {
+    public double side(String parameter) {
         double answer;
         switch (parameter) {
-            case ('a'):
+            case ("a"):
                 answer = area / height1;
                 break;
-            case ('p'):
+            case ("p"):
                 answer = perimeter / 2 - length;
                 break;
-            case ('d'):
-                answer = help.pythagoreanTheorem(diagonal, height1, '-');
+            case ("d"):
+                answer = help.pythagoreanTheorem(diagonal, height1, "-");
                 break;
-            case ('i'):
+            case ("i"):
                 answer = area / (2 * inputRadius);
                 break;
-            case ('o'):
-                answer = help.pythagoreanTheorem(outRadius * 2, length, '-');
+            case ("o"):
+                answer = help.pythagoreanTheorem(outRadius * 2, length, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");

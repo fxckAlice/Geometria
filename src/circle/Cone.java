@@ -5,7 +5,11 @@ import help.HelpingMethods;
 public class Cone extends Circle{
     HelpingMethods help = new HelpingMethods();
     protected double volume, areaSide, areaBase, heightP, slantHeight;
-
+    public Cone(double radius, double heightP){
+        this.radius = radius;
+        this.heightP = heightP;
+    }
+    public Cone(){}
     public void setVolume(double volume) {
         this.volume = volume;
     }
@@ -43,20 +47,20 @@ public class Cone extends Circle{
         return volume;
     }
     public double slantHeight(){
-        slantHeight = help.pythagoreanTheorem(heightP, radius, '+');
+        slantHeight = help.pythagoreanTheorem(heightP, radius, "+");
         return slantHeight;
     }
-    public double height(String parameter){
+    public double heightP(String parameter){
         double answer;
         switch (parameter){
             case("s"):
-                answer = help.pythagoreanTheorem(slantHeight, radius,'-');
+                answer = help.pythagoreanTheorem(slantHeight, radius,"-");
                 break;
             case("aS"):
-                answer = help.pythagoreanTheorem(areaSide / Math.PI / radius, radius, '-');
+                answer = help.pythagoreanTheorem(areaSide / Math.PI / radius, radius, "-");
                 break;
             case("a"):
-                answer = help.pythagoreanTheorem((area - Math.pow(radius, 2) * Math.PI) / Math.PI / radius, radius, '-');
+                answer = help.pythagoreanTheorem((area - Math.pow(radius, 2) * Math.PI) / Math.PI / radius, radius, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -68,7 +72,7 @@ public class Cone extends Circle{
         double answer;
         switch (parameter){
             case("s"):
-                answer = help.pythagoreanTheorem(slantHeight, heightP,'-');
+                answer = help.pythagoreanTheorem(slantHeight, heightP,"-");
                 break;
             case("aS"):
                 answer = areaSide / Math.PI / slantHeight;
@@ -78,6 +82,7 @@ public class Cone extends Circle{
                 break;
             case("aB"):
                 answer = Math.sqrt(areaBase / Math.PI);
+                break;
             default:
                 System.out.println("Enter correct parameter.");
                 answer = -1;

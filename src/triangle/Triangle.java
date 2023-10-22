@@ -43,17 +43,17 @@ public class Triangle extends IsoscelesTriangle {
     public void setCornerSide(double cornerSide) {
         System.out.println("Doesn't exist");
     }
-    public double medianA(){
-        medianB = 0.5 * Math.sqrt(2 * Math.pow(b, 2) + 2 * Math.pow(c, 2) - Math.pow(a, 2));
-        return medianB;
+    public double median(){
+        median = 0.5 * Math.sqrt(2 * Math.pow(b, 2) + 2 * Math.pow(c, 2) - Math.pow(a, 2));
+        return median;
     }
     public double medianB(){
         medianB = 0.5 * Math.sqrt(2 * Math.pow(a, 2) + 2 * Math.pow(c, 2) - Math.pow(b, 2));
         return medianB;
     }
     public double medianC(){
-        medianB = 0.5 * Math.sqrt(2 * Math.pow(a, 2) + 2 * Math.pow(b, 2) - Math.pow(c, 2));
-        return medianB;
+        medianC = 0.5 * Math.sqrt(2 * Math.pow(a, 2) + 2 * Math.pow(b, 2) - Math.pow(c, 2));
+        return medianC;
     }
     public double heightA(){
         heightB = Math.cos(cornerB / 180 * Math.PI) * c;
@@ -71,15 +71,15 @@ public class Triangle extends IsoscelesTriangle {
         perimeter = a + b + c;
         return perimeter;
     }
-    public double area(char parameter){
+    public double area(String parameter){
         switch (parameter){
-            case ('b'):
+            case ("b"):
                 area = heightB * b / 2;
                 break;
-            case ('a'):
+            case ("a"):
                 area = height * a / 2;
                 break;
-            case ('c'):
+            case ("c"):
                 area = heightC * c / 2;
             default:
                 System.out.println("Enter correct parameter.");
@@ -95,30 +95,30 @@ public class Triangle extends IsoscelesTriangle {
         inputRadius = Math.sqrt((semiPerimeter() - a) * (semiPerimeter() - b) * (semiPerimeter() - c) / semiPerimeter());
         return inputRadius;
     }
-    public double side(char parameter) {
+    public double side(String parameter) {
         double answer;
         switch (parameter) {
-            case 'o':
+            case "o":
                 answer = outRadius * 4 * area / (b * c);
                 break;
-            case 'i':
+            case "i":
                 answer = semiPerimeter() - (Math.pow(inputRadius, 2) * semiPerimeter() / (semiPerimeter() - b) * (semiPerimeter() - c));
                 break;
-            case 'p':
+            case "p":
                 answer = perimeter - b - c;
                 break;
-            case 'a':
+            case "a":
                 answer = area / height * 2;
                 break;
-            case 'h':
-                answer = help.pythagoreanTheorem(b, height,'-') + help.pythagoreanTheorem(c, height, '-');
+            case "h":
+                answer = help.pythagoreanTheorem(b, height,"-") + help.pythagoreanTheorem(c, height, "-");
                 break;
-            case 't':
-                double temp = 2 * b * c * help.round(Math.cos((180 - cornerA) / 180 * Math.PI), -10);
-                answer = Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - temp);
+            case "t":
+                double temp = 2 * b * c * Math.cos(cornerA / 180 * Math.PI);
+                answer = help.round(Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - temp), -8);
                 break;
-            case 'm':
-                answer = Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(c, 2)) - Math.pow(median / 2, 2));
+            case "m":
+                answer = help.round(Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(c, 2)) - Math.pow(median * 2, 2)), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -126,30 +126,30 @@ public class Triangle extends IsoscelesTriangle {
         }
         return answer;
     }
-    public double sideB(char parameter) {
+    public double sideB(String parameter) {
         double answer;
         switch (parameter) {
-            case 'o':
+            case "o":
                 answer = outRadius * 4 * area / (c * a);
                 break;
-            case 'i':
+            case "i":
                 answer = semiPerimeter() - (Math.pow(inputRadius, 2) * semiPerimeter() / (semiPerimeter() - a) * (semiPerimeter() - c));
                 break;
-            case 'p':
+            case "p":
                 answer = perimeter - a - c;
                 break;
-            case 'a':
+            case "a":
                 answer = area / heightB * 2;
                 break;
-            case 'h':
-                answer = help.pythagoreanTheorem(a, heightB, '-') + help.pythagoreanTheorem(c, heightB, '+');
+            case "h":
+                answer = help.pythagoreanTheorem(a, heightB, "-") + help.pythagoreanTheorem(c, heightB, "+");
                 break;
-            case 't':
-                double temp = 2 * a * c * help.round(Math.cos((180 - cornerB) / 180 * Math.PI), -10);
-                answer = Math.sqrt(Math.pow(a, 2) + Math.pow(c, 2) - temp);
+            case "t":
+                double temp = 2 * a * c * Math.cos(cornerB / 180 * Math.PI);
+                answer = help.round(Math.sqrt(Math.pow(a, 2) + Math.pow(c, 2) - temp), -8);
                 break;
-            case 'm':
-                answer = Math.sqrt(2 * (Math.pow(a, 2) + Math.pow(c, 2)) - Math.pow(medianB / 2, 2));
+            case "m":
+                answer = help.round(Math.sqrt(2 * (Math.pow(a, 2) + Math.pow(c, 2)) - Math.pow(medianB * 2, 2)), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -157,30 +157,30 @@ public class Triangle extends IsoscelesTriangle {
         }
         return answer;
     }
-    public double sideC(char parameter) {
+    public double sideC(String parameter) {
         double answer;
         switch (parameter) {
-            case 'o':
+            case "o":
                 answer = outRadius * 4 * area / (b * a);
                 break;
-            case 'i':
+            case "i":
                 answer = semiPerimeter() - (Math.pow(inputRadius, 2) * semiPerimeter() / ((semiPerimeter() - b) * (semiPerimeter() - a)));
                 break;
-            case 'p':
+            case "p":
                 answer = perimeter - b - a;
                 break;
-            case 'a':
+            case "a":
                 answer = area / heightC * 2;
                 break;
-            case 'h':
-                answer = help.pythagoreanTheorem(b, heightC, '-') + help.pythagoreanTheorem(a, heightC,'-');
+            case "h":
+                answer = help.pythagoreanTheorem(b, heightC, "-") + help.pythagoreanTheorem(a, heightC,"-");
                 break;
-            case 't':
-                double temp = 2 * b * a * help.round(Math.cos((180 - cornerC) / 180 * Math.PI), -10);
-                answer = Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2) - temp);
+            case "t":
+                double temp = 2 * b * a * Math.cos(cornerC / 180 * Math.PI);
+                answer = help.round(Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2) - temp), -8);
                 break;
-            case 'm':
-                answer = Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(a, 2)) - Math.pow(medianC / 2, 2));
+            case "m":
+                answer = help.round(Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(a, 2)) - Math.pow(medianC * 2, 2)), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
