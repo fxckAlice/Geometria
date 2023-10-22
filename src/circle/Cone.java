@@ -5,7 +5,11 @@ import help.HelpingMethods;
 public class Cone extends Circle{
     HelpingMethods help = new HelpingMethods();
     protected double volume, areaSide, areaBase, heightP, slantHeight;
-
+    public Cone(double radius, double heightP){
+        this.radius = radius;
+        this.heightP = heightP;
+    }
+    public Cone(){}
     public void setVolume(double volume) {
         this.volume = volume;
     }

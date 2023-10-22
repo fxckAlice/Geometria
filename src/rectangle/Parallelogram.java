@@ -3,12 +3,31 @@ package rectangle;
 public class Parallelogram extends Rectangle {
     protected double height1, height2;
     protected double diagonal2;
-
+    public Parallelogram(double length, double width, double corner){
+        this.length = length;
+        this.width = width;
+        corner:{
+            if (corner >= 180) {
+                System.out.println("Error!");
+                break corner;
+            }
+            if (corner <= 90) {
+                this.corner = corner;
+            } else {
+                this.corner = 180 - corner;
+            }
+        }
+    }
+    public Parallelogram(){}
     public void setDiagonal2(double diagonal2){this.diagonal2 = diagonal2;}
     public void setCorner(double corner){
+        if(corner >= 180){
+            System.out.println("Error!");
+            return;
+        }
         if(corner <= 90){this.corner = corner;}
         else{
-            System.out.println("Corner must be less than 90 degrees");
+            this.corner = 180 - corner;
         }
     }
     public void setHeight1(double height1) {

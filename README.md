@@ -53,6 +53,7 @@ SDK: *corrnetto 11*;
 
 </div>  
 
+**Constructor`s overload** - ``Rectangle(double length, double width)``.
 
 - ```double length``` - the main values that denotes the value of rectangle`s side;
 - ```set[-Length, -Width, -Perimeter, -Area, -Diagonal, -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example ```setLength(3)```;
@@ -84,6 +85,8 @@ ___
 
 </div>  
 
+**Constructor`s overload** - ``Square(double length)``.
+
 + ```setWidth(double value)``` - method outputs Error because all sides of a square are equal(`setWidth() == setLength()`), so we use only `setLength()`;
 + ```cornerDiagonalWidth()``` - method outputs Error because `cornerDiagonalWidth() == cornerDiagonalLength()`.
 ---
@@ -97,12 +100,7 @@ ___
 
 </div>
 
-
-
-
-
-
-
+**Constructor`s overload** - ``Parallelogram(double length, double width, double corner)``.
 
 + ```corner()``` - corner must be less than 90 degrees, otherwise it will not be a parallelogram;
 + ```diagonal()``` -  since a parallelogram is a derivative of a rectangle and if you enter a diagonal, it doesn't work. It means you need to use `diagonal1()` or `diagonal2()` using ```double leinght```,```double width``` and `double corner`;
@@ -119,6 +117,10 @@ ___
 
 #### The class ```Rhombus```:
 *Rhombus extends Parallelogram.*
+
+
+**Constructor`s overload** - ``Rhombus(double length, double corner)``.
+
 + ```setWidth(double value)``` - method outputs Error because all sides of a rhombus are equal(`setWidth() == setLength()`), so we use only `setLength()`;
 <!--+ ```area()``` - the method works only by using parameters:
   + ```'h'``` - `double value` - calculation of the area using `double height` and `double length`;
@@ -130,6 +132,11 @@ ___
 #### The 3D figures:
 #### The class ```Cube```:
 *Cube extends Square.*
+
+
+
+**Constructor`s overload** - ``Cube(double length)``.
+
 + ```set[-Volume, -DiagonalV](double value)``` - methods which you should use to give values to parameters. For example ```setVolume(36)```;
 + ```volume()``` - method which calculates the volume of cube using `double length`;
 + ```diagonalV()``` - method which calculates the diagonal of cube using `double length`;
@@ -143,6 +150,8 @@ ___
 <div style="text-align:center;">
 <img src="src/photos/parallelepiped.jpg" width="400" height="300">
 </div>  
+
+**Constructor`s overload** - ``Parallelepiped(double length, double width, double heightP)``.
 
 + ```double heightP, double volume, double diagonalV, double diagonalSideLength, double diagonalSideWidth```- variables that will be used in methods;
 + ```volume()``` - method which calculates the volume of parallelepiped using `double length`, `double width`, `double heightP`;
@@ -177,6 +186,9 @@ ___
 --- 
 #### The class `StraightPrismRhombus`:
 *StraightPrismRhombus extends Rhombus.*
+
+**Constructor`s overload** - ``StraightPrismRhombus(double length,double heightP, double corner)``.
+
 + ```double heightP, double volume, double diagonalV1, double diagonalV2, double diagonalSideLength``` - variables that will be used in methods;
 + ```volume()``` - method which calculates the volume of prism using `double length`, `double height1` and `double heightP`;
 + ```diagonalSideLength()    - method which calculates diagonal of edge of the prism (length * height) using `double length` and `double heightP`;
@@ -208,6 +220,9 @@ ___
 
 #### The class `StraightPrismParallelogram`:
 *StraightPrismParallelogram extends Parallelogram.*
+
+**Constructor`s overload** - ``StraightPrismParallelogram(double length, double width, double heightP, double corner)``.
+
 + ```double heightP, double volume, double diagonalV1, double diagonalV2, double diagonalSideLength, double diagonalSideWidth``` - methods which doesn't exist in this class;
 + ```double volume(String parameter)``` - method which calculates the volume of prism in different ways using characteristic in dependence of parameter:
   + ```"l"``` - using  `double length`, `double height1` and `heightP`;
@@ -255,6 +270,8 @@ If you enter another parameter, an error will occur.
 <img src="src/photos/Equilateraltriangle.jpg" width="400" height="300">
 </div>  
 
+**Constructor`s overload** - ``EquilateralTriangle(double a)``.
+
 + ```double a, double perimeter, double area, double median, double bisector, double height, double outRadius, double inputRadius``` - variables that will be used in methods;
 + ```set[-A, -Perimeter, -Area, -Median, -Bisector, -Height -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example `setA(6)`;
 + ```semiPerimeter()``` - calculation of the semi-perimeter using `double perimeter`;
@@ -281,6 +298,8 @@ If you enter another parameter, an error will occur.
 <img src="src/photos/Isoscelestriangle.jpg" width="400" height="300">
 </div>  
 
+**Constructor`s overload** - ``IsoscelesTriangle(double a, double b)``.
+
 + ```double b, double medianB, double bisectorB, double heightB, double cornerApex, double ornerSid``` - variables that will be used in methods;
 + ```set[-B, -MedianB, -BisectorB, -HeightB, -CornerApex, -CornerSide](double value)``` - methods which you should use to give values to parameters. For example `setMedianB(8)`;
 + ```medianB()``` - method which calculates the median of isosceles triangle using `double b` and `double a`;
@@ -303,6 +322,9 @@ If you enter another parameter, an error will occur.
 <div style="text-align:center;">
 <img src="src/photos/triangle.jpg" width="400" height="300">
 </div>  
+
+
+**Constructor`s overload** - ``Triangle(double a, double b, double c)``.
 
 + ```double c, double medianC, double heightC, double bisectorC, double cornerA, double cornerB, double cornerC``` - variables that will be used in methods;
 + ```setCornerSide(), setCornerApex()``` - methods which doesn't exist in this class;
@@ -333,6 +355,9 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `RightTriangle`:
 *RightTriangle extends Triangle.*
+
+**Constructor`s overload** - ``RightTriangle(double a, double b, double c)``.
+
 + ```setHeight(), setHeightB()``` -  methods which doesn't exist in this class;
 + ```setCornerC()``` - You should to input only 90 degrees, because it is a constant in right triangle;
 + ```double area(String parameter)``` - method which calculates the area of right triangle using characteristic in dependence of parameter:
@@ -381,6 +406,9 @@ If you enter another parameter, an error will occur.
 #### The 3D figures:
 #### The class `StraightPrismEquilateralTriangle`:
 *StraightPrismEquilateralTriangle extends EquilateralTriangle.*
+
+**Constructor`s overload** - ``StraightPrismEquilateralTriangle(double a, double heightP)``.
+
 + ```double heightP, double volume``` - variables that will be used in methods;
 + ```setPerimeter(), setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
 + ```double perimeter, double outRadius, double inputRadius``` - variables which doesn't exist in this class;
@@ -404,6 +432,8 @@ If you enter another parameter, an error will occur.
 <img src="src/photos/Regulartriangularpyramid.jpg" width="400" height="300">
 </div>  
 
+**Constructor`s overload** - ``RightPyramidEquilateralTriangle(double a)``.
+
 + ```double volume, double areaSide, double areaBase, double heightP, double slantHeight``` - variables that will be used in methods;
 + ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlantHeight](double value)``` - methods which you should use to give values to parameters. For example: `setAreaSide(24)`;
 + ```setPerimeter(), setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
@@ -426,6 +456,9 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `StraightPrismIsoscelesTriangle`:
 *StraightPrismIsoscelesTriangle extends IsoscelesTriangle.*
+
+**Constructor`s overload** - ``StraightPrismIsoscelesTriangle(double a, double b, double heightP)``.
+
 + ```double heightP, double areaBase, double areaSide, double volume, double diagonalSideA, double diagonalSideB``` - variables that will be used in methods;
 + ```setPerimeter(), setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
 + ```set[-Volume, -HeightP, -DiagonalSideA, -DiagonalSideB](double value)``` - methods which you should use to give values to parameters. For example `setDiagonalSideB(16)`;
@@ -452,6 +485,9 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `StraightPrismTriangle`:
 *StraightPrismTriangle extends Triangle.*
+
+**Constructor`s overload** - ``StraightPrismTriangle(double a, double b, double c, double heightP)``.
+
 + ```double volume, double areaSide, double areaBase, double heightP, double diagonalSideA, double diagonalSideB, double diagonalSideC``` - variables that will be used in methods;
 + ```set[-Volume, -AreaSide, -AreaBase, -HeightP, -DiagonalSideA, -DiagonalSideB, -DiagonalSideC](double value)``` - methods which you should use to give values to parameters. For example `setAreaBase(36)`;
 + ```setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
@@ -512,6 +548,10 @@ If you enter another parameter, an error will occur.
 ---
 
 #### The class `StraightPrismRightTriangle`:
+*StraightPrismRightTriangle extends RightTriangle.*
+
+**Constructor`s overload** - ``StraightPrismRightTriangle(double a, double b, double c, double heightP)``.
+
 + ```double volume, double areaSide, double areaBase, double heightP, double diagonalSideA, double diagonalSideB,double diagonalSideC``` - variables that will be used in methods;
 + ```set[-Volume, -AreaSide, -AreaBase, -HeightP, -DiagonalSideA, -DiagonalSideB, -DiagonalSideC]``` - methods which you should use to give values to parameters. For example `setDiagonalSideA(16)`;
 + ```setInputRadius(), setOutRadius()``` - methods which doesn't exist in this class;
@@ -581,6 +621,8 @@ If you enter another parameter, an error will occur.
 <img src="src/photos/circle.jpg" width="400" height="400">
 </div>  
 
+**Constructor`s overload** - ``Circle(double radius)``.
+
 + ```double radius, double diameter, double length, double area``` - variables that will be used in methods;
 + ```set[-Radius, -Diameter, -Length, -Area](double value)``` - methods which you should use to give values to parameters. For example `setDiameter(12)`;
 + ```diameter()``` - method which calculates the diameter of circle using `double radius`;
@@ -595,6 +637,10 @@ If you enter another parameter, an error will occur.
 ---
 #### The 3D figures:
 #### The class `Cone`:
+
+
+**Constructor`s overload** - ``Cone(double radius, double heightP)``.
+
 + ```double volume, double areaSide, double areaBase, double hightP, double slantHeight``` - variables that will be used in methods;
 + ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlanHeight](double value)``` - methods which you should use to give values to parameters. For example `setVolume(36`
 + ```areaBase()``` - method which calculates the base area of cone using `double radius`;
@@ -620,6 +666,9 @@ If you enter another parameter, an error will occur.
 
 #### The class `Sphere`:
 *Sphere extends Circle.*
+
+**Constructor`s overload** - ``Sphere(double radius)``.
+
 + ```double volume``` - variables that will be used in methods;
 + ```area()``` - method which calculates area of sphere using `double radius`;
 + ```volume()``` - method which calculates volume of sphere using `double radius`.

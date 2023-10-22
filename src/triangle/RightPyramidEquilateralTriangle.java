@@ -5,6 +5,10 @@ import help.HelpingMethods;
 public class RightPyramidEquilateralTriangle extends EquilateralTriangle{
     HelpingMethods help = new HelpingMethods();
     protected double volume, areaSide, areaBase, heightP, slantHeight;
+    public RightPyramidEquilateralTriangle(double a){
+        this.a = a;
+    }
+    public RightPyramidEquilateralTriangle(){}
     public void setVolume(double volume) {
         this.volume = volume;
     }

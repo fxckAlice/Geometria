@@ -2,6 +2,13 @@ package triangle;
 
 public class StraightPrismRightTriangle extends RightTriangle{
     protected double volume, areaSide, areaBase, heightP, diagonalSideA, diagonalSideB, diagonalSideC;
+    public StraightPrismRightTriangle(double a, double b, double c, double heightP){
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.heightP = heightP;
+    }
+    public StraightPrismRightTriangle(){}
     public void setVolume(double volume) {
         this.volume = volume;
     }

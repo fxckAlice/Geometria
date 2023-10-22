@@ -1,8 +1,24 @@
 package rectangle;
 
 public class StraightPrismParallelogram extends Parallelogram{
-                protected double heightP,volume, diagonalV1, diagonalV2, diagonalSideLength, diagonalSideWidth;
-
+    protected double heightP,volume, diagonalV1, diagonalV2, diagonalSideLength, diagonalSideWidth;
+    public StraightPrismParallelogram(double length, double width, double heightP, double corner){
+        this.length = length;
+        this.width = width;
+        this.heightP = heightP;
+        corner:{
+            if (corner >= 180) {
+                System.out.println("Error!");
+                break corner;
+            }
+            if (corner <= 90) {
+                this.corner = corner;
+            } else {
+                this.corner = 180 - corner;
+            }
+        }
+    }
+    public StraightPrismParallelogram(){}
     public void setHeightP(double heightP) {
         this.heightP = heightP;
     }
