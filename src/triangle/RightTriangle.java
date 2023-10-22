@@ -1,6 +1,12 @@
 package triangle;
 
 public class RightTriangle extends Triangle {
+    public RightTriangle(double a, double b, double c){
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+    public RightTriangle(){}
     @Override
     public void setHeight(double height) {
         System.out.println("Doesn't exist.");

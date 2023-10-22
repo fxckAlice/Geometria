@@ -2,6 +2,12 @@ package triangle;
 
 public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
     protected double heightP, areaBase, areaSide, volume, diagonalSideA, diagonalSideB;
+    public StraightPrismIsoscelesTriangle(double a, double b, double heightP){
+        this.a = a;
+        this.b = b;
+        this.heightP = heightP;
+    }
+    public StraightPrismIsoscelesTriangle(){}
     @Override
     public void setPerimeter(double perimeter) {
         System.out.println("Doesn`t exist!");

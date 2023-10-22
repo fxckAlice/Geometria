@@ -2,6 +2,12 @@ package triangle;
 
 public class Triangle extends IsoscelesTriangle {
     protected double c, medianC,heightC, bisectorC, cornerA, cornerB, cornerC;
+    public Triangle(double a, double b, double c){
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+    public Triangle(){}
     public void setMedian(double median) {
         this.median = median;
     }

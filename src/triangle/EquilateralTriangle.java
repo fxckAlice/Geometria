@@ -5,6 +5,10 @@ import help.HelpingMethods;
 public class EquilateralTriangle {
     HelpingMethods help = new HelpingMethods();
     protected double a, perimeter, area, median, bisector, height, outRadius, inputRadius, semiPerimeter;
+    public EquilateralTriangle(double a){
+        this.a = a;
+    }
+    public EquilateralTriangle(){}
     protected double semiPerimeter(){
         semiPerimeter = perimeter / 2;
         return semiPerimeter;
