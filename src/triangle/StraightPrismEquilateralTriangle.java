@@ -5,6 +5,11 @@ import org.w3c.dom.html.HTMLLegendElement;
 
 public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
     protected double heightP, volume, diagonalSide;
+    public StraightPrismEquilateralTriangle(double a, double heightP){
+        this.a = a;
+        this.heightP = heightP;
+    }
+    public StraightPrismEquilateralTriangle(){}
     @Override
     public void setPerimeter(double perimeter) {
         System.out.println("Doesn`t exist!");

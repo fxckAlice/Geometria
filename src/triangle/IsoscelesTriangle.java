@@ -2,7 +2,11 @@ package triangle;
 
 public class IsoscelesTriangle extends EquilateralTriangle {
     protected double b, medianB, bisectorB, heightB, cornerApex, cornerSide;
-
+    public IsoscelesTriangle(double a, double b){
+        this.a = a;
+        this.b = b;
+    }
+    public IsoscelesTriangle(){}
     public void setB(double b) {
         this.b = b;
     }
