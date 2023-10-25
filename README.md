@@ -69,7 +69,7 @@ SDK: *corrnetto 11*;
   <span> - double corner;</span>
 </div>
 <div style="text-align:center;">
-  <span>color</span> :peach: :large_orange_diamond: :shipit:
+  <span>color</span> :peach:
   <span> - cornerDiagonalWidth();</span>
 </div>
 <div style="text-align:center;">
@@ -78,6 +78,8 @@ SDK: *corrnetto 11*;
 </div>
 
 </div>  
+
+---
 
 **Constructor`s overload** - ``Rectangle(double length, double width)``.
 
@@ -107,9 +109,17 @@ ___
 *Square extends Rectangle.*
 
 <div style="text-align:center;">
-<img src="src/photos/square.jpg" width="400" height="400"> <img src="src/photos/square2.jpg" >
+<img src="src/photos/square.jpg" width="400" height="300"> 
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double width.</span>
+</div>
 
 </div>  
+
+---
 
 **Constructor`s overload** - ``Square(double length)``.
 
