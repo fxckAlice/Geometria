@@ -49,7 +49,33 @@ SDK: *corrnetto 11*;
 #### The head class ```Rectangle```:
 
 <div style="text-align:center;">
-<img src="src/photos/rectangle.jpg" width="400" height="300"><img src="src/photos/rectangle2.jpg" width="300" height="250">
+<img src="src/photos/rectangle.jpg" width="400" height="300">
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double width;</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double length;</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double diagonal;</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double corner;</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - cornerDiagonalWidth();</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - cornerDiagonalLength().</span>
+</div>
 
 </div>  
 
