@@ -712,4 +712,5 @@ If you enter another parameter, an error will occur.
 
 Project participants:
 - [Alexandr Mykhailov](https://github.com/fxckAlice);
-- [Polina Kovdrysh](https://github.com/pkovdrysh).
+- [Polina Kovdrysh](https://github.com/pkovdrysh);
+- :shipit: - squirrel).
