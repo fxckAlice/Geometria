@@ -444,7 +444,7 @@ If you enter another parameter, an error will occur.
 </div>
 
 <div style="text-align:center;">
-  <span>color</span> :peach:
+  <span>color</span> :heart:
   <span> - double cornerSide.</span>
 </div>
 
@@ -514,7 +514,7 @@ If you enter another parameter, an error will occur.
 </div>
 
 <div style="text-align:center;">
-  <span>color</span> ::heartpulse::
+  <span>color</span> :heartpulse:
   <span> - double bisectorB;</span>
 </div>
 
