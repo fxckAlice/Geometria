@@ -65,15 +65,15 @@ SDK: *corrnetto 11*;
   <span> - double diagonal;</span>
 </div>
 <div style="text-align:center;">
-  <span>color</span> :purple_heart:
+  <span>color</span> :heart: 
   <span> - double corner;</span>
 </div>
 <div style="text-align:center;">
-  <span>color</span> :blue_heart:
+  <span>color</span> :peach: :large_orange_diamond: :shipit:
   <span> - cornerDiagonalWidth();</span>
 </div>
 <div style="text-align:center;">
-  <span>color</span> :blue_heart:
+  <span>color</span> :yellow_heart:
   <span> - cornerDiagonalLength().</span>
 </div>
 
