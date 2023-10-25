@@ -69,7 +69,7 @@ SDK: *corrnetto 11*;
   <span> - double corner;</span>
 </div>
 <div style="text-align:center;">
-  <span>color</span> :peach: :large_orange_diamond: :shipit:
+  <span>color</span> :peach:
   <span> - cornerDiagonalWidth();</span>
 </div>
 <div style="text-align:center;">
@@ -78,6 +78,8 @@ SDK: *corrnetto 11*;
 </div>
 
 </div>  
+
+---
 
 **Constructor`s overload** - ``Rectangle(double length, double width)``.
 
@@ -107,9 +109,17 @@ ___
 *Square extends Rectangle.*
 
 <div style="text-align:center;">
-<img src="src/photos/square.jpg" width="400" height="400"> <img src="src/photos/square2.jpg" >
+<img src="src/photos/square.jpg" width="400" height="300"> 
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double width.</span>
+</div>
 
 </div>  
+
+---
 
 **Constructor`s overload** - ``Square(double length)``.
 
@@ -122,9 +132,44 @@ ___
 *Parallelogram extends Rectangle.*
 
 <div style="text-align:center;">
-<img src="src/photos/parallelogram.jpg" width="400" height="300"><img src="src/photos/parallelogram.2.jpg" width="300" height="250">
+<img src="src/photos/parallelogram.jpg" width="400" height="300">
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double width;</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double length;</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :heartpulse:
+  <span> - double diagonal1;</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :peach:
+  <span> - double diagonal2;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double height1;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :heart:
+  <span> - double height2;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :yellow_heart:
+  <span> - double corner.</span>
+</div>
 
 </div>
+
+---
 
 **Constructor`s overload** - ``Parallelogram(double length, double width, double corner)``.
 
@@ -175,7 +220,41 @@ ___
 
 <div style="text-align:center;">
 <img src="src/photos/parallelepiped.jpg" width="400" height="300">
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+<div style="text-align:center;">
+  <span>color</span> :heart:
+  <span> - double width;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double length;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double heightP;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :yellow_heart:
+  <span> - double diagonalSideWidth;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :peach:
+  <span> - double diagonalSideLength;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double diagonalV.</span>
+</div>
+
 </div>  
+
+---
 
 **Constructor`s overload** - ``Parallelepiped(double length, double width, double heightP)``.
 
@@ -294,7 +373,21 @@ If you enter another parameter, an error will occur.
 
 <div style="text-align:center;">
 <img src="src/photos/Equilateraltriangle.jpg" width="400" height="300">
-</div>  
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double a;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double height.</span>
+</div>
+
+</div>
+
+---
 
 **Constructor`s overload** - ``EquilateralTriangle(double a)``.
 
@@ -322,11 +415,46 @@ If you enter another parameter, an error will occur.
 
 <div style="text-align:center;">
 <img src="src/photos/Isoscelestriangle.jpg" width="400" height="300">
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+
+<div style="text-align:center;">
+  <span>color</span> :heart:
+  <span> - double b;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double heightB;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double bisectorB;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :heartpulse:
+  <span> - double medianB;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :peach:
+  <span> - double cornerApex;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :peach:
+  <span> - double cornerSide.</span>
+</div>
+
 </div>  
+
+---
 
 **Constructor`s overload** - ``IsoscelesTriangle(double a, double b)``.
 
-+ ```double b, double medianB, double bisectorB, double heightB, double cornerApex, double ornerSid``` - variables that will be used in methods;
++ ```double b, double medianB, double bisectorB, double heightB, double cornerApex, double cornerSide``` - variables that will be used in methods;
 + ```set[-B, -MedianB, -BisectorB, -HeightB, -CornerApex, -CornerSide](double value)``` - methods which you should use to give values to parameters. For example `setMedianB(8)`;
 + ```medianB()``` - method which calculates the median of isosceles triangle using `double b` and `double a`;
 + ```heightB()``` - method which calculates the height of isosceles triangle using `double b`;
@@ -347,8 +475,57 @@ If you enter another parameter, an error will occur.
 
 <div style="text-align:center;">
 <img src="src/photos/triangle.jpg" width="400" height="300">
-</div>  
 
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+
+<div style="text-align:center;">
+  <span>color</span> :heart:
+  <span> - double a;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double b;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double c;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :peach:
+  <span> - double cornerA;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :yellow_heart:
+  <span> - double cornerC;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :heart:
+  <span> - double cornerB;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :yellow_heart:
+  <span> - double medianA;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> ::heartpulse::
+  <span> - double bisectorB;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double heightC.</span>
+</div>
+
+</div> 
+
+---
 
 **Constructor`s overload** - ``Triangle(double a, double b, double c)``.
 
@@ -456,7 +633,18 @@ If you enter another parameter, an error will occur.
 
 <div style="text-align:center;">
 <img src="src/photos/Regulartriangularpyramid.jpg" width="400" height="300">
-</div>  
+
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double slantHeight.</span>
+</div>
+
+</div> 
+
+----
 
 **Constructor`s overload** - ``RightPyramidEquilateralTriangle(double a)``.
 
@@ -645,7 +833,27 @@ If you enter another parameter, an error will occur.
 
 <div style="text-align:center;">
 <img src="src/photos/circle.jpg" width="400" height="400">
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double length;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double diameter;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double radius.</span>
+</div>
+
 </div>  
+
+---
 
 **Constructor`s overload** - ``Circle(double radius)``.
 
@@ -668,22 +876,22 @@ If you enter another parameter, an error will occur.
 **Constructor`s overload** - ``Cone(double radius, double heightP)``.
 
 + ```double volume, double areaSide, double areaBase, double hightP, double slantHeight``` - variables that will be used in methods;
-+ ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlanHeight](double value)``` - methods which you should use to give values to parameters. For example `setVolume(36`
++ ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlantHeight](double value)``` - methods which you should use to give values to parameters. For example `setVolume(36`
 + ```areaBase()``` - method which calculates the base area of cone using `double radius`;
-+ ```areaSide()``` - method which calculates the area of the sides of cone using `double radius` and `double slanHeight`;
++ ```areaSide()``` - method which calculates the area of the sides of cone using `double radius` and `double slantHeight`;
 + ```area()``` - method which calculates the area of cone using `double areaSide` and `double areaBase`;
 + ```volume()``` - method which calculates the volume of cone using `double areaBase` and `heightP`;
-+ ```slanHeight()``` - method which calculates the slan height of cone using `HelpingMethods`, `double heightP` and `double radius`;
++ ```slantHeight()``` - method which calculates the slant height of cone using `HelpingMethods`, `double heightP` and `double radius`;
 + ```double heightP(String parameter)``` - method which calculates the volume height of cone using characteristic in dependence of parameter:
-  + ```"s"``` - using the `HelpingMethods`, `double slanHeight` and `double radius`;
+  + ```"s"``` - using the `HelpingMethods`, `double slantHeight` and `double radius`;
   + ```"aS"``` - using the `HelpingMethods`, `double areaSide` and `double radius`;
   + ```"a"``` - using the `HelpingMethods`, `double area` and `double radius`.
 
   If you enter another parameter, an error will occur.
 + ```double radius(String parameter)``` - method which calculates the radius of cone using characteristic in dependence of parameter:
-  + ```"s"``` - using the `HelpingMethods`, `double slanHeight` and `double heightP`;
-  + ```"aS"``` - using the `double areaSide` and `double slanHeight`;
-  + ```"a"``` - using the `HelpingMethods`, `double slanHeight` and `double area`;
+  + ```"s"``` - using the `HelpingMethods`, `double slantHeight` and `double heightP`;
+  + ```"aS"``` - using the `double areaSide` and `double slantHeight`;
+  + ```"a"``` - using the `HelpingMethods`, `double slantHeight` and `double area`;
   + ```"aB"``` - using the `double areaBase`.
 
   If you enter another parameter, an error will occur.
