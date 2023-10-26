@@ -45,6 +45,7 @@ public class Parallelogram extends Rectangle {
                 break;
             case ("w"):
                 area = height2 * width;
+                break;
             case ("c"):
                 area = width * Math.sin(corner / 180 * Math.PI) * length;
                 break;
