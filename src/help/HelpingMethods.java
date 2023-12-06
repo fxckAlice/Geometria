@@ -1,7 +1,7 @@
 package help;
 
 public class HelpingMethods {
-    public double quadraticEducation(double a, double b, double c){
+    public static double quadraticEducation(double a, double b, double c){
         double answer;
         double D = Math.pow(b, 2) - 4 * a * c;
         if(D < 0){
@@ -23,7 +23,7 @@ public class HelpingMethods {
         }
         return answer;
     }
-    public double round(double x, int dozen){
+    public static double round(double x, int dozen){
         double rounding = Math.pow(10, dozen);
         int temp;
         if(dozen < -9 | dozen > 9){
@@ -40,7 +40,7 @@ public class HelpingMethods {
             return temp * rounding;
         }
     }
-    public double pythagoreanTheorem(double a, double b, String action){
+    public static double pythagoreanTheorem(double a, double b, String action){
         double answer;
         switch (action){
             case ("+"):
@@ -55,7 +55,7 @@ public class HelpingMethods {
         }
         return answer;
     }
-    public double pythagoreanTheorem(double a, String action){
+    public static double pythagoreanTheorem(double a, String action){
         double answer;
         switch (action){
             case ("+"):

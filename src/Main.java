@@ -7,8 +7,6 @@ import circle.Cone;
 
 public class Main {
     public static void main(String[] args) {
-        Rectangle a = new Rectangle();
-        System.out.println(a.perimeter() + " " + a.diagonal());
-        int lk;
+        System.out.println(HelpingMethods.round(324567, 5));
     }
 }

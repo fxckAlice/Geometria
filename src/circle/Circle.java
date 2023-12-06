@@ -3,7 +3,6 @@ package circle;
 import help.HelpingMethods;
 
 public class Circle {
-    HelpingMethods help = new HelpingMethods();
     protected double radius, diameter, length, area;
     public Circle(double radius){
         this.radius = radius;
