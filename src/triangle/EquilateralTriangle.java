@@ -3,7 +3,6 @@ package triangle;
 import help.HelpingMethods;
 
 public class EquilateralTriangle {
-    HelpingMethods help = new HelpingMethods();
     protected double a, perimeter, area, median, bisector, height, outRadius, inputRadius, semiPerimeter;
     public EquilateralTriangle(double a){
         this.a = a;
@@ -53,7 +52,7 @@ public class EquilateralTriangle {
         return area;
     }
     public double height(){
-        height = help.pythagoreanTheorem(a, a / 2, "-");
+        height = HelpingMethods.pythagoreanTheorem(a, a / 2, "-");
         return  height;
     }
     public double outRadius(){

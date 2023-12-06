@@ -1,5 +1,7 @@
 package triangle;
 
+import help.HelpingMethods;
+
 public class RightTriangle extends Triangle {
     public RightTriangle(double a, double b, double c){
         this.a = a;
@@ -56,10 +58,10 @@ public class RightTriangle extends Triangle {
         double answer;
         switch (parameter) {
             case "o":
-                answer = help.pythagoreanTheorem(outRadius * 2, b, "-");
+                answer = HelpingMethods.pythagoreanTheorem(outRadius * 2, b, "-");
                 break;
             case "m":
-                answer = help.pythagoreanTheorem(medianC * 2, b, "-");
+                answer = HelpingMethods.pythagoreanTheorem(medianC * 2, b, "-");
                 break;
             case "p":
                 answer = perimeter - b - c;
@@ -68,19 +70,19 @@ public class RightTriangle extends Triangle {
                 answer = area / b;
                 break;
             case "t":
-                answer = help.pythagoreanTheorem(c, b, "-");
+                answer = HelpingMethods.pythagoreanTheorem(c, b, "-");
                 break;
             case ("sin"):
-                answer = help.round(c * Math.sin(cornerA / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(c * Math.sin(cornerA / 180 * Math.PI), -8);
                 break;
             case ("cos"):
-                answer = help.round(c * Math.cos(cornerB / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(c * Math.cos(cornerB / 180 * Math.PI), -8);
                 break;
             case ("tan"):
-                answer = help.round(b * Math.tan(cornerA / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(b * Math.tan(cornerA / 180 * Math.PI), -8);
                 break;
             case ("ctan"):
-                answer = help.round(b / Math.tan(cornerB / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(b / Math.tan(cornerB / 180 * Math.PI), -8);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -92,10 +94,10 @@ public class RightTriangle extends Triangle {
         double answer;
         switch (parameter) {
             case "o":
-                answer = help.pythagoreanTheorem(outRadius * 2, a, "-");
+                answer = HelpingMethods.pythagoreanTheorem(outRadius * 2, a, "-");
                 break;
             case "m":
-                answer = help.pythagoreanTheorem(medianC * 2, a, "-");
+                answer = HelpingMethods.pythagoreanTheorem(medianC * 2, a, "-");
                 break;
             case "p":
                 answer = perimeter - a - c;
@@ -104,19 +106,19 @@ public class RightTriangle extends Triangle {
                 answer = area / a;
                 break;
             case "t":
-                answer = help.pythagoreanTheorem(c, a, "-");
+                answer = HelpingMethods.pythagoreanTheorem(c, a, "-");
                 break;
             case ("sin"):
-                answer = help.round(c * Math.sin(cornerB / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(c * Math.sin(cornerB / 180 * Math.PI), -8);
                 break;
             case ("cos"):
-                answer = help.round(c * Math.cos(cornerA / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(c * Math.cos(cornerA / 180 * Math.PI), -8);
                 break;
             case ("tan"):
-                answer = help.round(a * Math.tan(cornerB / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(a * Math.tan(cornerB / 180 * Math.PI), -8);
                 break;
             case ("ctan"):
-                answer = help.round(a / Math.tan(cornerA / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(a / Math.tan(cornerA / 180 * Math.PI), -8);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -138,19 +140,19 @@ public class RightTriangle extends Triangle {
                 answer = perimeter - a - b;
                 break;
             case "t":
-                answer = help.pythagoreanTheorem(b, a, "+");
+                answer = HelpingMethods.pythagoreanTheorem(b, a, "+");
                 break;
             case ("sinA"):
-                answer = help.round(a / Math.sin(cornerA / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(a / Math.sin(cornerA / 180 * Math.PI), -8);
                 break;
             case ("cosA"):
-                answer = help.round(b / Math.cos(cornerA / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(b / Math.cos(cornerA / 180 * Math.PI), -8);
                 break;
             case ("sinB"):
-                answer = help.round(b / Math.sin(cornerB / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(b / Math.sin(cornerB / 180 * Math.PI), -8);
                 break;
             case ("cosB"):
-                answer = help.round(a / Math.cos(cornerB / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(a / Math.cos(cornerB / 180 * Math.PI), -8);
                 break;
             default:
                 System.out.println("Enter correct parameter.");

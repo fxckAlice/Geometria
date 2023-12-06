@@ -1,5 +1,7 @@
 package triangle;
 
+import help.HelpingMethods;
+
 public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
     protected double heightP, areaBase, areaSide, volume, diagonalSideA, diagonalSideB;
     public StraightPrismIsoscelesTriangle(double a, double b, double heightP){
@@ -76,11 +78,11 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
         return -1;
     }
     public double diagonalSideA(){
-        diagonalSideA = help.pythagoreanTheorem(a, heightP, "+");
+        diagonalSideA = HelpingMethods.pythagoreanTheorem(a, heightP, "+");
         return diagonalSideA;
     }
     public double diagonalSideB(){
-        diagonalSideB = help.pythagoreanTheorem(b, heightP, "+");
+        diagonalSideB = HelpingMethods.pythagoreanTheorem(b, heightP, "+");
         return diagonalSideB;
     }
     public double heightP(String parameter){
@@ -93,10 +95,10 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
                 answer = areaSide / (a * 2 + b);
                 break;
             case ("dSA"):
-                answer = help.pythagoreanTheorem(diagonalSideA, a, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonalSideA, a, "-");
                 break;
             case ("dSB"):
-                answer = help.pythagoreanTheorem(diagonalSideB, b, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonalSideB, b, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -109,16 +111,16 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
         double answer;
         switch (parameter){
             case ("v"):
-                answer = help.pythagoreanTheorem(2 * volume / heightP / b, b / 2, "+");
+                answer = HelpingMethods.pythagoreanTheorem(2 * volume / heightP / b, b / 2, "+");
                 break;
             case ("aB"):
-                answer = help.pythagoreanTheorem(2 * areaBase / b, b / 2, "+");
+                answer = HelpingMethods.pythagoreanTheorem(2 * areaBase / b, b / 2, "+");
                 break;
             case ("aS"):
                 answer = areaSide / heightP - a * 2;
                 break;
             case ("dSB"):
-                answer = help.pythagoreanTheorem(diagonalSideA, heightP, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonalSideA, heightP, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -131,7 +133,7 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
         double answer;
         switch (parameter){
             case ("v"):
-                answer = help.pythagoreanTheorem(2 * volume / heightP / b, b / 2, "+");
+                answer = HelpingMethods.pythagoreanTheorem(2 * volume / heightP / b, b / 2, "+");
                 break;
             case ("aB"):
                 answer = areaBase / heightP * 2;
@@ -140,7 +142,7 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
                 answer = (areaSide / heightP - b) / 2;
                 break;
             case ("dSB"):
-                answer = help.pythagoreanTheorem(diagonalSideB, heightP, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonalSideB, heightP, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");

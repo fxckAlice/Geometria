@@ -1,5 +1,7 @@
 package triangle;
 
+import help.HelpingMethods;
+
 public class Triangle extends IsoscelesTriangle {
     protected double c, medianC,heightC, bisectorC, cornerA, cornerB, cornerC;
     public Triangle(double a, double b, double c){
@@ -117,14 +119,14 @@ public class Triangle extends IsoscelesTriangle {
                 answer = area / height * 2;
                 break;
             case "h":
-                answer = help.pythagoreanTheorem(b, height,"-") + help.pythagoreanTheorem(c, height, "-");
+                answer = HelpingMethods.pythagoreanTheorem(b, height,"-") + HelpingMethods.pythagoreanTheorem(c, height, "-");
                 break;
             case "t":
                 double temp = 2 * b * c * Math.cos(cornerA / 180 * Math.PI);
-                answer = help.round(Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - temp), -8);
+                answer = HelpingMethods.round(Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - temp), -8);
                 break;
             case "m":
-                answer = help.round(Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(c, 2)) - Math.pow(median * 2, 2)), -7);
+                answer = HelpingMethods.round(Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(c, 2)) - Math.pow(median * 2, 2)), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -148,14 +150,14 @@ public class Triangle extends IsoscelesTriangle {
                 answer = area / heightB * 2;
                 break;
             case "h":
-                answer = help.pythagoreanTheorem(a, heightB, "-") + help.pythagoreanTheorem(c, heightB, "+");
+                answer = HelpingMethods.pythagoreanTheorem(a, heightB, "-") + HelpingMethods.pythagoreanTheorem(c, heightB, "+");
                 break;
             case "t":
                 double temp = 2 * a * c * Math.cos(cornerB / 180 * Math.PI);
-                answer = help.round(Math.sqrt(Math.pow(a, 2) + Math.pow(c, 2) - temp), -8);
+                answer = HelpingMethods.round(Math.sqrt(Math.pow(a, 2) + Math.pow(c, 2) - temp), -8);
                 break;
             case "m":
-                answer = help.round(Math.sqrt(2 * (Math.pow(a, 2) + Math.pow(c, 2)) - Math.pow(medianB * 2, 2)), -7);
+                answer = HelpingMethods.round(Math.sqrt(2 * (Math.pow(a, 2) + Math.pow(c, 2)) - Math.pow(medianB * 2, 2)), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -179,14 +181,14 @@ public class Triangle extends IsoscelesTriangle {
                 answer = area / heightC * 2;
                 break;
             case "h":
-                answer = help.pythagoreanTheorem(b, heightC, "-") + help.pythagoreanTheorem(a, heightC,"-");
+                answer = HelpingMethods.pythagoreanTheorem(b, heightC, "-") + HelpingMethods.pythagoreanTheorem(a, heightC,"-");
                 break;
             case "t":
                 double temp = 2 * b * a * Math.cos(cornerC / 180 * Math.PI);
-                answer = help.round(Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2) - temp), -8);
+                answer = HelpingMethods.round(Math.sqrt(Math.pow(b, 2) + Math.pow(a, 2) - temp), -8);
                 break;
             case "m":
-                answer = help.round(Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(a, 2)) - Math.pow(medianC * 2, 2)), -7);
+                answer = HelpingMethods.round(Math.sqrt(2 * (Math.pow(b, 2) + Math.pow(a, 2)) - Math.pow(medianC * 2, 2)), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");

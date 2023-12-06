@@ -1,5 +1,7 @@
 package triangle;
 
+import help.HelpingMethods;
+
 public class StraightPrismRightTriangle extends RightTriangle{
     protected double volume, areaSide, areaBase, heightP, diagonalSideA, diagonalSideB, diagonalSideC;
     public StraightPrismRightTriangle(double a, double b, double c, double heightP){
@@ -67,15 +69,15 @@ public class StraightPrismRightTriangle extends RightTriangle{
         return volume;
     }
     public double diagonalSideA(){
-        diagonalSideA = help.pythagoreanTheorem(heightP, a, "+");
+        diagonalSideA = HelpingMethods.pythagoreanTheorem(heightP, a, "+");
         return diagonalSideA;
     }
     public double diagonalSideB(){
-        diagonalSideB = help.pythagoreanTheorem(heightP, b, "+");
+        diagonalSideB = HelpingMethods.pythagoreanTheorem(heightP, b, "+");
         return diagonalSideB;
     }
     public double diagonalSideC(){
-        diagonalSideC = help.pythagoreanTheorem(heightP, c, "+");
+        diagonalSideC = HelpingMethods.pythagoreanTheorem(heightP, c, "+");
         return diagonalSideC;
     }
     @Override
@@ -101,13 +103,13 @@ public class StraightPrismRightTriangle extends RightTriangle{
                 heightP = volume / areaBase;
                 break;
             case ("dSA"):
-                heightP = help.pythagoreanTheorem(diagonalSideA, a, "-");
+                heightP = HelpingMethods.pythagoreanTheorem(diagonalSideA, a, "-");
                 break;
             case ("dSB"):
-                heightP = help.pythagoreanTheorem(diagonalSideB, b, "-");
+                heightP = HelpingMethods.pythagoreanTheorem(diagonalSideB, b, "-");
                 break;
             case ("dSC"):
-                heightP = help.pythagoreanTheorem(diagonalSideC, c, "-");
+                heightP = HelpingMethods.pythagoreanTheorem(diagonalSideC, c, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -125,22 +127,22 @@ public class StraightPrismRightTriangle extends RightTriangle{
                 answer = volume / heightP / b / 4;
                 break;
             case ("dSA"):
-                answer = help.pythagoreanTheorem(diagonalSideA, heightP, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonalSideA, heightP, "-");
                 break;
             case ("t"):
-                answer = help.pythagoreanTheorem(c, b,"-");
+                answer = HelpingMethods.pythagoreanTheorem(c, b,"-");
                 break;
             case ("sin"):
-                answer = help.round(c * Math.sin(cornerA / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(c * Math.sin(cornerA / 180 * Math.PI), -8);
                 break;
             case ("cos"):
-                answer = help.round(c * Math.cos(cornerB / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(c * Math.cos(cornerB / 180 * Math.PI), -8);
                 break;
             case ("tan"):
-                answer = help.round(b * Math.tan(cornerA / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(b * Math.tan(cornerA / 180 * Math.PI), -8);
                 break;
             case ("ctan"):
-                answer = help.round(b / Math.tan(cornerB / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(b / Math.tan(cornerB / 180 * Math.PI), -8);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -158,22 +160,22 @@ public class StraightPrismRightTriangle extends RightTriangle{
                 answer = volume / heightP / a / 4;
                 break;
             case ("dSB"):
-                answer = help.pythagoreanTheorem(diagonalSideB, heightP, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonalSideB, heightP, "-");
                 break;
             case ("t"):
-                answer = help.pythagoreanTheorem(c, a,"-");
+                answer = HelpingMethods.pythagoreanTheorem(c, a,"-");
                 break;
             case ("sinA"):
-                answer = help.round(a / Math.sin(cornerA / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(a / Math.sin(cornerA / 180 * Math.PI), -8);
                 break;
             case ("cosA"):
-                answer = help.round(b / Math.cos(cornerA / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(b / Math.cos(cornerA / 180 * Math.PI), -8);
                 break;
             case ("sinB"):
-                answer = help.round(b / Math.sin(cornerB / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(b / Math.sin(cornerB / 180 * Math.PI), -8);
                 break;
             case ("cosB"):
-                answer = help.round(a / Math.cos(cornerB / 180 * Math.PI), -8);
+                answer = HelpingMethods.round(a / Math.cos(cornerB / 180 * Math.PI), -8);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -191,10 +193,10 @@ public class StraightPrismRightTriangle extends RightTriangle{
                 answer = volume / heightP / heightC / 4;
                 break;
             case ("dSC"):
-                answer = help.pythagoreanTheorem(diagonalSideC, heightP, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonalSideC, heightP, "-");
                 break;
             case ("t"):
-                answer = help.pythagoreanTheorem(b, a,"+");
+                answer = HelpingMethods.pythagoreanTheorem(b, a,"+");
                 break;
             case ("m"):
                 answer = 2 * medianC;

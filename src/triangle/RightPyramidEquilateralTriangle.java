@@ -3,7 +3,6 @@ package triangle;
 import help.HelpingMethods;
 
 public class RightPyramidEquilateralTriangle extends EquilateralTriangle{
-    HelpingMethods help = new HelpingMethods();
     protected double volume, areaSide, areaBase, heightP, slantHeight;
     public RightPyramidEquilateralTriangle(double a){
         this.a = a;
@@ -74,7 +73,7 @@ public class RightPyramidEquilateralTriangle extends EquilateralTriangle{
         return -1;
     }
     public double heightP(){
-        heightP = help.pythagoreanTheorem(a, help.pythagoreanTheorem(a, a / 2, "-") * 2 / 3, "-");
+        heightP = HelpingMethods.pythagoreanTheorem(a, HelpingMethods.pythagoreanTheorem(a, a / 2, "-") * 2 / 3, "-");
         return heightP;
     }  //heightP = a / 2; xD
     public double side(String parameter){

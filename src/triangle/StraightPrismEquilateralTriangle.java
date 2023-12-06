@@ -39,7 +39,7 @@ public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
         return volume;
     }
     public double diagonalSide(){
-        diagonalSide = help.pythagoreanTheorem(a, heightP, "+");
+        diagonalSide = HelpingMethods.pythagoreanTheorem(a, heightP, "+");
         return diagonalSide;
     }
 
@@ -84,7 +84,7 @@ public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
         double answer;
         switch (parameter){
             case ("a"):
-                answer = help.quadraticEducation(Math.sqrt(3) / 2, 3 * heightP, -area);
+                answer = HelpingMethods.quadraticEducation(Math.sqrt(3) / 2, 3 * heightP, -area);
                 break;
             case ("v"):
                 answer = Math.sqrt(volume / heightP * 4 / Math.sqrt(3));

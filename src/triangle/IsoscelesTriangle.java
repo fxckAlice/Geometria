@@ -1,5 +1,7 @@
 package triangle;
 
+import help.HelpingMethods;
+
 public class IsoscelesTriangle extends EquilateralTriangle {
     protected double b, medianB, bisectorB, heightB, cornerApex, cornerSide;
     public IsoscelesTriangle(double a, double b){
@@ -32,11 +34,11 @@ public class IsoscelesTriangle extends EquilateralTriangle {
     }
     @Override
     public double height(){
-        height = help.pythagoreanTheorem(a, b / 2, "-");
+        height = HelpingMethods.pythagoreanTheorem(a, b / 2, "-");
         return  height;
     }
     public double medianB(){
-        medianB = 0.5 * help.pythagoreanTheorem(a, b * Math.sqrt(2), "+");
+        medianB = 0.5 * HelpingMethods.pythagoreanTheorem(a, b * Math.sqrt(2), "+");
         return medianB;
     }
     public double heightB(){
@@ -86,7 +88,7 @@ public class IsoscelesTriangle extends EquilateralTriangle {
                 answer = area / heightB * 2;
                 break;
             case "h":
-                answer = help.pythagoreanTheorem(height, b / 2, "+");
+                answer = HelpingMethods.pythagoreanTheorem(height, b / 2, "+");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -110,7 +112,7 @@ public class IsoscelesTriangle extends EquilateralTriangle {
                 answer = area / height * 2;
                 break;
             case "h":
-                answer = help.pythagoreanTheorem(a, height, "-");
+                answer = HelpingMethods.pythagoreanTheorem(a, height, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
