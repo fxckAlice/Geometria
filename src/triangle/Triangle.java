@@ -89,6 +89,7 @@ public class Triangle extends IsoscelesTriangle {
                 break;
             case ("c"):
                 area = heightC * c / 2;
+                break;
             default:
                 System.out.println("Enter correct parameter.");
                 area = -1;

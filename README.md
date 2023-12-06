@@ -47,26 +47,41 @@ SDK: *corrnetto 11*;
 ### The package `rectangle`:
 #### The 2D figures:
 #### The head class ```Rectangle```:
-![rectangle](src/photos/rectangle.jpg)
+
+<div style="text-align:center;">
+<img src="src/photos/rectangle.jpg" width="400" height="300">
+
 <span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
 <div style="text-align:center;">
-  <span style="color: none;">double</span>
-  <span style="color: blue;">width;</span>
+  <span>color</span> :blue_heart:
+  <span> - double width;</span>
 </div>
 <div style="text-align:center;">
-  <span style="color: none;">double</span>
-  <span style="color: green;">length;</span>
+  <span>color</span> :green_heart:
+  <span> - double length;</span>
 </div>
 <div style="text-align:center;">
-  <span style="color: none;">double</span>
-  <span style="color: purple;">diagonal;</span>
+  <span>color</span> :purple_heart:
+  <span> - double diagonal;</span>
 </div>
 <div style="text-align:center;">
-  <span style="color: none;">double</span>
-  <span style="color: red;">corner;</span>
+  <span>color</span> :heart: 
+  <span> - double corner;</span>
 </div>
-<span style="color: orange;"><div style="text-align:center;">cornerDiagonalWidth();</div></span>
-<span style="color: yellow;"><div style="text-align:center;">cornerDiagonalLength().</div></span>
+<div style="text-align:center;">
+  <span>color</span> :peach:
+  <span> - cornerDiagonalWidth();</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :yellow_heart:
+  <span> - cornerDiagonalLength().</span>
+</div>
+
+</div>  
+
+---
+
+**Constructor`s overload** - ``Rectangle(double length, double width)``.
 
 - ```double length``` - the main values that denotes the value of rectangle`s side;
 - ```set[-Length, -Width, -Perimeter, -Area, -Diagonal, -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example ```setLength(3)```;
@@ -92,6 +107,22 @@ ___
 
 #### The class ```Square```:
 *Square extends Rectangle.*
+
+<div style="text-align:center;">
+<img src="src/photos/square.jpg" width="400" height="300"> 
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double width.</span>
+</div>
+
+</div>  
+
+---
+
+**Constructor`s overload** - ``Square(double length)``.
+
 + ```setWidth(double value)``` - method outputs Error because all sides of a square are equal(`setWidth() == setLength()`), so we use only `setLength()`;
 + ```cornerDiagonalWidth()``` - method outputs Error because `cornerDiagonalWidth() == cornerDiagonalLength()`.
 ---
@@ -99,6 +130,49 @@ ___
 
 #### The class ```Parallelogram```:
 *Parallelogram extends Rectangle.*
+
+<div style="text-align:center;">
+<img src="src/photos/parallelogram.jpg" width="400" height="300">
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double width;</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double length;</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :heartpulse:
+  <span> - double diagonal1;</span>
+</div>
+<div style="text-align:center;">
+  <span>color</span> :peach:
+  <span> - double diagonal2;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double height1;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :heart:
+  <span> - double height2;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :yellow_heart:
+  <span> - double corner.</span>
+</div>
+
+</div>
+
+---
+
+**Constructor`s overload** - ``Parallelogram(double length, double width, double corner)``.
+
 + ```corner()``` - corner must be less than 90 degrees, otherwise it will not be a parallelogram;
 + ```diagonal()``` -  since a parallelogram is a derivative of a rectangle and if you enter a diagonal, it doesn't work. It means you need to use `diagonal1()` or `diagonal2()` using ```double leinght```,```double width``` and `double corner`;
 
@@ -114,6 +188,10 @@ ___
 
 #### The class ```Rhombus```:
 *Rhombus extends Parallelogram.*
+
+
+**Constructor`s overload** - ``Rhombus(double length, double corner)``.
+
 + ```setWidth(double value)``` - method outputs Error because all sides of a rhombus are equal(`setWidth() == setLength()`), so we use only `setLength()`;
 <!--+ ```area()``` - the method works only by using parameters:
   + ```'h'``` - `double value` - calculation of the area using `double height` and `double length`;
@@ -125,6 +203,11 @@ ___
 #### The 3D figures:
 #### The class ```Cube```:
 *Cube extends Square.*
+
+
+
+**Constructor`s overload** - ``Cube(double length)``.
+
 + ```set[-Volume, -DiagonalV](double value)``` - methods which you should use to give values to parameters. For example ```setVolume(36)```;
 + ```volume()``` - method which calculates the volume of cube using `double length`;
 + ```diagonalV()``` - method which calculates the diagonal of cube using `double length`;
@@ -134,6 +217,47 @@ ___
 ---
 #### The class `Parallelepiped`:
 *Parallelepiped extends Rectangle.*
+
+<div style="text-align:center;">
+<img src="src/photos/parallelepiped.jpg" width="400" height="300">
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+<div style="text-align:center;">
+  <span>color</span> :heart:
+  <span> - double width;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double length;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double heightP;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :yellow_heart:
+  <span> - double diagonalSideWidth;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :peach:
+  <span> - double diagonalSideLength;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double diagonalV.</span>
+</div>
+
+</div>  
+
+---
+
+**Constructor`s overload** - ``Parallelepiped(double length, double width, double heightP)``.
+
 + ```double heightP, double volume, double diagonalV, double diagonalSideLength, double diagonalSideWidth```- variables that will be used in methods;
 + ```volume()``` - method which calculates the volume of parallelepiped using `double length`, `double width`, `double heightP`;
 + ```diagonalV()``` - method which calculates the diagonal of parallelepiped using `double diagonal` and `double heightP`;
@@ -167,6 +291,9 @@ ___
 --- 
 #### The class `StraightPrismRhombus`:
 *StraightPrismRhombus extends Rhombus.*
+
+**Constructor`s overload** - ``StraightPrismRhombus(double length,double heightP, double corner)``.
+
 + ```double heightP, double volume, double diagonalV1, double diagonalV2, double diagonalSideLength``` - variables that will be used in methods;
 + ```volume()``` - method which calculates the volume of prism using `double length`, `double height1` and `double heightP`;
 + ```diagonalSideLength()    - method which calculates diagonal of edge of the prism (length * height) using `double length` and `double heightP`;
@@ -198,6 +325,9 @@ ___
 
 #### The class `StraightPrismParallelogram`:
 *StraightPrismParallelogram extends Parallelogram.*
+
+**Constructor`s overload** - ``StraightPrismParallelogram(double length, double width, double heightP, double corner)``.
+
 + ```double heightP, double volume, double diagonalV1, double diagonalV2, double diagonalSideLength, double diagonalSideWidth``` - methods which doesn't exist in this class;
 + ```double volume(String parameter)``` - method which calculates the volume of prism in different ways using characteristic in dependence of parameter:
   + ```"l"``` - using  `double length`, `double height1` and `heightP`;
@@ -240,6 +370,27 @@ If you enter another parameter, an error will occur.
 ### The package `triangle`:
 #### The 2D figures:
 #### The head class ```EquilateralTriangle```:
+
+<div style="text-align:center;">
+<img src="src/photos/Equilateraltriangle.jpg" width="400" height="300">
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double a;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double height.</span>
+</div>
+
+</div>
+
+---
+
+**Constructor`s overload** - ``EquilateralTriangle(double a)``.
+
 + ```double a, double perimeter, double area, double median, double bisector, double height, double outRadius, double inputRadius``` - variables that will be used in methods;
 + ```set[-A, -Perimeter, -Area, -Median, -Bisector, -Height -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example `setA(6)`;
 + ```semiPerimeter()``` - calculation of the semi-perimeter using `double perimeter`;
@@ -261,7 +412,49 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `IsoscelesTriangle`:
 *IsoscelesTriangle extends EquilateralTriangle.*
-+ ```double b, double medianB, double bisectorB, double heightB, double cornerApex, double ornerSid``` - variables that will be used in methods;
+
+<div style="text-align:center;">
+<img src="src/photos/Isoscelestriangle.jpg" width="400" height="300">
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+
+<div style="text-align:center;">
+  <span>color</span> :heart:
+  <span> - double b;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double heightB;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double bisectorB;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :heartpulse:
+  <span> - double medianB;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :peach:
+  <span> - double cornerApex;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :peach:
+  <span> - double cornerSide.</span>
+</div>
+
+</div>  
+
+---
+
+**Constructor`s overload** - ``IsoscelesTriangle(double a, double b)``.
+
++ ```double b, double medianB, double bisectorB, double heightB, double cornerApex, double cornerSide``` - variables that will be used in methods;
 + ```set[-B, -MedianB, -BisectorB, -HeightB, -CornerApex, -CornerSide](double value)``` - methods which you should use to give values to parameters. For example `setMedianB(8)`;
 + ```medianB()``` - method which calculates the median of isosceles triangle using `double b` and `double a`;
 + ```heightB()``` - method which calculates the height of isosceles triangle using `double b`;
@@ -279,6 +472,63 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `Triangle`:
 *Triangle extends IsoscelesTriangle.*
+
+<div style="text-align:center;">
+<img src="src/photos/triangle.jpg" width="400" height="300">
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+
+<div style="text-align:center;">
+  <span>color</span> :heart:
+  <span> - double a;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double b;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double c;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :peach:
+  <span> - double cornerA;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :yellow_heart:
+  <span> - double cornerC;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :heart:
+  <span> - double cornerB;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :yellow_heart:
+  <span> - double medianA;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> ::heartpulse::
+  <span> - double bisectorB;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double heightC.</span>
+</div>
+
+</div> 
+
+---
+
+**Constructor`s overload** - ``Triangle(double a, double b, double c)``.
+
 + ```double c, double medianC, double heightC, double bisectorC, double cornerA, double cornerB, double cornerC``` - variables that will be used in methods;
 + ```setCornerSide(), setCornerApex()``` - methods which doesn't exist in this class;
 + ```medianA(), medianC()``` - method which calculates the median of triangle using `double b`, `double c` and `double a`;
@@ -308,6 +558,9 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `RightTriangle`:
 *RightTriangle extends Triangle.*
+
+**Constructor`s overload** - ``RightTriangle(double a, double b, double c)``.
+
 + ```setHeight(), setHeightB()``` -  methods which doesn't exist in this class;
 + ```setCornerC()``` - You should to input only 90 degrees, because it is a constant in right triangle;
 + ```double area(String parameter)``` - method which calculates the area of right triangle using characteristic in dependence of parameter:
@@ -351,10 +604,14 @@ If you enter another parameter, an error will occur.
 
   If you enter another parameter, an error will occur.
 
-  
+---
+
 #### The 3D figures:
 #### The class `StraightPrismEquilateralTriangle`:
 *StraightPrismEquilateralTriangle extends EquilateralTriangle.*
+
+**Constructor`s overload** - ``StraightPrismEquilateralTriangle(double a, double heightP)``.
+
 + ```double heightP, double volume``` - variables that will be used in methods;
 + ```setPerimeter(), setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
 + ```double perimeter, double outRadius, double inputRadius``` - variables which doesn't exist in this class;
@@ -373,6 +630,24 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `RightPyramidEquilateralTriangle`:
 *RightPyramidEquilateralTriangle extends EquilateralTriangle.*
+
+<div style="text-align:center;">
+<img src="src/photos/Regulartriangularpyramid.jpg" width="400" height="300">
+
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double slantHeight.</span>
+</div>
+
+</div> 
+
+----
+
+**Constructor`s overload** - ``RightPyramidEquilateralTriangle(double a)``.
+
 + ```double volume, double areaSide, double areaBase, double heightP, double slantHeight``` - variables that will be used in methods;
 + ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlantHeight](double value)``` - methods which you should use to give values to parameters. For example: `setAreaSide(24)`;
 + ```setPerimeter(), setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
@@ -395,6 +670,9 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `StraightPrismIsoscelesTriangle`:
 *StraightPrismIsoscelesTriangle extends IsoscelesTriangle.*
+
+**Constructor`s overload** - ``StraightPrismIsoscelesTriangle(double a, double b, double heightP)``.
+
 + ```double heightP, double areaBase, double areaSide, double volume, double diagonalSideA, double diagonalSideB``` - variables that will be used in methods;
 + ```setPerimeter(), setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
 + ```set[-Volume, -HeightP, -DiagonalSideA, -DiagonalSideB](double value)``` - methods which you should use to give values to parameters. For example `setDiagonalSideB(16)`;
@@ -421,6 +699,9 @@ If you enter another parameter, an error will occur.
 ---
 #### The class `StraightPrismTriangle`:
 *StraightPrismTriangle extends Triangle.*
+
+**Constructor`s overload** - ``StraightPrismTriangle(double a, double b, double c, double heightP)``.
+
 + ```double volume, double areaSide, double areaBase, double heightP, double diagonalSideA, double diagonalSideB, double diagonalSideC``` - variables that will be used in methods;
 + ```set[-Volume, -AreaSide, -AreaBase, -HeightP, -DiagonalSideA, -DiagonalSideB, -DiagonalSideC](double value)``` - methods which you should use to give values to parameters. For example `setAreaBase(36)`;
 + ```setOutRadius(), setInputRadius()``` - methods which doesn't exist in this class;
@@ -481,6 +762,10 @@ If you enter another parameter, an error will occur.
 ---
 
 #### The class `StraightPrismRightTriangle`:
+*StraightPrismRightTriangle extends RightTriangle.*
+
+**Constructor`s overload** - ``StraightPrismRightTriangle(double a, double b, double c, double heightP)``.
+
 + ```double volume, double areaSide, double areaBase, double heightP, double diagonalSideA, double diagonalSideB,double diagonalSideC``` - variables that will be used in methods;
 + ```set[-Volume, -AreaSide, -AreaBase, -HeightP, -DiagonalSideA, -DiagonalSideB, -DiagonalSideC]``` - methods which you should use to give values to parameters. For example `setDiagonalSideA(16)`;
 + ```setInputRadius(), setOutRadius()``` - methods which doesn't exist in this class;
@@ -545,6 +830,33 @@ If you enter another parameter, an error will occur.
 ### The package `circle`:
 #### The 2D figures:
 #### The head class `Circle`:
+
+<div style="text-align:center;">
+<img src="src/photos/circle.jpg" width="400" height="400">
+
+<span style="color: blue;"><div style="text-align:center;">Designation of colors in a figure:</div></span>
+
+<div style="text-align:center;">
+  <span>color</span> :green_heart:
+  <span> - double length;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :blue_heart:
+  <span> - double diameter;</span>
+</div>
+
+<div style="text-align:center;">
+  <span>color</span> :purple_heart:
+  <span> - double radius.</span>
+</div>
+
+</div>  
+
+---
+
+**Constructor`s overload** - ``Circle(double radius)``.
+
 + ```double radius, double diameter, double length, double area``` - variables that will be used in methods;
 + ```set[-Radius, -Diameter, -Length, -Area](double value)``` - methods which you should use to give values to parameters. For example `setDiameter(12)`;
 + ```diameter()``` - method which calculates the diameter of circle using `double radius`;
@@ -559,23 +871,27 @@ If you enter another parameter, an error will occur.
 ---
 #### The 3D figures:
 #### The class `Cone`:
+
+
+**Constructor`s overload** - ``Cone(double radius, double heightP)``.
+
 + ```double volume, double areaSide, double areaBase, double hightP, double slantHeight``` - variables that will be used in methods;
-+ ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlanHeight](double value)``` - methods which you should use to give values to parameters. For example `setVolume(36`
++ ```set[-Volume, -HeightP, -AreaSide, -AreaBase, -SlantHeight](double value)``` - methods which you should use to give values to parameters. For example `setVolume(36`
 + ```areaBase()``` - method which calculates the base area of cone using `double radius`;
-+ ```areaSide()``` - method which calculates the area of the sides of cone using `double radius` and `double slanHeight`;
++ ```areaSide()``` - method which calculates the area of the sides of cone using `double radius` and `double slantHeight`;
 + ```area()``` - method which calculates the area of cone using `double areaSide` and `double areaBase`;
 + ```volume()``` - method which calculates the volume of cone using `double areaBase` and `heightP`;
-+ ```slanHeight()``` - method which calculates the slan height of cone using `HelpingMethods`, `double heightP` and `double radius`;
-+ ```double height(String parameter)``` - method which calculates the height of cone using characteristic in dependence of parameter:
-  + ```"s"``` - using the `HelpingMethods`, `double slanHeight` and `double radius`;
++ ```slantHeight()``` - method which calculates the slant height of cone using `HelpingMethods`, `double heightP` and `double radius`;
++ ```double heightP(String parameter)``` - method which calculates the volume height of cone using characteristic in dependence of parameter:
+  + ```"s"``` - using the `HelpingMethods`, `double slantHeight` and `double radius`;
   + ```"aS"``` - using the `HelpingMethods`, `double areaSide` and `double radius`;
   + ```"a"``` - using the `HelpingMethods`, `double area` and `double radius`.
 
   If you enter another parameter, an error will occur.
 + ```double radius(String parameter)``` - method which calculates the radius of cone using characteristic in dependence of parameter:
-  + ```"s"``` - using the `HelpingMethods`, `double slanHeight` and `double heightP`;
-  + ```"aS"``` - using the `double areaSide` and `double slanHeight`;
-  + ```"a"``` - using the `HelpingMethods`, `double slanHeight` and `double area`;
+  + ```"s"``` - using the `HelpingMethods`, `double slantHeight` and `double heightP`;
+  + ```"aS"``` - using the `double areaSide` and `double slantHeight`;
+  + ```"a"``` - using the `HelpingMethods`, `double slantHeight` and `double area`;
   + ```"aB"``` - using the `double areaBase`.
 
   If you enter another parameter, an error will occur.
@@ -584,6 +900,9 @@ If you enter another parameter, an error will occur.
 
 #### The class `Sphere`:
 *Sphere extends Circle.*
+
+**Constructor`s overload** - ``Sphere(double radius)``.
+
 + ```double volume``` - variables that will be used in methods;
 + ```area()``` - method which calculates area of sphere using `double radius`;
 + ```volume()``` - method which calculates volume of sphere using `double radius`.
@@ -591,4 +910,5 @@ If you enter another parameter, an error will occur.
 
 Project participants:
 - [Alexandr Mykhailov](https://github.com/fxckAlice);
-- [Polina Kovdrysh](https://github.com/pkovdrysh).
+- [Polina Kovdrysh](https://github.com/pkovdrysh);
+- :shipit: - squirrel).

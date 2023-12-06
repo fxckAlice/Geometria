@@ -58,6 +58,9 @@ public class IsoscelesTriangle extends EquilateralTriangle {
             case ("b"):
                 area = heightB * a / 2;
                 break;
+            default:
+                System.out.println("Enter correct parameter.");
+                area = -1;
         }
         return area;
     }

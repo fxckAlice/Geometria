@@ -30,6 +30,10 @@ public class RightTriangle extends Triangle {
                 break;
             case ("c"):
                 area = heightC * c / 2;
+                break;
+            default:
+                System.out.println("Enter correct parameter.");
+                area = -1;
         }
         return area;
     }

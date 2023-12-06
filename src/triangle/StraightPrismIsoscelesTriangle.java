@@ -50,6 +50,9 @@ public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
             case ("b"):
                 areaBase = heightB * a / 2;
                 break;
+            default:
+                System.out.println("Enter correct parameter.");
+                areaBase = -1;
         }
         return areaBase;
     }
