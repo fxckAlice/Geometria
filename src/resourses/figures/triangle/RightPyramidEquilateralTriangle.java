@@ -1,6 +1,6 @@
-package triangle;
+package resourses.figures.triangle;
 
-import help.HelpingMethods;
+import resourses.help.HelpingMethods;
 
 public class RightPyramidEquilateralTriangle extends EquilateralTriangle{
     protected double volume, areaSide, areaBase, heightP, slantHeight;

@@ -1,7 +1,6 @@
-package triangle;
+package resourses.figures.triangle;
 
-import help.HelpingMethods;
-import org.w3c.dom.html.HTMLLegendElement;
+import resourses.help.HelpingMethods;
 
 public class StraightPrismEquilateralTriangle extends EquilateralTriangle{
     protected double heightP, volume, diagonalSide;

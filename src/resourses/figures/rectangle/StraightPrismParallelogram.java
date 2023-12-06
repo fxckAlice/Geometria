@@ -1,6 +1,6 @@
-package rectangle;
+package resourses.figures.rectangle;
 
-import help.HelpingMethods;
+import resourses.help.HelpingMethods;
 
 public class StraightPrismParallelogram extends Parallelogram{
     protected double heightP,volume, diagonalV1, diagonalV2, diagonalSideLength, diagonalSideWidth;

@@ -1,6 +1,6 @@
-package rectangle;
+package resourses.figures.rectangle;
 
-import help.HelpingMethods;
+import resourses.help.HelpingMethods;
 
 public class StraightPrismRhombus extends Rhombus{
     public StraightPrismRhombus(double length,double heightP, double corner){

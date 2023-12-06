@@ -1,6 +1,6 @@
-package rectangle;
+package resourses.figures.rectangle;
 
-import help.HelpingMethods;
+import resourses.help.HelpingMethods;
 
 public class Rhombus extends Parallelogram {
     public Rhombus(double length, double corner){

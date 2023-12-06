@@ -1,6 +1,4 @@
-package circle;
-
-import help.HelpingMethods;
+package resourses.figures.circle;
 
 public class Circle {
     protected double radius, diameter, length, area;

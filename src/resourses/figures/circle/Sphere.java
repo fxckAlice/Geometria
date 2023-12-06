@@ -1,4 +1,4 @@
-package circle;
+package resourses.figures.circle;
 
 public class Sphere extends Circle{
     protected double volume;

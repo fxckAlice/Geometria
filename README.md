@@ -1,6 +1,6 @@
 # Geometria
 
-"Geometria" is a program to help to calculate basic parameters in simple figures :ballot_box_with_check:
+"Geometria" is a program to resourses.resourses.figures.triangle.help to calculate basic parameters in simple resourses.figures :ballot_box_with_check:
 
 <div style="text-align:center">
   <img src="src/photos/img_2.png" alt="img_2.png">
@@ -27,25 +27,25 @@ SDK: *corrnetto 11*;
   + ```Return value```:
     + Returns a number rounded to the specified tenth;
     + If the value of the dozen parameter is outside the range from -9 to 9, the function will display the message "Out of range" and return -1.
-3. ```public double pythagoreanTheorem(double a, double b, char action)``` - this is a function that implements the Pythagorean theorem to calculate the length of the hypotenuse of a triangle or the difference of the legs depending on the specified operation.
+3. ```public double pythagoreanTheorem(double a, double b, char action)``` - this is a function that implements the Pythagorean theorem to calculate the length of the hypotenuse of a resourses.resourses.figures.triangle or the difference of the legs depending on the specified operation.
   + ```Variables```:
-    + ```double a``` - length of the first leg of the triangle;
-    + ```double b``` - length of the second leg of the triangle;
+    + ```double a``` - length of the first leg of the resourses.resourses.figures.triangle;
+    + ```double b``` - length of the second leg of the resourses.resourses.figures.triangle;
     + ```char action``` - the operation to be performed. Can be '+' (to calculate the hypotenuse) or '-' (to calculate the difference between the legs).
   + ```Return value```:
     + Returns the result of an operation depending on the specified action;
     + If action is not '+' or '-', the function will print the message "Enter correct parameter." and will return -1.
-4. ```public double pythagoreanTheorem(double a, char action)``` - this is a function that applies the Pythagorean theorem to calculate either the length of the hypotenuse of a triangle (the sum of the squares of the legs) or the difference of the legs, depending on the specified operation.
+4. ```public double pythagoreanTheorem(double a, char action)``` - this is a function that applies the Pythagorean theorem to calculate either the length of the hypotenuse of a resourses.resourses.figures.triangle (the sum of the squares of the legs) or the difference of the legs, depending on the specified operation.
   + ```Variables```:
-    + ```double a``` - the length of one of the legs of the triangle;
+    + ```double a``` - the length of one of the legs of the resourses.resourses.figures.triangle;
     + ```char action``` - The operation to be performed. Can be '+' (to calculate the length of the hypotenuse) or '-' (to calculate the difference between the legs).
   + ```Return value```:
     + Returns the result of an operation depending on the specified action;
     + If action is not '+' or '-', the function will print the message "Enter correct parameter." and will return -1.
 ---
 
-### The package `rectangle`:
-#### The 2D figures:
+### The package `resourses.resourses.figures.triangle.rectangle`:
+#### The 2D resourses.figures:
 #### The head class ```Rectangle```:
 
 <div style="text-align:center;">
@@ -83,22 +83,22 @@ SDK: *corrnetto 11*;
 
 **Constructor`s overload** - ``Rectangle(double length, double width)``.
 
-- ```double length``` - the main values that denotes the value of rectangle`s side;
+- ```double length``` - the main values that denotes the value of resourses.resourses.figures.triangle.rectangle`s side;
 - ```set[-Length, -Width, -Perimeter, -Area, -Diagonal, -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example ```setLength(3)```;
-- ```area()``` - method which calculates the area of rectangle using ```double length``` and ```double width```;
-- ```perimeter()``` - method which calculates the perimeter of rectangle using ```double length``` and ```double width```;
-- ```diagonal()``` - method which calculates the diagonal of rectangle using ```double length``` and ```double width```;
-- ```outRadius()``` - method which calculates the radius of out circle using ```double diagonal``` only if the rectangle corresponds to the conditions for the existence of such a circle;
-- ```inputRadius()``` - method which calculates the radius of input circle using ```double length``` only if the rectangle corresponds to the conditions for the existence of such a circle;
-- ```corner()``` - method which calculates the corner of rectangle;
-- ```sumOfCorners()``` - method which calculates the sum of all corners in rectangle; 
+- ```area()``` - method which calculates the area of resourses.resourses.figures.triangle.rectangle using ```double length``` and ```double width```;
+- ```perimeter()``` - method which calculates the perimeter of resourses.resourses.figures.triangle.rectangle using ```double length``` and ```double width```;
+- ```diagonal()``` - method which calculates the diagonal of resourses.resourses.figures.triangle.rectangle using ```double length``` and ```double width```;
+- ```outRadius()``` - method which calculates the radius of out resourses.resourses.figures.triangle.circle using ```double diagonal``` only if the resourses.resourses.figures.triangle.rectangle corresponds to the conditions for the existence of such a resourses.resourses.figures.triangle.circle;
+- ```inputRadius()``` - method which calculates the radius of input resourses.resourses.figures.triangle.circle using ```double length``` only if the resourses.resourses.figures.triangle.rectangle corresponds to the conditions for the existence of such a resourses.resourses.figures.triangle.circle;
+- ```corner()``` - method which calculates the corner of resourses.resourses.figures.triangle.rectangle;
+- ```sumOfCorners()``` - method which calculates the sum of all corners in resourses.resourses.figures.triangle.rectangle; 
 - ```cornerDiagonal[-Length, -Width]``` - method which calculates the corner between the diagonal and particular side. For example ```cornerDiagonalLength()``` => *30*;
 - ```double side(String parameter)``` - method which calculates the ```double width``` using ```double length``` and characteristic in dependence of parameter:
-  - ```"a"``` - is the area of rectangle;
-  - ```"p"``` - is the perimeter of rectangle;
-  - ```"d"``` - is the diagonal of rectangle;
-  - ```"i"``` - is the radius of input circle of rectangle;
-  - ```"o"``` - is the radius of out circle of rectangle.
+  - ```"a"``` - is the area of resourses.resourses.figures.triangle.rectangle;
+  - ```"p"``` - is the perimeter of resourses.resourses.figures.triangle.rectangle;
+  - ```"d"``` - is the diagonal of resourses.resourses.figures.triangle.rectangle;
+  - ```"i"``` - is the radius of input resourses.resourses.figures.triangle.circle of resourses.resourses.figures.triangle.rectangle;
+  - ```"o"``` - is the radius of out resourses.resourses.figures.triangle.circle of resourses.resourses.figures.triangle.rectangle.
 
   If you enter another parameter, an error will occur.
 ___
@@ -174,10 +174,10 @@ ___
 **Constructor`s overload** - ``Parallelogram(double length, double width, double corner)``.
 
 + ```corner()``` - corner must be less than 90 degrees, otherwise it will not be a parallelogram;
-+ ```diagonal()``` -  since a parallelogram is a derivative of a rectangle and if you enter a diagonal, it doesn't work. It means you need to use `diagonal1()` or `diagonal2()` using ```double leinght```,```double width``` and `double corner`;
++ ```diagonal()``` -  since a parallelogram is a derivative of a resourses.resourses.figures.triangle.rectangle and if you enter a diagonal, it doesn't work. It means you need to use `diagonal1()` or `diagonal2()` using ```double leinght```,```double width``` and `double corner`;
 
-+ ```outRadius()``` - a circle can be described around a square and a rectangle, that is, when equality `diagonal1() == diagonal2()` is fulfilled.The method using method `diagonal1()`;
-+ ```inputRadius()``` - method, which using `double length`, `double width` and `area()`, works only when `double length == double width` otherwise, it is not possible to inscribe a circle in a parallelogram and find the radius;
++ ```outRadius()``` - a resourses.resourses.figures.triangle.circle can be described around a square and a resourses.resourses.figures.triangle.rectangle, that is, when equality `diagonal1() == diagonal2()` is fulfilled.The method using method `diagonal1()`;
++ ```inputRadius()``` - method, which using `double length`, `double width` and `area()`, works only when `double length == double width` otherwise, it is not possible to inscribe a resourses.resourses.figures.triangle.circle in a parallelogram and find the radius;
 + ```double area(String parameter)``` - method which calculates the area of parallelogram using characteristic in dependence of parameter:
   + ```"h"``` - using `double height` and `double length`;
   + ```"c"``` - using `double width`, `double corner` and `double length`. 
@@ -200,7 +200,7 @@ ___
   If you enter another parameter, an error will occur.-->
  + ```cornerDiagonalWidth()``` - the method produces an Error, because all sides of a rhombus are equal and we use the `double length`, and therefore the `cornerDiagonalLength()` method.
 ---
-#### The 3D figures:
+#### The 3D resourses.figures:
 #### The class ```Cube```:
 *Cube extends Square.*
 
@@ -367,8 +367,8 @@ If you enter another parameter, an error will occur.
 
 ---
 
-### The package `triangle`:
-#### The 2D figures:
+### The package `resourses.resourses.figures.triangle`:
+#### The 2D resourses.figures:
 #### The head class ```EquilateralTriangle```:
 
 <div style="text-align:center;">
@@ -395,11 +395,11 @@ If you enter another parameter, an error will occur.
 + ```set[-A, -Perimeter, -Area, -Median, -Bisector, -Height -OutRadius, -InputRadius, -Corner](double value)``` - methods which you should use to give values to parameters. For example `setA(6)`;
 + ```semiPerimeter()``` - calculation of the semi-perimeter using `double perimeter`;
 + ```setMedian(), setBisector()``` - these methods are designed to derive from this class, and it can't be used in this class. you should use `setHeight()`.
-+ ```perimeter()``` -  method which calculates the perimeter of equilateral triangle using `double a`;
-+ ```area()``` -  method which calculates the area of equilateral triangle using ```double a```;
-+ ```height()``` - method which calculates the height of equilateral triangle using ```double a```;
-+ ```outRadius()``` - method which calculates the radius of the circle of equilateral triangle using ```double a```;
-+ ```inputRadius()``` - method which calculates the radius of the inscribed circle of equilateral triangle using ```double a```;
++ ```perimeter()``` -  method which calculates the perimeter of equilateral resourses.resourses.figures.triangle using `double a`;
++ ```area()``` -  method which calculates the area of equilateral resourses.resourses.figures.triangle using ```double a```;
++ ```height()``` - method which calculates the height of equilateral resourses.resourses.figures.triangle using ```double a```;
++ ```outRadius()``` - method which calculates the radius of the resourses.resourses.figures.triangle.circle of equilateral resourses.resourses.figures.triangle using ```double a```;
++ ```inputRadius()``` - method which calculates the radius of the inscribed resourses.resourses.figures.triangle.circle of equilateral resourses.resourses.figures.triangle using ```double a```;
 + ```double side(String parameter)``` - method which calculates the ```double a``` using characteristic in dependence of parameter:
   + ```"a"``` - ```double value``` - using the `double outRadius`;
   + ```"p"``` - ```double value``` - using the `double inputRadius`;
@@ -456,9 +456,9 @@ If you enter another parameter, an error will occur.
 
 + ```double b, double medianB, double bisectorB, double heightB, double cornerApex, double cornerSide``` - variables that will be used in methods;
 + ```set[-B, -MedianB, -BisectorB, -HeightB, -CornerApex, -CornerSide](double value)``` - methods which you should use to give values to parameters. For example `setMedianB(8)`;
-+ ```medianB()``` - method which calculates the median of isosceles triangle using `double b` and `double a`;
-+ ```heightB()``` - method which calculates the height of isosceles triangle using `double b`;
-+ ```double area(String parameter)``` - method which calculates the area of isosceles triangle using characteristic in dependence of parameter:
++ ```medianB()``` - method which calculates the median of isosceles resourses.resourses.figures.triangle using `double b` and `double a`;
++ ```heightB()``` - method which calculates the height of isosceles resourses.resourses.figures.triangle using `double b`;
++ ```double area(String parameter)``` - method which calculates the area of isosceles resourses.resourses.figures.triangle using characteristic in dependence of parameter:
   + ```"a"``` - using the `double height` and `double b`;
   + ```"b"``` - using the `double heightB` and `double a`.
 + ```double sideB(String parameter)``` - method which calculates the ```double b``` using characteristic in dependence of parameter:
@@ -531,10 +531,10 @@ If you enter another parameter, an error will occur.
 
 + ```double c, double medianC, double heightC, double bisectorC, double cornerA, double cornerB, double cornerC``` - variables that will be used in methods;
 + ```setCornerSide(), setCornerApex()``` - methods which doesn't exist in this class;
-+ ```medianA(), medianC()``` - method which calculates the median of triangle using `double b`, `double c` and `double a`;
-+ ```heightA()``` - method which calculates the height of triangle using `double c` and `double cornerB`;
-+ ```heightB()``` - method which calculates the height of triangle using `double a` and `double cornerC`; 
-+ ```heightC()``` - method which calculates the height of triangle using `double b` and `double cornerA`;
++ ```medianA(), medianC()``` - method which calculates the median of resourses.resourses.figures.triangle using `double b`, `double c` and `double a`;
++ ```heightA()``` - method which calculates the height of resourses.resourses.figures.triangle using `double c` and `double cornerB`;
++ ```heightB()``` - method which calculates the height of resourses.resourses.figures.triangle using `double a` and `double cornerC`; 
++ ```heightC()``` - method which calculates the height of resourses.resourses.figures.triangle using `double b` and `double cornerA`;
 + ```double side(String parameter)``` - method which calculate the ```double a``` using characteristic in dependence of parameter:
   + ```"o"``` - using the `double outRadius`, `double area`, `double b` and `double c`; 
   + ```"i"``` - using the `double semiPerimeter`, `double inputRadius`,`double b` and `double c`;
@@ -562,13 +562,13 @@ If you enter another parameter, an error will occur.
 **Constructor`s overload** - ``RightTriangle(double a, double b, double c)``.
 
 + ```setHeight(), setHeightB()``` -  methods which doesn't exist in this class;
-+ ```setCornerC()``` - You should to input only 90 degrees, because it is a constant in right triangle;
-+ ```double area(String parameter)``` - method which calculates the area of right triangle using characteristic in dependence of parameter:
++ ```setCornerC()``` - You should to input only 90 degrees, because it is a constant in right resourses.resourses.figures.triangle;
++ ```double area(String parameter)``` - method which calculates the area of right resourses.resourses.figures.triangle using characteristic in dependence of parameter:
   + ```"s"``` - using the `double a`, `double b`;
   + ```"c"``` - using the `double heightC`, `double c`. 
 
   If you enter another parameter, an error will occur.
-+ ```double side(String parameter)``` - method which calculates the `double a` of right triangle using characteristic in dependence of parameter:
++ ```double side(String parameter)``` - method which calculates the `double a` of right resourses.resourses.figures.triangle using characteristic in dependence of parameter:
   + ```"o"``` - using `HelpingMethods`, `double outRadius` and `double b`;
   + ```"m"``` - using `HelpingMthods`, `double medianC` and `double b`;
   + ```"p"``` - using `double perimeter`, `double b` and `double c`;
@@ -580,7 +580,7 @@ If you enter another parameter, an error will occur.
   + ```"ctan"``` - using `double b` and `double cornerA`.
 
   If you enter another parameter, an error will occur.
-+ ```double sideB(String parameter)``` - method which calculates the `double a` of right triangle using characteristic in dependence of parameter:
++ ```double sideB(String parameter)``` - method which calculates the `double a` of right resourses.resourses.figures.triangle using characteristic in dependence of parameter:
   + ```"o"``` - using `HelpingMethods`, `double outRadius` and `double a`;
   + ```"m"``` - using `HelpingMthods`, `double medianC` and `double a`;
   + ```"p"``` - using `double perimeter`, `double a` and `double c`;
@@ -592,7 +592,7 @@ If you enter another parameter, an error will occur.
   + ```"ctan"``` - using `double a` and `double cornerA`.
 
   If you enter another parameter, an error will occur.
-+ ```double sideC(String parameter)``` - method which calculates the `double a` of right triangle using characteristic in dependence of parameter:
++ ```double sideC(String parameter)``` - method which calculates the `double a` of right resourses.resourses.figures.triangle using characteristic in dependence of parameter:
   + ```"o"``` - using `double outRadius`;
   + ```"m"``` - using `double medianC`;
   + ```"p"``` - using `double perimeter`, `double b` and `double a`;
@@ -606,7 +606,7 @@ If you enter another parameter, an error will occur.
 
 ---
 
-#### The 3D figures:
+#### The 3D resourses.figures:
 #### The class `StraightPrismEquilateralTriangle`:
 *StraightPrismEquilateralTriangle extends EquilateralTriangle.*
 
@@ -827,8 +827,8 @@ If you enter another parameter, an error will occur.
 
 
 ---
-### The package `circle`:
-#### The 2D figures:
+### The package `resourses.resourses.figures.triangle.circle`:
+#### The 2D resourses.figures:
 #### The head class `Circle`:
 
 <div style="text-align:center;">
@@ -859,17 +859,17 @@ If you enter another parameter, an error will occur.
 
 + ```double radius, double diameter, double length, double area``` - variables that will be used in methods;
 + ```set[-Radius, -Diameter, -Length, -Area](double value)``` - methods which you should use to give values to parameters. For example `setDiameter(12)`;
-+ ```diameter()``` - method which calculates the diameter of circle using `double radius`;
-+ ```length()``` - method which calculates the length of circle using `double radius`;
-+ ```area()``` - method which calculates the area of circle using `double radius`;
-+ ```double radius(String parameter)``` - method which calculates the radius of circle using characteristic in dependence of parameter:
++ ```diameter()``` - method which calculates the diameter of resourses.resourses.figures.triangle.circle using `double radius`;
++ ```length()``` - method which calculates the length of resourses.resourses.figures.triangle.circle using `double radius`;
++ ```area()``` - method which calculates the area of resourses.resourses.figures.triangle.circle using `double radius`;
++ ```double radius(String parameter)``` - method which calculates the radius of resourses.resourses.figures.triangle.circle using characteristic in dependence of parameter:
   + ```"d"``` - using the `double diameter`;.
   + ```"l"``` - using the `double length`;
   + ```"a"``` - using the `double area`.
 
   If you enter another parameter, an error will occur.
 ---
-#### The 3D figures:
+#### The 3D resourses.figures:
 #### The class `Cone`:
 
 
