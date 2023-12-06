@@ -3,7 +3,6 @@ package rectangle;
 import help.HelpingMethods;
 
 public class Rectangle {
-    HelpingMethods help = new HelpingMethods();
     protected double length, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
     public Rectangle(double length, double width){
         this.length = length;
@@ -44,7 +43,7 @@ public class Rectangle {
         return area;
     }
     public double diagonal(){
-        diagonal = help.pythagoreanTheorem(length, width, "+");
+        diagonal = HelpingMethods.pythagoreanTheorem(length, width, "+");
         return diagonal;
     }
     public double outRadius (){
@@ -71,13 +70,13 @@ public class Rectangle {
                 answer = perimeter / 2 - length;
                 break;
             case ("d"):
-                answer = help.pythagoreanTheorem(diagonal, length, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonal, length, "-");
                 break;
             case ("i"):
                 answer = 2 * inputRadius;
                 break;
             case ("o"):
-                answer = help.round(help.pythagoreanTheorem(outRadius * 2, "-"), -7);
+                answer = HelpingMethods.round(HelpingMethods.pythagoreanTheorem(outRadius * 2, "-"), -7);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
@@ -94,10 +93,10 @@ public class Rectangle {
         return 360;
     }
     public double cornerDiagonalLength(){
-        return help.round(Math.acos(length / diagonal) / Math.PI * 180, -7);
+        return HelpingMethods.round(Math.acos(length / diagonal) / Math.PI * 180, -7);
     }
     public double cornerDiagonalWidth(){
-        return help.round(Math.asin(length / diagonal) / Math.PI * 180, -7);
+        return HelpingMethods.round(Math.asin(length / diagonal) / Math.PI * 180, -7);
     }
 
 }

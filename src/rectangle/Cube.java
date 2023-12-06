@@ -1,5 +1,7 @@
 package rectangle;
 
+import help.HelpingMethods;
+
 public class Cube extends Square{
     protected double volume, diagonalV;
     public Cube(double length){
@@ -66,7 +68,7 @@ public class Cube extends Square{
                 answer = Math.sqrt(area / 6);
                 break;
             case ("d"):
-                answer = help.pythagoreanTheorem(diagonal, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonal, "-");
                 break;
             case ("v"):
                 answer = Math.cbrt(volume);

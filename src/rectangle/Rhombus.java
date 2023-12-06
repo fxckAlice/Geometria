@@ -1,5 +1,7 @@
 package rectangle;
 
+import help.HelpingMethods;
+
 public class Rhombus extends Parallelogram {
     public Rhombus(double length, double corner){
         this.length = length;
@@ -72,7 +74,7 @@ public class Rhombus extends Parallelogram {
                 answer = perimeter / 2 - length;
                 break;
             case ("d"):
-                answer = help.pythagoreanTheorem(diagonal, height1, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonal, height1, "-");
                 break;
             case ("i"):
                 answer = area / (2 * inputRadius);

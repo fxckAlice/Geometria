@@ -1,5 +1,7 @@
 package rectangle;
 
+import help.HelpingMethods;
+
 public class StraightPrismRhombus extends Rhombus{
     public StraightPrismRhombus(double length,double heightP, double corner){
         this.length = length;
@@ -43,7 +45,7 @@ public class StraightPrismRhombus extends Rhombus{
         return volume;
     }
     public double diagonalSideLength(){
-        diagonalSideLength = help.pythagoreanTheorem(length, heightP, "+");
+        diagonalSideLength = HelpingMethods.pythagoreanTheorem(length, heightP, "+");
         return diagonalSideLength;
     }
     @Override
@@ -62,11 +64,11 @@ public class StraightPrismRhombus extends Rhombus{
         return area;
     }
     public double diagonalV1(){
-        diagonalV1 = help.pythagoreanTheorem(heightP, diagonal,"+");
+        diagonalV1 = HelpingMethods.pythagoreanTheorem(heightP, diagonal,"+");
         return diagonalV1;
     }
     public double diagonalV2(){
-        diagonalV2 = help.pythagoreanTheorem(heightP, diagonal2, "+");
+        diagonalV2 = HelpingMethods.pythagoreanTheorem(heightP, diagonal2, "+");
         return diagonalV2;
     }
     @Override
@@ -103,13 +105,13 @@ public class StraightPrismRhombus extends Rhombus{
                 answer = (area / 2 - length * height1) / 2 / length;
                 break;
             case ("dL"):
-                answer = help.pythagoreanTheorem(diagonalSideLength, length, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonalSideLength, length, "-");
                 break;
             case("dV1"):
-                answer = help.pythagoreanTheorem(diagonalV1, diagonal, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonalV1, diagonal, "-");
                 break;
             case("dV2"):
-                answer = help.pythagoreanTheorem(diagonalV2, diagonal2, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonalV2, diagonal2, "-");
                 break;
             case ("v"):
                 answer = volume / (length * height1);
@@ -128,7 +130,7 @@ public class StraightPrismRhombus extends Rhombus{
                 answer = area / 2 / (height1 + heightP * 2);
                 break;
             case ("dL"):
-                answer = help.pythagoreanTheorem(diagonalSideLength, heightP, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonalSideLength, heightP, "-");
                 break;
             case ("v"):
                 answer = volume / heightP / height1;

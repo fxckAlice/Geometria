@@ -1,5 +1,7 @@
 package rectangle;
 
+import help.HelpingMethods;
+
 public class Square extends Rectangle {
     public Square(double length){
         this.length = length;
@@ -21,7 +23,7 @@ public class Square extends Rectangle {
     }
     @Override
     public double diagonal(){
-        diagonal = help.pythagoreanTheorem(length,"+");
+        diagonal = HelpingMethods.pythagoreanTheorem(length,"+");
         return diagonal;
     }
     @Override
@@ -49,13 +51,13 @@ public class Square extends Rectangle {
                 answer = perimeter / 4;
                 break;
             case ("d"):
-                answer = help.pythagoreanTheorem(diagonal, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonal, "-");
                 break;
             case ("i"):
                 answer = 2 * inputRadius;
                 break;
             case ("o"):
-                answer = help.pythagoreanTheorem(outRadius * 2, "-");
+                answer = HelpingMethods.pythagoreanTheorem(outRadius * 2, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");

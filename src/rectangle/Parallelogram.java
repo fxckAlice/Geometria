@@ -1,5 +1,7 @@
 package rectangle;
 
+import help.HelpingMethods;
+
 public class Parallelogram extends Rectangle {
     protected double height1, height2;
     protected double diagonal2;
@@ -60,12 +62,12 @@ public class Parallelogram extends Rectangle {
         return -1;
     }
     public double diagonal1(){
-        double temp = 2 * length * width * help.round(Math.cos((180 - corner) / 180 * Math.PI), -10);
+        double temp = 2 * length * width * HelpingMethods.round(Math.cos((180 - corner) / 180 * Math.PI), -10);
         diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal;
     }
     public double diagonal2(){
-        double temp = 2 * length * width * help.round(Math.cos(corner / 180 * Math.PI), -10);
+        double temp = 2 * length * width * HelpingMethods.round(Math.cos(corner / 180 * Math.PI), -10);
         diagonal2 = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal2;
     }
@@ -103,13 +105,13 @@ public class Parallelogram extends Rectangle {
                 answer = perimeter / 2 - length;
                 break;
             case ("d"):
-                answer = help.pythagoreanTheorem(diagonal, height1, "-");
+                answer = HelpingMethods.pythagoreanTheorem(diagonal, height1, "-");
                 break;
             case ("i"):
                 answer = area / (2 * inputRadius);
                 break;
             case ("o"):
-                answer = help.pythagoreanTheorem(outRadius * 2, length, "-");
+                answer = HelpingMethods.pythagoreanTheorem(outRadius * 2, length, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
