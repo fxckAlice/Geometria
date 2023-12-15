@@ -33,10 +33,24 @@ public class Rectangle {
     public void setOutRadius(double outRadius) {
         this.outRadius = outRadius;
     }
-
-    public double perimeter(){
-        perimeter = 2 * length + 2 * width;
-        return perimeter;
+    public double getPerimeter(){
+        if (perimeter != 0){
+            return perimeter;
+        }
+        else if(length != 0 && width != 0){
+            perimeter = (length + width) * 2;
+            return perimeter;
+        } else if (length != 0 && diagonal != 0) {
+            perimeter = (HelpingMethods.pythagoreanTheorem(diagonal, length, "-") + length) * 2;
+            return perimeter;
+        }
+        else if (width != 0 && diagonal != 0) {
+            perimeter = (HelpingMethods.pythagoreanTheorem(diagonal, width, "-") + width) * 2;
+            return perimeter;
+        } else if (length != 0 && area != 0) {
+            perimeter = (area / length + length) * 2;
+            return perimeter;
+        }
     }
     public double area(){
         area = length * width;
