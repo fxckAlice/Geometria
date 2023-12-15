@@ -81,19 +81,19 @@ public class Rectangle {
             return -1;
         }
     }
-    public double area(){
+    protected double area(){
         area = length * width;
         return area;
     }
-    public double diagonal(){
+    protected double diagonal(){
         diagonal = HelpingMethods.pythagoreanTheorem(length, width, "+");
         return diagonal;
     }
-    public double outRadius (){
+    protected double outRadius (){
         outRadius = diagonal / 2;
         return outRadius;
     }
-    public double inputRadius(){
+    protected double inputRadius(){
         if(length == width){
             inputRadius = length / 2;
             return inputRadius;
@@ -103,7 +103,7 @@ public class Rectangle {
             return -1;
         }
     }
-    public double side(String parameter){
+    protected double side(String parameter){
         double answer;
         switch (parameter){
             case ("a"):
@@ -128,17 +128,17 @@ public class Rectangle {
         }
         return answer;
     }
-    public double corner(){
+    public double getCorner(){
         corner = 90;
         return corner;
     }
-    public double sumOfCorners(){
+    public double getSumOfCorners(){
         return 360;
     }
-    public double cornerDiagonalLength(){
+    protected double cornerDiagonalLength(){
         return HelpingMethods.round(Math.acos(length / diagonal) / Math.PI * 180, -7);
     }
-    public double cornerDiagonalWidth(){
+    protected double cornerDiagonalWidth(){
         return HelpingMethods.round(Math.asin(length / diagonal) / Math.PI * 180, -7);
     }
 
