@@ -38,18 +38,47 @@ public class Rectangle {
             return perimeter;
         }
         else if(length != 0 && width != 0){
-            perimeter = (length + width) * 2;
-            return perimeter;
-        } else if (length != 0 && diagonal != 0) {
-            perimeter = (HelpingMethods.pythagoreanTheorem(diagonal, length, "-") + length) * 2;
-            return perimeter;
+            return perimeter();
+        }
+        else if (length != 0 && diagonal != 0) {
+            width = HelpingMethods.pythagoreanTheorem(diagonal, length, "-");
+            return perimeter();
         }
         else if (width != 0 && diagonal != 0) {
-            perimeter = (HelpingMethods.pythagoreanTheorem(diagonal, width, "-") + width) * 2;
+            length = HelpingMethods.pythagoreanTheorem(diagonal, width, "-");
+            return perimeter();
+        }
+        else if (length != 0 && area != 0) {
+            width = area / length;
+            return perimeter();
+        }
+        else if (width != 0 && area != 0) {
+            length = area / width;
+            return perimeter();
+        }
+        else if (length != 0 && outRadius != 0){
+            diagonal = outRadius * 2;
+            width = HelpingMethods.pythagoreanTheorem(diagonal, length, "-");
+            return perimeter();
+        }
+        else if (width != 0 && outRadius != 0) {
+            diagonal = outRadius * 2;
+            length = HelpingMethods.pythagoreanTheorem(diagonal, width, "-");
+            return perimeter();
+        }
+        else{
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
+    protected double perimeter(){
+        if(length != 0 && width != 0){
+            perimeter = 2 * length + 2 * width;
             return perimeter;
-        } else if (length != 0 && area != 0) {
-            perimeter = (area / length + length) * 2;
-            return perimeter;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
         }
     }
     public double area(){
