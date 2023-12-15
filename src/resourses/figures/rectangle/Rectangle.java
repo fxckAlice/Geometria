@@ -1,6 +1,6 @@
-package rectangle;
+package resourses.figures.rectangle;
 
-import help.HelpingMethods;
+import resourses.help.HelpingMethods;
 
 public class Rectangle {
     protected double length, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
@@ -99,7 +99,7 @@ public class Rectangle {
             return inputRadius;
         }
         else{
-            System.out.println("Error. The figure doesn't have input circle.");
+            System.out.println("Error. The figure doesn't have input Resourses.Resourses.triangle.circle.");
             return -1;
         }
     }

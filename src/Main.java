@@ -1,8 +1,4 @@
-import circle.Circle;
-import help.HelpingMethods;
-import rectangle.Rectangle;
-import triangle.*;
-import circle.Cone;
+import resourses.help.HelpingMethods;
 //import Rectangle.Rhombus;
 
 public class Main {

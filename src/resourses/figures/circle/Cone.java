@@ -1,6 +1,6 @@
-package circle;
+package resourses.figures.circle;
 
-import help.HelpingMethods;
+import resourses.help.HelpingMethods;
 
 public class Cone extends Circle{
     protected double volume, areaSide, areaBase, heightP, slantHeight;

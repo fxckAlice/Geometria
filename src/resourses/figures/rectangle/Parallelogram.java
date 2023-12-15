@@ -1,6 +1,6 @@
-package rectangle;
+package resourses.figures.rectangle;
 
-import help.HelpingMethods;
+import resourses.help.HelpingMethods;
 
 public class Parallelogram extends Rectangle {
     protected double height1, height2;
@@ -80,7 +80,7 @@ public class Parallelogram extends Rectangle {
             return outRadius;
         }
         else{
-            System.out.println("This parallelogram doesn't have out circle");
+            System.out.println("This parallelogram doesn't have out Resourses.Resourses.triangle.circle");
             return  -1;
         }
     }
@@ -91,7 +91,7 @@ public class Parallelogram extends Rectangle {
             return inputRadius;
         }
         else{
-            System.out.println("Error. The figure doesn't have input circle.");
+            System.out.println("Error. The figure doesn't have input Resourses.Resourses.triangle.circle.");
             return -1;
         }
     }

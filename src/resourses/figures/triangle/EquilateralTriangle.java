@@ -1,6 +1,6 @@
-package triangle;
+package resourses.figures.triangle;
 
-import help.HelpingMethods;
+import resourses.help.HelpingMethods;
 
 public class EquilateralTriangle {
     protected double a, perimeter, area, median, bisector, height, outRadius, inputRadius, semiPerimeter;
