@@ -81,9 +81,72 @@ public class Rectangle {
             return -1;
         }
     }
+    public double getArea(){
+        if (area != 0){
+            return area;
+        }
+        else if(length != 0 && width != 0){
+            return area();
+        }
+        else if (length != 0 && diagonal != 0) {
+            width = HelpingMethods.pythagoreanTheorem(diagonal, length, "-");
+            return area();
+        }
+        else if (width != 0 && diagonal != 0) {
+            length = HelpingMethods.pythagoreanTheorem(diagonal, width, "-");
+            return area();
+        }
+        else if (length != 0 && perimeter != 0) {
+            width = perimeter / 2 - length;
+            return area();
+        }
+        else if (width != 0 && perimeter != 0) {
+            length = perimeter / 2 - width;
+            return area();
+        }
+        else if (length != 0 && outRadius != 0){
+            diagonal = outRadius * 2;
+            width = HelpingMethods.pythagoreanTheorem(diagonal, length, "-");
+            return area();
+        }
+        else if (width != 0 && outRadius != 0) {
+            diagonal = outRadius * 2;
+            length = HelpingMethods.pythagoreanTheorem(diagonal, width, "-");
+            return area();
+        }
+        else{
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
     protected double area(){
         area = length * width;
         return area;
+    }
+    public double getDiagonal(){
+        if (diagonal != 0) {
+            return diagonal;
+        } else if (length != 0 && width != 0) {
+            return diagonal();
+        } else if (length != 0 && perimeter != 0) {
+            width = perimeter / 2 - length;
+            return diagonal();
+        } else if (width != 0 && perimeter != 0) {
+            length = perimeter / 2 - width;
+            return diagonal();
+        } else if (length != 0 && area != 0) {
+            width = area / length;
+            return diagonal();
+        } else if (width != 0 && area != 0) {
+            length = area / width;
+            return diagonal();
+        } else if (outRadius != 0) {
+            diagonal = outRadius * 2;
+            return diagonal;
+        }else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     protected double diagonal(){
         diagonal = HelpingMethods.pythagoreanTheorem(length, width, "+");
