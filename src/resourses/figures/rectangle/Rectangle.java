@@ -133,6 +133,24 @@ public class Rectangle {
         outRadius = diagonal / 2;
         return outRadius;
     }
+    public double getInputRadius(){
+        if (inputRadius > 0) return inputRadius;
+        else if (length > 0){
+            if (width > 0) return inputRadius();
+            else {
+                getWidth();
+                return inputRadius();
+            }
+        }
+        else if (width > 0) {
+            getLength();
+            return inputRadius();
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
     protected double inputRadius(){
         if(length == width){
             inputRadius = length / 2;
