@@ -55,7 +55,7 @@ public class Cube extends Square{
         System.out.println("Doesn`t exist");
         return -1;
     }
-    @Override
+
     public double sumOfCorners(){
         System.out.println("Error!");
         return -1;
