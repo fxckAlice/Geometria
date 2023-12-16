@@ -1,6 +1,6 @@
-package resourses.figures.triangle;
+package resources.figures.triangle;
 
-import resourses.help.HelpingMethods;
+import resources.help.HelpingMethods;
 
 public class IsoscelesTriangle extends EquilateralTriangle {
     protected double b, medianB, bisectorB, heightB, cornerApex, cornerSide;

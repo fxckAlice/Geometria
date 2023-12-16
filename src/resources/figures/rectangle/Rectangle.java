@@ -1,6 +1,6 @@
-package resourses.figures.rectangle;
+package resources.figures.rectangle;
 
-import resourses.help.HelpingMethods;
+import resources.help.HelpingMethods;
 
 public class Rectangle {
     protected double length, width, perimeter, area, diagonal, outRadius, inputRadius, corner;
@@ -80,8 +80,14 @@ public class Rectangle {
         }
     }
     protected double area(){
-        area = length * width;
-        return area;
+        if (length > 0 && width > 0){
+            area = length * width;
+            return area;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     public double getDiagonal(){
         if (diagonal > 0) return diagonal;
@@ -102,8 +108,14 @@ public class Rectangle {
         }
     }
     protected double diagonal(){
-        diagonal = HelpingMethods.pythagoreanTheorem(length, width, "+");
-        return diagonal;
+        if (length > 0 && width > 0){
+            diagonal = HelpingMethods.pythagoreanTheorem(length, width, "+");
+            return diagonal;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     public double getOutRadius(){
         if (outRadius > 0) return outRadius;
@@ -130,8 +142,14 @@ public class Rectangle {
         }
     }
     protected double outRadius (){
-        outRadius = diagonal / 2;
-        return outRadius;
+        if (diagonal > 0){
+            outRadius = diagonal / 2;
+            return outRadius;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     public double getInputRadius(){
         if (inputRadius > 0) return inputRadius;
@@ -152,12 +170,17 @@ public class Rectangle {
         }
     }
     protected double inputRadius(){
-        if(length == width){
-            inputRadius = length / 2;
-            return inputRadius;
+        if (length > 0 && width > 0){
+            if (length == width) {
+                inputRadius = length / 2;
+                return inputRadius;
+            } else {
+                System.out.println("Error. The figure doesn't have input radius.");
+                return -1;
+            }
         }
-        else{
-            System.out.println("Error. The figure doesn't have input Resourses.Resourses.triangle.circle.");
+        else {
+            System.out.println("Error! Missing values.");
             return -1;
         }
     }
@@ -251,12 +274,6 @@ public class Rectangle {
     }
     public double getSumOfCorners(){
         return 360;
-    }
-    protected double cornerDiagonalLength(){
-        return HelpingMethods.round(Math.acos(length / diagonal) / Math.PI * 180, -7);
-    }
-    protected double cornerDiagonalWidth(){
-        return HelpingMethods.round(Math.asin(length / diagonal) / Math.PI * 180, -7);
     }
 
 }

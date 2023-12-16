@@ -1,4 +1,4 @@
-package resourses.help;
+package resources.help;
 
 public class HelpingMethods {
     public static double quadraticEducation(double a, double b, double c){

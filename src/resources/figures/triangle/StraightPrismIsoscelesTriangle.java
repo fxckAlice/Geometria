@@ -1,6 +1,6 @@
-package resourses.figures.triangle;
+package resources.figures.triangle;
 
-import resourses.help.HelpingMethods;
+import resources.help.HelpingMethods;
 
 public class StraightPrismIsoscelesTriangle extends IsoscelesTriangle{
     protected double heightP, areaBase, areaSide, volume, diagonalSideA, diagonalSideB;

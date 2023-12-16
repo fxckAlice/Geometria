@@ -1,6 +1,6 @@
-package resourses.figures.triangle;
+package resources.figures.triangle;
 
-import resourses.help.HelpingMethods;
+import resources.help.HelpingMethods;
 
 public class RightTriangle extends Triangle {
     public RightTriangle(double a, double b, double c){

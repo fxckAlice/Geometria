@@ -1,6 +1,6 @@
-package resourses.figures.rectangle;
+package resources.figures.rectangle;
 
-import resourses.help.HelpingMethods;
+import resources.help.HelpingMethods;
 
 public class Parallelepiped extends Rectangle{
     double heightP, volume, diagonalV, diagonalSideLength, diagonalSideWidth;

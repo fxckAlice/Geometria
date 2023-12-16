@@ -1,6 +1,6 @@
-package resourses.figures.triangle;
+package resources.figures.triangle;
 
-import resourses.help.HelpingMethods;
+import resources.help.HelpingMethods;
 
 public class Triangle extends IsoscelesTriangle {
     protected double c, medianC,heightC, bisectorC, cornerA, cornerB, cornerC;

@@ -1,4 +1,4 @@
-package resourses.figures.circle;
+package resources.figures.circle;
 
 public class Circle {
     protected double radius, diameter, length, area;
