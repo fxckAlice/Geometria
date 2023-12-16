@@ -33,46 +33,26 @@ public class Rectangle {
     public void setOutRadius(double outRadius) {
         this.outRadius = outRadius;
     }
-    public double getPerimeter(){
-        if (perimeter != 0){
-            return perimeter;
+    public double getPerimeter() {
+        if (perimeter > 0) return perimeter;
+        else if (length > 0){
+            if (width > 0) return perimeter();
+            else {
+                getWidth();
+                return perimeter();
+            }
         }
-        else if(length != 0 && width != 0){
+        else if (width > 0) {
+            getLength();
             return perimeter();
         }
-        else if (length != 0 && diagonal != 0) {
-            width = HelpingMethods.pythagoreanTheorem(diagonal, length, "-");
-            return perimeter();
-        }
-        else if (width != 0 && diagonal != 0) {
-            length = HelpingMethods.pythagoreanTheorem(diagonal, width, "-");
-            return perimeter();
-        }
-        else if (length != 0 && area != 0) {
-            width = area / length;
-            return perimeter();
-        }
-        else if (width != 0 && area != 0) {
-            length = area / width;
-            return perimeter();
-        }
-        else if (length != 0 && outRadius != 0){
-            diagonal = outRadius * 2;
-            width = HelpingMethods.pythagoreanTheorem(diagonal, length, "-");
-            return perimeter();
-        }
-        else if (width != 0 && outRadius != 0) {
-            diagonal = outRadius * 2;
-            length = HelpingMethods.pythagoreanTheorem(diagonal, width, "-");
-            return perimeter();
-        }
-        else{
+        else {
             System.out.println("Error! Missing values.");
             return -1;
         }
     }
     protected double perimeter(){
-        if(length != 0 && width != 0){
+        if(length > 0 && width > 0){
             perimeter = 2 * length + 2 * width;
             return perimeter;
         }
@@ -82,39 +62,19 @@ public class Rectangle {
         }
     }
     public double getArea(){
-        if (area != 0){
-            return area;
+        if (area > 0) return area;
+        else if (length > 0){
+            if (width > 0) return area();
+            else {
+                getWidth();
+                return area();
+            }
         }
-        else if(length != 0 && width != 0){
+        else if (width > 0) {
+            getLength();
             return area();
         }
-        else if (length != 0 && diagonal != 0) {
-            width = HelpingMethods.pythagoreanTheorem(diagonal, length, "-");
-            return area();
-        }
-        else if (width != 0 && diagonal != 0) {
-            length = HelpingMethods.pythagoreanTheorem(diagonal, width, "-");
-            return area();
-        }
-        else if (length != 0 && perimeter != 0) {
-            width = perimeter / 2 - length;
-            return area();
-        }
-        else if (width != 0 && perimeter != 0) {
-            length = perimeter / 2 - width;
-            return area();
-        }
-        else if (length != 0 && outRadius != 0){
-            diagonal = outRadius * 2;
-            width = HelpingMethods.pythagoreanTheorem(diagonal, length, "-");
-            return area();
-        }
-        else if (width != 0 && outRadius != 0) {
-            diagonal = outRadius * 2;
-            length = HelpingMethods.pythagoreanTheorem(diagonal, width, "-");
-            return area();
-        }
-        else{
+        else {
             System.out.println("Error! Missing values.");
             return -1;
         }
@@ -124,26 +84,19 @@ public class Rectangle {
         return area;
     }
     public double getDiagonal(){
-        if (diagonal != 0) {
-            return diagonal;
-        } else if (length != 0 && width != 0) {
+        if (diagonal > 0) return diagonal;
+        else if (length > 0){
+            if (width > 0) return diagonal();
+            else {
+                getWidth();
+                return diagonal();
+            }
+        }
+        else if (width > 0) {
+            getLength();
             return diagonal();
-        } else if (length != 0 && perimeter != 0) {
-            width = perimeter / 2 - length;
-            return diagonal();
-        } else if (width != 0 && perimeter != 0) {
-            length = perimeter / 2 - width;
-            return diagonal();
-        } else if (length != 0 && area != 0) {
-            width = area / length;
-            return diagonal();
-        } else if (width != 0 && area != 0) {
-            length = area / width;
-            return diagonal();
-        } else if (outRadius != 0) {
-            diagonal = outRadius * 2;
-            return diagonal;
-        }else {
+        }
+        else {
             System.out.println("Error! Missing values.");
             return -1;
         }
@@ -151,6 +104,30 @@ public class Rectangle {
     protected double diagonal(){
         diagonal = HelpingMethods.pythagoreanTheorem(length, width, "+");
         return diagonal;
+    }
+    public double getOutRadius(){
+        if (outRadius > 0) return outRadius;
+        if (diagonal > 0) return outRadius();
+        else if (length > 0){
+            if (width > 0) {
+                diagonal();
+                return outRadius();
+            }
+            else {
+                getWidth();
+                diagonal();
+                return perimeter();
+            }
+        }
+        else if (width > 0) {
+            getLength();
+            diagonal();
+            return perimeter();
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     protected double outRadius (){
         outRadius = diagonal / 2;
@@ -166,30 +143,89 @@ public class Rectangle {
             return -1;
         }
     }
-    protected double side(String parameter){
-        double answer;
+    public double getWidth(){
+        if(width > 0){
+            return width;
+        } else if (length > 0) {
+            if(area > 0) return sideW("a");
+            else if (perimeter > 0) return sideW("p");
+            else if (diagonal > 0) return sideW("d");
+            else if (inputRadius > 0) return sideW("i");
+            else if (outRadius > 0) return sideW("o");
+            else {
+                System.out.println("Error! Missing values.");
+                return -1;
+            }
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
+    protected double sideW(String parameter){
         switch (parameter){
             case ("a"):
-                answer = area / length;
+                width = area / length;
                 break;
             case ("p"):
-                answer = perimeter / 2 - length;
+                width = perimeter / 2 - length;
                 break;
             case ("d"):
-                answer = HelpingMethods.pythagoreanTheorem(diagonal, length, "-");
+                width = HelpingMethods.pythagoreanTheorem(diagonal, length, "-");
                 break;
             case ("i"):
-                answer = 2 * inputRadius;
+                width = 2 * inputRadius;
                 break;
             case ("o"):
-                answer = HelpingMethods.round(HelpingMethods.pythagoreanTheorem(outRadius * 2, "-"), -7);
+                width = HelpingMethods.pythagoreanTheorem(outRadius * 2, length, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
-                answer = -1;
-                break;
+                return -1;
         }
-        return answer;
+        return width;
+    }
+    public double getLength(){
+        if(length > 0){
+            return length;
+        } else if (width > 0) {
+            if(area > 0) return side("a");
+            else if (perimeter > 0) return side("p");
+            else if (diagonal > 0) return side("d");
+            else if (inputRadius > 0) return side("i");
+            else if (outRadius > 0) return side("o");
+            else {
+                System.out.println("Error! Missing values.");
+                return -1;
+            }
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
+    protected double side(String parameter){
+        switch (parameter){
+            case ("a"):
+                length = area / width;
+                break;
+            case ("p"):
+                length = perimeter / 2 - width;
+                break;
+            case ("d"):
+                length = HelpingMethods.pythagoreanTheorem(diagonal, width, "-");
+                break;
+            case ("i"):
+                length = 2 * inputRadius;
+                break;
+            case ("o"):
+                length = HelpingMethods.pythagoreanTheorem(outRadius * 2, width, "-");
+                break;
+            default:
+                System.out.println("Enter correct parameter.");
+                return -1;
+        }
+        return length;
     }
     public double getCorner(){
         corner = 90;
