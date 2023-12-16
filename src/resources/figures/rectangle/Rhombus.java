@@ -89,13 +89,5 @@ public class Rhombus extends Parallelogram {
         }
         return answer;
     }
-    @Override
-    public double cornerDiagonalLength(){
-        return corner / 2;
-    }
-    @Override
-    public double cornerDiagonalWidth(){
-        System.out.println("Please use cornerDiagonalLenght()");
-        return -1;
-    }
+
 }
