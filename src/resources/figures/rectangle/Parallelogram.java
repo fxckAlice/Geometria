@@ -121,12 +121,4 @@ public class Parallelogram extends Rectangle {
         }
         return answer;
     }
-    @Override
-    public double cornerDiagonalLength(){
-        return (Math.asin(height1 / diagonal) / Math.PI * 180);
-    }
-    @Override
-    public double cornerDiagonalWidth(){
-        return Math.asin((area / width) / Math.PI * 180);
-    }
 }
