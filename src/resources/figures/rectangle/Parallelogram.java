@@ -40,7 +40,7 @@ public class Parallelogram extends Rectangle {
         this.height2 = height2;
     }
 
-    public double area(String parameter){
+    protected double area(String parameter){
         switch (parameter) {
             case ("l"):
                 area = height1 * length;
@@ -58,22 +58,28 @@ public class Parallelogram extends Rectangle {
         return area;
     }
     @Override
-    public double diagonal(){
+    protected double diagonal(){
         System.out.println("You can use diagonal1() or diagonal2");
         return -1;
     }
     public double diagonal1(){
-        double temp = 2 * length * width * HelpingMethods.round(Math.cos((180 - corner) / 180 * Math.PI), -10);
+        double temp = 2 * length * width * HelpingMethods.round(Math.cos((180 - corner) / 180 * Math.PI), -8);
         diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal;
     }
     public double diagonal2(){
-        double temp = 2 * length * width * HelpingMethods.round(Math.cos(corner / 180 * Math.PI), -10);
+        double temp = 2 * length * width * HelpingMethods.round(Math.cos(corner / 180 * Math.PI), -8);
         diagonal2 = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal2;
     }
+    protected double height1(){
+        return width * Math.sin(corner / 180 * Math.PI);
+    }
+    protected double height2(){
+        return length * Math.sin(corner / 180 * Math.PI);
+    }
     @Override
-    public double outRadius (){
+    protected double outRadius (){
         if(diagonal1() == diagonal2()){
             double temp = diagonal1();
             outRadius = temp / 2;
@@ -85,7 +91,7 @@ public class Parallelogram extends Rectangle {
         }
     }
     @Override
-    public double inputRadius(){
+    protected double inputRadius(){
         if(length == width){
             inputRadius = area() / 2 * length;
             return inputRadius;
@@ -96,29 +102,54 @@ public class Parallelogram extends Rectangle {
         }
     }
     @Override
-    public double side(String parameter) {
-        double answer;
+    public double sideW(String parameter) {
         switch (parameter) {
             case ("a"):
-                answer = area / height1;
+                width = area / height2;
                 break;
             case ("p"):
-                answer = perimeter / 2 - length;
+                width = perimeter / 2 - length;
                 break;
-            case ("d"):
-                answer = HelpingMethods.pythagoreanTheorem(diagonal, height1, "-");
+            case ("d1"):
+                width = HelpingMethods.quadraticEducation(1,-(2 * length * HelpingMethods.round(Math.cos((180 - corner) / 180 * Math.PI), -8)), Math.pow(length, 2) - Math.pow(diagonal, 2));
+                break;
+            case ("d2"):
+                width = HelpingMethods.quadraticEducation(1,-(2 * length * HelpingMethods.round(Math.cos(corner / 180 * Math.PI), -8)), Math.pow(length, 2) - Math.pow(diagonal2, 2));
                 break;
             case ("i"):
-                answer = area / (2 * inputRadius);
+                width = area / (2 * inputRadius);
                 break;
             case ("o"):
-                answer = HelpingMethods.pythagoreanTheorem(outRadius * 2, length, "-");
+                width = HelpingMethods.pythagoreanTheorem(outRadius * 2, length, "-");
                 break;
             default:
                 System.out.println("Enter correct parameter.");
-                answer = -1;
-                break;
+                return  -1;
         }
-        return answer;
+        return width;
+    }
+    @Override
+    protected double side(String parameter) {
+        switch (parameter) {
+            case ("a"):
+                length = area / height2;
+                break;
+            case ("p"):
+                length = perimeter / 2 - width;
+                break;
+            case ("d"):
+                length = HelpingMethods.pythagoreanTheorem(diagonal, height2, "-");
+                break;
+            case ("i"):
+                length = area / (2 * inputRadius);
+                break;
+            case ("o"):
+                length = HelpingMethods.pythagoreanTheorem(outRadius * 2, width, "-");
+                break;
+            default:
+                System.out.println("Enter correct parameter.");
+                return -1;
+        }
+        return length;
     }
 }
