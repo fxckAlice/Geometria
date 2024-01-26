@@ -62,21 +62,21 @@ public class Parallelogram extends Rectangle {
         System.out.println("You can use diagonal1() or diagonal2");
         return -1;
     }
-    public double diagonal1(){
+    protected double diagonal1(){
         double temp = 2 * length * width * HelpingMethods.round(Math.cos((180 - corner) / 180 * Math.PI), -8);
         diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal;
     }
-    public double diagonal2(){
+    protected double diagonal2(){
         double temp = 2 * length * width * HelpingMethods.round(Math.cos(corner / 180 * Math.PI), -8);
         diagonal2 = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal2;
     }
     protected double height1(){
-        return width * Math.sin(corner / 180 * Math.PI);
+        return width * Math.cos(corner / 180 * Math.PI);
     }
     protected double height2(){
-        return length * Math.sin(corner / 180 * Math.PI);
+        return length * Math.cos(corner / 180 * Math.PI);
     }
     @Override
     protected double outRadius (){
@@ -102,7 +102,7 @@ public class Parallelogram extends Rectangle {
         }
     }
     @Override
-    public double sideW(String parameter) {
+    protected double sideW(String parameter) {
         switch (parameter) {
             case ("a"):
                 width = area / height2;
@@ -115,6 +115,9 @@ public class Parallelogram extends Rectangle {
                 break;
             case ("d2"):
                 width = HelpingMethods.quadraticEducation(1,-(2 * length * HelpingMethods.round(Math.cos(corner / 180 * Math.PI), -8)), Math.pow(length, 2) - Math.pow(diagonal2, 2));
+                break;
+            case ("h"):
+                width = height1 / Math.cos(corner / 180 * Math.PI);
                 break;
             case ("i"):
                 width = area / (2 * inputRadius);
@@ -137,8 +140,14 @@ public class Parallelogram extends Rectangle {
             case ("p"):
                 length = perimeter / 2 - width;
                 break;
-            case ("d"):
-                length = HelpingMethods.pythagoreanTheorem(diagonal, height2, "-");
+            case ("d1"):
+                length = HelpingMethods.quadraticEducation(1,-(2 * width * HelpingMethods.round(Math.cos((180 - corner) / 180 * Math.PI), -8)), Math.pow(width, 2) - Math.pow(diagonal, 2));
+                break;
+            case ("d2"):
+                length = HelpingMethods.quadraticEducation(1,-(2 * width * HelpingMethods.round(Math.cos(corner / 180 * Math.PI), -8)), Math.pow(width, 2) - Math.pow(diagonal2, 2));
+                break;
+            case ("h"):
+                length = height2 / Math.cos(corner / 180 * Math.PI);
                 break;
             case ("i"):
                 length = area / (2 * inputRadius);
@@ -151,5 +160,24 @@ public class Parallelogram extends Rectangle {
                 return -1;
         }
         return length;
+    }
+    protected double corner(String parameter){
+        switch (parameter){
+            case("h1"):
+                corner = Math.acos(height1 / width) / Math.PI * 180;
+                break;
+            case("h2"):
+                corner = Math.acos(height2 / length) / Math.PI * 180;
+                break;
+            case("d1"):
+                corner = 180 - (Math.acos((-(Math.pow(diagonal, 2) - Math.pow(length, 2) - Math.pow(width, 2)) / (2 * length * width))) / Math.PI * 180);
+                break;
+            case("d2"):
+                corner = Math.acos((-(Math.pow(diagonal2, 2) - Math.pow(length, 2) - Math.pow(width, 2)) / (2 * length * width))) / Math.PI * 180;
+            default:
+                System.out.println("Enter correct parameter.");
+                return -1;
+        }
+        return corner;
     }
 }
