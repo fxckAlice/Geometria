@@ -15,26 +15,36 @@ public class Cube extends Square{
     public void setDiagonalV(double diagonalV) {
         this.diagonalV = diagonalV;
     }
-    public double volume(){
+    public double getVolume(){
+        if (volume > 0) return volume;
+        else if (!(length > 0)) getLength();
+        return volume();
+    }
+    protected double volume(){
         volume = Math.pow(length, 3);
         return volume;
     }
-    public double diagonalV(){
+    public double getDiagonalV(){
+        if (diagonalV > 0) return diagonalV;
+        else if (!(length > 0)) getLength();
+        return diagonalV();
+    }
+    protected double diagonalV(){
         diagonalV = length * Math.sqrt(3);
         return diagonalV;
     }
     @Override
-    public double area(){
+    protected double area(){
         area = Math.pow(length, 2) * 6;
         return area;
     }
     @Override
-    public double perimeter() {
+    protected double perimeter() {
         System.out.println("Doesn`t exist");
         return -1;
     }
     @Override
-    public double inputRadius() {
+    protected double inputRadius() {
         System.out.println("Doesn`t exist");
         return -1;
     }
@@ -51,36 +61,45 @@ public class Cube extends Square{
         System.out.println("Doesn`t exist");
     }
     @Override
-    public double outRadius (){
+    protected double outRadius (){
         System.out.println("Doesn`t exist");
         return -1;
     }
-
-    public double sumOfCorners(){
+    protected double sumOfCorners(){
         System.out.println("Error!");
         return -1;
     }
+    public double getLength(){
+        if (length > 0) return length;
+        else if (area > 0) return side("a");
+        else if (diagonal > 0) return  side("d");
+        else if (volume > 0) return side("v");
+        else if (diagonalV > 0) return side("s");
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
     @Override
-    public double side(String parameter){
-        double answer;
+    protected double side(String parameter){
         switch (parameter){
             case ("a"):
-                answer = Math.sqrt(area / 6);
+                length = Math.sqrt(area / 6);
                 break;
             case ("d"):
-                answer = HelpingMethods.pythagoreanTheorem(diagonal, "-");
+                length = HelpingMethods.pythagoreanTheorem(diagonal, "-");
                 break;
             case ("v"):
-                answer = Math.cbrt(volume);
+                length = Math.cbrt(volume);
                 break;
             case("s"):
-                answer = diagonalV / Math.sqrt(3);
+                length = diagonalV / Math.sqrt(3);
                 break;
             default:
                 System.out.println("Enter correct parameter.");
-                answer = -1;
+                length = -1;
                 break;
         }
-        return answer;
+        return length;
     }
 }
