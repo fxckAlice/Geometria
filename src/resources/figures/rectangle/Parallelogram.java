@@ -101,6 +101,27 @@ public class Parallelogram extends Rectangle {
             return -1;
         }
     }
+    public double getWidth(){
+        if(width > 0){
+            return width;
+        } else if (length > 0) {
+            if(area > 0 && height2 > 0) return sideW("a");
+            else if (perimeter > 0) return sideW("p");
+            else if (diagonal > 0 && corner > 0) return sideW("d1");
+            else if (diagonal2 > 0 && corner > 0) return sideW("d2");
+            else if (height1 > 0 && corner > 0) return sideW("h");
+            else if (inputRadius > 0 && area > 0) return sideW("i");
+            else if (outRadius > 0) return sideW("o");
+            else {
+                System.out.println("Error! Missing values.");
+                return -1;
+            }
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
     @Override
     protected double sideW(String parameter) {
         switch (parameter) {
@@ -131,11 +152,32 @@ public class Parallelogram extends Rectangle {
         }
         return width;
     }
+    public double getLength(){
+        if(length > 0){
+            return length;
+        } else if (width > 0) {
+            if(area > 0 && height1 > 0) return side("a");
+            else if (perimeter > 0) return side("p");
+            else if (diagonal > 0 && corner > 0) return side("d1");
+            else if (diagonal2 > 0 && corner > 0) return side("d1");
+            else if (inputRadius > 0 && area > 0) return side("i");
+            else if (height2 > 0 && corner > 0) return side("h");
+            else if (outRadius > 0) return side("o");
+            else {
+                System.out.println("Error! Missing values.");
+                return -1;
+            }
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
     @Override
     protected double side(String parameter) {
         switch (parameter) {
             case ("a"):
-                length = area / height2;
+                length = area / height1;
                 break;
             case ("p"):
                 length = perimeter / 2 - width;
@@ -160,6 +202,19 @@ public class Parallelogram extends Rectangle {
                 return -1;
         }
         return length;
+    }
+    public double getCorner(){
+        if(corner > 0){
+            return corner;
+        }
+        else if (height1 > 0 && width > 0) return corner("h1");
+        else if (height2 > 0 && length > 0) return corner("h2");
+        else if (diagonal > 0 && width > 0 && length > 0) return corner("d1");
+        else if (diagonal2 > 0 && width > 0 && length > 0) return corner("d2");
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     protected double corner(String parameter){
         switch (parameter){
