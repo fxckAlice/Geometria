@@ -36,11 +36,10 @@ public class Rectangle {
     public double getPerimeter() {
         if (perimeter > 0) return perimeter;
         else if (length > 0){
-            if (width > 0) return perimeter();
-            else {
+            if (!(width > 0)) {
                 getWidth();
-                return perimeter();
             }
+            return perimeter();
         }
         else if (width > 0) {
             getLength();
@@ -64,11 +63,8 @@ public class Rectangle {
     public double getArea(){
         if (area > 0) return area;
         else if (length > 0){
-            if (width > 0) return area();
-            else {
-                getWidth();
-                return area();
-            }
+            if (!(width > 0))getWidth();
+            return area();
         }
         else if (width > 0) {
             getLength();
@@ -92,11 +88,8 @@ public class Rectangle {
     public double getDiagonal(){
         if (diagonal > 0) return diagonal;
         else if (length > 0){
-            if (width > 0) return diagonal();
-            else {
-                getWidth();
-                return diagonal();
-            }
+            if (!(width > 0)) getWidth();
+            return diagonal();
         }
         else if (width > 0) {
             getLength();
@@ -154,11 +147,8 @@ public class Rectangle {
     public double getInputRadius(){
         if (inputRadius > 0) return inputRadius;
         else if (length > 0){
-            if (width > 0) return inputRadius();
-            else {
-                getWidth();
-                return inputRadius();
-            }
+            if (!(width > 0)) getWidth();
+            return inputRadius();
         }
         else if (width > 0) {
             getLength();

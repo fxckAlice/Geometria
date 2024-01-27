@@ -39,7 +39,30 @@ public class Parallelogram extends Rectangle {
     public void setHeight2(double height2) {
         this.height2 = height2;
     }
-
+    public double getArea(){
+        if (area > 0) return area;
+        else if (length > 0){
+            if (height1 > 0) return area("l");
+            else{ if (!(width > 0)) {
+                getWidth();
+            }
+            if(!(corner > 0)){
+                getCorner();
+            }
+            return area("c");}
+        }
+        else if (width > 0) {
+            if (height2 > 0) return area("w");
+            else{
+                getLength();
+                return area("c");
+            }
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
     protected double area(String parameter){
         switch (parameter) {
             case ("l"):
@@ -62,31 +85,125 @@ public class Parallelogram extends Rectangle {
         System.out.println("You can use diagonal1() or diagonal2");
         return -1;
     }
+    public double getDiagonal1(){
+        if(diagonal > 0) return diagonal;
+        else if (length > 0) {
+            if (!(width > 0)){
+                getWidth();
+            }
+            if (!(corner > 0)){
+                getCorner();
+            }
+            return diagonal();
+        }
+        else if (width > 0) {
+            getLength();
+            if (!(corner > 0)){
+                getCorner();
+            }
+            return diagonal();
+        }
+        else if (corner > 0) {
+            getLength();
+            getWidth();
+            return diagonal();
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
     protected double diagonal1(){
         double temp = 2 * length * width * HelpingMethods.round(Math.cos((180 - corner) / 180 * Math.PI), -8);
         diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal;
+    }
+    public double getDiagonal2(){
+        if(diagonal2 > 0) return diagonal2;
+        else if (length > 0) {
+            if (!(width > 0)){
+                getWidth();
+            }
+            if (!(corner > 0)){
+                getCorner();
+            }
+            return diagonal2();
+        }
+        else if (width > 0) {
+            getLength();
+            if (!(corner > 0)){
+                getCorner();
+            }
+            return diagonal2();
+        }
+        else if (corner > 0) {
+            getLength();
+            getWidth();
+            return diagonal2();
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     protected double diagonal2(){
         double temp = 2 * length * width * HelpingMethods.round(Math.cos(corner / 180 * Math.PI), -8);
         diagonal2 = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
         return diagonal2;
     }
+    public double getHeight1(){
+        if(height1 > 0){
+            return height1;
+        }
+        else if (width > 0) {
+            if (!(corner > 0)){
+                getCorner();
+            }
+            return height1();
+        }
+        else if (corner > 0) {
+            getWidth();
+            return height1();
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
     protected double height1(){
         return width * Math.cos(corner / 180 * Math.PI);
+    }
+    public double getHeight2(){
+        if(height2 > 0){
+            return height2;
+        }
+        else if (length > 0) {
+            if (!(corner > 0)){
+                getCorner();
+            }
+            return height2();
+        }
+        else if (corner > 0) {
+            getLength();
+            return height2();
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     protected double height2(){
         return length * Math.cos(corner / 180 * Math.PI);
     }
     @Override
-    protected double outRadius (){
+    protected double outRadius(){
         if(diagonal1() == diagonal2()){
             double temp = diagonal1();
             outRadius = temp / 2;
             return outRadius;
         }
         else{
-            System.out.println("This parallelogram doesn't have out Resourses.Resourses.triangle.circle");
+            System.out.println("This parallelogram doesn't have out circle");
             return  -1;
         }
     }
