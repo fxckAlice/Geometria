@@ -66,14 +66,32 @@ public class Parallelogram extends Rectangle {
     protected double area(String parameter){
         switch (parameter) {
             case ("l"):
-                area = height1 * length;
-                break;
+                if (height1 > 0 && length > 0){
+                    area = height1 * length;
+                    break;
+                }
+                else {
+                    System.out.println("Error! Missing values.");
+                    return -1;
+                }
             case ("w"):
-                area = height2 * width;
-                break;
+                if (height2 > 0 && width > 0){
+                    area = height2 * width;
+                    break;
+                }
+                else {
+                    System.out.println("Error! Missing values.");
+                    return -1;
+                }
             case ("c"):
-                area = width * Math.sin(corner / 180 * Math.PI) * length;
-                break;
+                if (length > 0 && width > 0 && corner > 0){
+                    area = width * Math.sin(corner / 180 * Math.PI) * length;
+                    break;
+                }
+                else {
+                    System.out.println("Error! Missing values.");
+                    return -1;
+                }
             default:
                 System.out.println("Enter correct parameter.");
                 area = -1;
@@ -114,9 +132,15 @@ public class Parallelogram extends Rectangle {
         }
     }
     protected double diagonal1(){
-        double temp = 2 * length * width * HelpingMethods.round(Math.cos((180 - corner) / 180 * Math.PI), -8);
-        diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
-        return diagonal;
+        if (length > 0 && width > 0 && corner > 0){
+            double temp = 2 * length * width * HelpingMethods.round(Math.cos((180 - corner) / 180 * Math.PI), -8);
+            diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
+            return diagonal;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     public double getDiagonal2(){
         if(diagonal2 > 0) return diagonal2;
