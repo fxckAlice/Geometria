@@ -43,13 +43,15 @@ public class Parallelogram extends Rectangle {
         if (area > 0) return area;
         else if (length > 0){
             if (height1 > 0) return area("l");
-            else{ if (!(width > 0)) {
+            else{
+                if (!(width > 0)) {
                 getWidth();
+                }
+                if(!(corner > 0)){
+                    getCorner();
+                }
+                return area("c");
             }
-            if(!(corner > 0)){
-                getCorner();
-            }
-            return area("c");}
         }
         else if (width > 0) {
             if (height2 > 0) return area("w");
@@ -112,23 +114,29 @@ public class Parallelogram extends Rectangle {
             if (!(corner > 0)){
                 getCorner();
             }
-            return diagonal();
+            return diagonal1();
         }
         else if (width > 0) {
             getLength();
             if (!(corner > 0)){
                 getCorner();
             }
-            return diagonal();
+            return diagonal1();
         }
         else if (corner > 0) {
             getLength();
             getWidth();
-            return diagonal();
+            return diagonal1();
         }
         else {
-            System.out.println("Error! Missing values.");
-            return -1;
+            getWidth();
+            getLength();
+            getCorner();
+            if (length > 0 && width > 0 && corner > 0) return diagonal1();
+            else {
+                System.out.println("Error! Missing values.");
+                return -1;
+            }
         }
     }
     protected double diagonal1(){
@@ -166,8 +174,14 @@ public class Parallelogram extends Rectangle {
             return diagonal2();
         }
         else {
-            System.out.println("Error! Missing values.");
-            return -1;
+            getWidth();
+            getLength();
+            getCorner();
+            if (length > 0 && width > 0 && corner > 0) return diagonal2();
+            else {
+                System.out.println("Error! Missing values.");
+                return -1;
+            }
         }
     }
     protected double diagonal2(){
