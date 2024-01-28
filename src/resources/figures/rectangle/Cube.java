@@ -21,8 +21,14 @@ public class Cube extends Square{
         return volume();
     }
     protected double volume(){
-        volume = Math.pow(length, 3);
-        return volume;
+        if (length > 0){
+            volume = Math.pow(length, 3);
+            return volume;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     public double getDiagonalV(){
         if (diagonalV > 0) return diagonalV;
@@ -30,13 +36,33 @@ public class Cube extends Square{
         return diagonalV();
     }
     protected double diagonalV(){
-        diagonalV = length * Math.sqrt(3);
-        return diagonalV;
+        if (length > 0){
+            diagonalV = length * Math.sqrt(3);
+            return diagonalV;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
+
+    @Override
+    public double getArea() {
+        if (area > 0) return area;
+        else if (!(length > 0)) getLength();
+        return area();
+    }
+
     @Override
     protected double area(){
-        area = Math.pow(length, 2) * 6;
-        return area;
+        if (length > 0){
+            area = Math.pow(length, 2) * 6;
+            return area;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     @Override
     protected double perimeter() {

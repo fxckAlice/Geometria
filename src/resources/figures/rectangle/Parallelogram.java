@@ -171,9 +171,15 @@ public class Parallelogram extends Rectangle {
         }
     }
     protected double diagonal2(){
-        double temp = 2 * length * width * HelpingMethods.round(Math.cos(corner / 180 * Math.PI), -8);
-        diagonal2 = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
-        return diagonal2;
+        if (length > 0 && width > 0 && corner > 0){
+            double temp = 2 * length * width * HelpingMethods.round(Math.cos(corner / 180 * Math.PI), -8);
+            diagonal2 = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2) - temp);
+            return diagonal2;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     public double getHeight1(){
         if(height1 > 0){
@@ -195,7 +201,13 @@ public class Parallelogram extends Rectangle {
         }
     }
     protected double height1(){
-        return width * Math.cos(corner / 180 * Math.PI);
+        if (width > 0 && corner > 0){
+            return width * Math.cos(corner / 180 * Math.PI);
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     public double getHeight2(){
         if(height2 > 0){
@@ -217,7 +229,13 @@ public class Parallelogram extends Rectangle {
         }
     }
     protected double height2(){
-        return length * Math.cos(corner / 180 * Math.PI);
+        if (length > 0 && corner > 0){
+            return length * Math.cos(corner / 180 * Math.PI);
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     @Override
     protected double outRadius(){
