@@ -216,7 +216,8 @@ public class Parallelogram extends Rectangle {
     }
     protected double height1(){
         if (width > 0 && corner > 0){
-            return width * Math.cos(corner / 180 * Math.PI);
+            height1 = width * Math.cos(corner / 180 * Math.PI);
+            return height1;
         }
         else {
             System.out.println("Error! Missing values.");
@@ -244,7 +245,8 @@ public class Parallelogram extends Rectangle {
     }
     protected double height2(){
         if (length > 0 && corner > 0){
-            return length * Math.cos(corner / 180 * Math.PI);
+            height2 = length * Math.cos(corner / 180 * Math.PI);
+            return height2;
         }
         else {
             System.out.println("Error! Missing values.");
