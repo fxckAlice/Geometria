@@ -129,6 +129,14 @@ public class Rhombus extends Parallelogram {
         }
     }
 
+    public double getDiagonal1(){
+        if (diagonal > 0) return diagonal;
+        else {
+            if (!(length > 0)) getLength();
+            if (!(corner > 0)) getCorner();
+            return diagonal1();
+        }
+    }
     @Override
     protected double diagonal1(){
         if (length > 0 && corner > 0){
@@ -141,6 +149,14 @@ public class Rhombus extends Parallelogram {
             return -1;
         }
     }
+    public double getDiagonal2(){
+        if (diagonal2 > 0) return diagonal2;
+        else {
+            if (!(length > 0)) getLength();
+            if (!(corner > 0)) getCorner();
+            return diagonal2();
+        }
+    }
     @Override
     protected double diagonal2(){
         if (length > 0 && corner > 0){
@@ -151,6 +167,13 @@ public class Rhombus extends Parallelogram {
         else {
             System.out.println("Error! Missing values.");
             return -1;
+        }
+    }
+    public double getInputRadius(){
+        if (inputRadius > 0) return inputRadius;
+        else {
+            if (!(length > 0)) getLength();
+            return inputRadius();
         }
     }
     @Override
