@@ -96,7 +96,7 @@ public class Parallelogram extends Rectangle {
                 }
             default:
                 System.out.println("Enter correct parameter.");
-                area = -1;
+                return -1;
         }
         return area;
     }
