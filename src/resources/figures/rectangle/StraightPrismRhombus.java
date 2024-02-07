@@ -48,13 +48,57 @@ public class StraightPrismRhombus extends Rhombus{
     public void setDiagonalSideLength(double diagonalSideLength) {
         this.diagonalSideLength = diagonalSideLength;
     }
-    public double volume(){
-        volume = length * height1 * heightP;
-        return volume;
+
+    public double getVolume() {
+        if (volume > 0) return volume;
+        else if (areaBase > 0){
+            if (!(heightP > 0)) getHeightP();
+            return volume();
+        }
+        else if (heightP > 0) {
+            getAreaBase();
+            return volume();
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
-    public double diagonalSideLength(){
-        diagonalSideLength = HelpingMethods.pythagoreanTheorem(length, heightP, "+");
-        return diagonalSideLength;
+
+    protected double volume(){
+        if (areaBase > 0 && heightP > 0){
+            volume = areaBase * heightP;
+            return volume;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
+    public double getDiagonalSideLength(){
+        if (diagonalSideLength > 0) return diagonalSideLength;
+        else if (length > 0) {
+            if (!(heightP > 0)) getHeightP();
+            return diagonalSideLength();
+        }
+        else if (heightP > 0) {
+            getLength();
+            return diagonalSideLength();
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
+    protected double diagonalSideLength(){
+        if (length > 0 && heightP > 0){
+            diagonalSideLength = HelpingMethods.pythagoreanTheorem(length, heightP, "+");
+            return diagonalSideLength;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     public double getAreaBase(){
         if (areaBase > 0) return areaBase;
@@ -125,8 +169,24 @@ public class StraightPrismRhombus extends Rhombus{
             return -1;
         }
     }
+    public double getArea(){
+        if (area > 0) return area;
+        else if (areaBase > 0){
+            if (!(areaSide > 0)) getAreaSide();
+            return area();
+        }
+        else if (areaSide > 0){
+            getAreaBase();
+            return area();
+        }
+        else {
+            getAreaBase();
+            getAreaSide();
+            return area();
+        }
+    }
     @Override
-    public double area(String parameter){
+    protected double area(){
         if (areaBase > 0 && areaSide > 0){
             area = areaBase * 2 + areaSide;
             return area;
@@ -136,13 +196,51 @@ public class StraightPrismRhombus extends Rhombus{
             return -1;
         }
     }
-    public double diagonalV1(){
-        diagonalV1 = HelpingMethods.pythagoreanTheorem(heightP, diagonal,"+");
-        return diagonalV1;
+    public double getDiagonalV1(){
+        if (diagonalV1 > 0) return diagonalV1;
+        else if (heightP > 0){
+            if(!(diagonal > 0)) getDiagonal1();
+            return diagonalV1();
+        }
+        else if (diagonal > 0){
+            getHeightP();
+            return diagonalV1();
+        }
+        else {
+            getHeightP();
+            getDiagonal1();
+            return diagonalV1();
+        }
     }
-    public double diagonalV2(){
-        diagonalV2 = HelpingMethods.pythagoreanTheorem(heightP, diagonal2, "+");
-        return diagonalV2;
+    protected double diagonalV1(){
+        if (heightP > 0 && diagonal > 0){
+            diagonalV1 = HelpingMethods.pythagoreanTheorem(heightP, diagonal, "+");
+            return diagonalV1;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
+
+    public double getDiagonalV2() {
+        if (diagonalV2 > 0) return diagonalV2;
+        else {
+            if (!(diagonal2 > 0)) getDiagonal2();
+            if (!(heightP > 0)) getHeightP();
+            return diagonalV2();
+        }
+    }
+
+    protected double diagonalV2(){
+        if (heightP > 0 && diagonal2 > 0){
+            diagonalV2 = HelpingMethods.pythagoreanTheorem(heightP, diagonal2, "+");
+            return diagonalV2;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     @Override
     public double inputRadius() {
