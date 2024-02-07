@@ -132,7 +132,15 @@ public class StraightPrismParallelogram extends Parallelogram{
             return -1;
         }
     }
-    protected double volume(char parameter){
+    public double getVolume(){
+        if (volume > 0) return volume;
+        else {
+            if (!(heightP > 0)) getHeightP();
+            if (!(areaBase > 0)) getAreaBase();
+            return volume();
+        }
+    }
+    protected double volume(){
         if (heightP > 0 && areaBase > 0) {
             volume = heightP * areaBase;
             return volume;
@@ -140,6 +148,14 @@ public class StraightPrismParallelogram extends Parallelogram{
         else {
             System.out.println("Error! Missing values.");
             return -1;
+        }
+    }
+    public double getArea(){
+        if (area > 0) return area;
+        else {
+            if (!(areaBase > 0)) getAreaBase();
+            if (!(areaSide > 0)) getAreaSide();
+            return area();
         }
     }
     @Override
@@ -153,6 +169,15 @@ public class StraightPrismParallelogram extends Parallelogram{
             return -1;
         }
     }
+
+    public double getDiagonalV1() {
+        if (diagonalV1 > 0) return diagonalV2;
+        else {
+            if (!(heightP > 0)) getHeightP();
+            if (!(diagonal > 0)) getDiagonal1();
+            return diagonalV1();
+        }
+    }
     protected double diagonalV1(){
         if (heightP > 0 && diagonal > 0){
             diagonalV1 = HelpingMethods.pythagoreanTheorem(heightP, diagonal, "+");
@@ -163,6 +188,16 @@ public class StraightPrismParallelogram extends Parallelogram{
             return -1;
         }
     }
+
+    public double getDiagonalV2() {
+        if (diagonalV2 > 0) return diagonalV2;
+        else {
+            if (!(heightP > 0)) getHeightP();
+            if (!(diagonal2 > 0)) getDiagonal2();
+            return diagonalV2();
+        }
+    }
+
     protected double diagonalV2(){
         if (heightP > 0 && diagonal2 > 0){
             diagonalV2 = HelpingMethods.pythagoreanTheorem(heightP, diagonal2, "+");
@@ -173,6 +208,14 @@ public class StraightPrismParallelogram extends Parallelogram{
             return -1;
         }
     }
+    public double getDiagonalSideLength() {
+        if (diagonalSideLength > 0) return diagonalSideLength;
+        else {
+            if (!(length > 0)) getLength();
+            if (!(heightP > 0)) getHeightP();
+            return diagonalSideLength();
+        }
+    }
     protected double diagonalSideLength(){
         if (heightP > 0 && length > 0){
             diagonalSideLength = HelpingMethods.pythagoreanTheorem(length, heightP, "+");
@@ -181,6 +224,14 @@ public class StraightPrismParallelogram extends Parallelogram{
         else {
             System.out.println("Error! Missing values.");
             return -1;
+        }
+    }
+    public double getDiagonalSideWidth() {
+        if (diagonalSideWidth > 0) return diagonalSideWidth;
+        else {
+            if (!(width > 0)) getWidth();
+            if (!(heightP > 0)) getHeightP();
+            return diagonalSideWidth();
         }
     }
     protected double diagonalSideWidth(){
