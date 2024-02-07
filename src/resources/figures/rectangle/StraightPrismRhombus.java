@@ -19,7 +19,15 @@ public class StraightPrismRhombus extends Rhombus{
         }
     }
     public StraightPrismRhombus(){}
-    protected double heightP, volume, diagonalV1, diagonalV2, diagonalSideLength;
+    protected double heightP, volume, diagonalV1, diagonalV2, diagonalSideLength, areaBase, areaSide;
+
+    public void setAreaSide(double areaSide) {
+        this.areaSide = areaSide;
+    }
+
+    public void setAreaBase(double areaBase) {
+        this.areaBase = areaBase;
+    }
 
     public void setHeightP(double heightP) {
         this.heightP = heightP;
@@ -48,20 +56,85 @@ public class StraightPrismRhombus extends Rhombus{
         diagonalSideLength = HelpingMethods.pythagoreanTheorem(length, heightP, "+");
         return diagonalSideLength;
     }
-    @Override
-    public double area(String parameter){
+    public double getAreaBase(){
+        if (areaBase > 0) return areaBase;
+        else if (length > 0){
+            getCorner();
+            if (corner > 0) return areaBase("c");
+            getHeight1();
+            if (height1 > 0) return areaBase("h");
+            else {
+                System.out.println("Error! Missing values.");
+                return -1;
+            }
+        }
+        else if (height1 > 0){
+            getLength();
+            return areaBase("h");
+        }
+        else if (corner > 0){
+            getLength();
+            return areaBase("c");
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
+    protected double areaBase(String parameter){
         switch (parameter) {
-            case ("l"):
-                area = 2 * ((height1 * length) + (heightP * length) * 2);
-                break;
+            case ("h"):
+                if (height1 > 0 && length > 0){
+                    areaBase = height1 * length;
+                    break;
+                }
+                else {
+                    System.out.println("Error! Missing values.");
+                    return -1;
+                }
             case ("c"):
-                area = 2 * ((Math.sin(corner / 180 * Math.PI) * Math.pow(length, 2)) + (heightP * length) * 2);
-                break;
+                if (length > 0 && corner > 0){
+                    areaBase = Math.sin(corner / 180 * Math.PI) * Math.pow(length, 2);
+                    break;
+                }
+                else {
+                    System.out.println("Error! Missing values.");
+                    return -1;
+                }
             default:
                 System.out.println("Enter correct parameter.");
-                area = -1;
+                return -1;
         }
-        return area;
+        return areaBase;
+    }
+    public double getAreaSide(){
+        if (areaSide > 0) return areaSide;
+        else {
+            if (!(length > 0)) getLength();
+            if (!(heightP > 0)) getHeightP();
+            return areaSide();
+        }
+    }
+    protected double areaSide(){
+        if (length > 0 && heightP > 0) {
+            areaSide = length * heightP * 4;
+            return areaSide;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
+    @Override
+    public double area(String parameter){
+        if (areaBase > 0 && areaSide > 0){
+            area = areaBase * 2 + areaSide;
+            return area;
+        }
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
     }
     public double diagonalV1(){
         diagonalV1 = HelpingMethods.pythagoreanTheorem(heightP, diagonal,"+");
@@ -98,49 +171,80 @@ public class StraightPrismRhombus extends Rhombus{
         System.out.println("Error!");
         return -1;
     }
-    public double heightP(String parameter){
-        double answer;
+    public double getHeightP(){
+        if (heightP > 0) return heightP;
+        else if (area > 0 && length > 0 && height1 > 0) return heightP("a");
+        else if (diagonalSideLength > 0 && length > 0) return heightP("dL");
+        else if (diagonalV1 > 0 && diagonal > 0) return heightP("dV1");
+        else if (diagonalV2 > 0 && diagonal2 > 0) return heightP("dV2");
+        else if (volume > 0 && length > 0 && height1 > 0) return heightP("v");
+        else if (areaSide> 0 && length > 0) return heightP("aS");
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
+    protected double heightP(String parameter){
         switch (parameter){
             case ("a"):
-                answer = (area / 2 - length * height1) / 2 / length;
+                heightP = (area / 2 - length * height1) / 2 / length;
                 break;
             case ("dL"):
-                answer = HelpingMethods.pythagoreanTheorem(diagonalSideLength, length, "-");
+                heightP = HelpingMethods.pythagoreanTheorem(diagonalSideLength, length, "-");
                 break;
             case("dV1"):
-                answer = HelpingMethods.pythagoreanTheorem(diagonalV1, diagonal, "-");
+                heightP = HelpingMethods.pythagoreanTheorem(diagonalV1, diagonal, "-");
                 break;
             case("dV2"):
-                answer = HelpingMethods.pythagoreanTheorem(diagonalV2, diagonal2, "-");
+                heightP = HelpingMethods.pythagoreanTheorem(diagonalV2, diagonal2, "-");
                 break;
             case ("v"):
-                answer = volume / (length * height1);
+                heightP = volume / getAreaBase();
+                break;
+            case ("aS"):
+                heightP = areaSide / 4 / length;
                 break;
             default:
                 System.out.println("Enter correct parameter.");
-                answer = -1;
-                break;
+                return -1;
         }
-        return answer;
+        return heightP;
     }
-    public double length(String parameter){
-        double answer;
+    public double getLength(){
+        if (length > 0) return length;
+        else if (area > 0 && height1 > 0 && heightP > 0) return length("a");
+        else if (diagonalSideLength > 0 && heightP > 0) return length("dL");
+        else if (volume > 0 && height1 > 0 && heightP > 0) return length("v");
+        else if (areaBase > 0 && height1 > 0) return length("aB");
+        else if (areaSide > 0 && heightP > 0) return length("aS");
+        else {
+            System.out.println("Error! Missing values.");
+            return -1;
+        }
+    }
+    protected double length(String parameter){
         switch (parameter){
             case ("a"):
-                answer = area / 2 / (height1 + heightP * 2);
+                length = area / 2 / (height1 + heightP * 2);
                 break;
             case ("dL"):
-                answer = HelpingMethods.pythagoreanTheorem(diagonalSideLength, heightP, "-");
+                length= HelpingMethods.pythagoreanTheorem(diagonalSideLength, heightP, "-");
                 break;
             case ("v"):
-                answer = volume / heightP / height1;
+                length = volume / heightP / height1;
+                break;
+            case ("aB"):
+                length = areaBase / height1;
+                break;
+            case ("aS"):
+                length = areaSide / 4 / heightP;
                 break;
             default:
                 System.out.println("Enter correct parameter.");
-                answer = -1;
+                length = -1;
                 break;
         }
-        return answer;
+        return length;
     }
 
 }
