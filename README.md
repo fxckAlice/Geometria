@@ -1,6 +1,6 @@
 # Geometria
 
-"Geometria" is a program to resourses.resourses.figures.triangle.help to calculate basic parameters in simple resourses.figures :ballot_box_with_check:
+"Geometria" is a libraryto calculate basic parameters of simple figures :ballot_box_with_check:
 
 <div style="text-align:center">
   <img src="src/photos/img_2.png" alt="img_2.png">
